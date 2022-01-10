@@ -36,54 +36,48 @@
   </head>
 
 <header>
-
-
-
-<nav class="navbar navbar-expand-lg navbar-primary bg-dark">
-  <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-      <img
-        src="/static/img/logo.png"
-        height="20"
-        alt="CircuitPython Show Logo"
-        loading="lazy"
-      />
-    </a>
-    <div>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-toggle="collapse"
-      data-mdb-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class=navbar-brand" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-brand" href="/episodes/all">Episodes</a>
-        </li>
-        <li class="nav-item">
-          <a class="navbar-brand" href="/about">About</a>
-        </li>
-      </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button
+              class="navbar-toggler"
+              type="button"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarExample01"
+              aria-controls="navbarExample01"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Episodes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  </div>
-</nav>
+  </nav>
+  <!-- Navbar -->
 
-<!-- Logo -->
-    <div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column text-center">
-      <a href = "/" ><img src="/static/img/circuitpython-logo.png" style="width:50%; height:auto; max-width300px;" alt="CircuitPython Show Logo" /></a>
-    </div>
-
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-dark">
+    <h1 class="mb-3">The CircuitPython Show</h1>
+    <h4 class="mb-3">A podcast about the people in and around CircuitPython</h4>
+    <a class="btn btn-primary" href="" role="button">Latest</a>
+    <a class="btn btn-secondary" href="" role="button">Episodes</a>
+    <a class="btn btn-success" href="" role="button">Newsletter</a>
+  </div>
+  <!-- Jumbotron -->
 </header>
+
 
 <!--Main Content Embed -->
   <body>
@@ -174,9 +168,7 @@
     <!-- Section: Text -->
     <section class="mb-4">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-        repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-        eum harum corrupti dicta, aliquam sequi voluptate quas.
+        The CircuitPython Show is independently written and produced by Paul Cutler.
       </p>
     </section>
     <!-- Section: Text -->
