@@ -1,0 +1,14 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <div style="height 100%; width 100%;">
+        <div class="container-fluid pt-3 d-flex align-items-center bg-dark pt-3 flex-column">
+            <h2>Podcast Episodes</h2>
+            <p>
+                Coming soon...
+            </p>
+
+</div>
+        </div>
+    </div>
+</div>

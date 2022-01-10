@@ -1,0 +1,18 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+
+    <div class="container-fluid pt-3 d-flex align-items-center bg-dark pt-3 align-items-center flex-column vh-75">
+
+                <!-- Icon Divider-->
+
+            <hr class="pt-3 bg-light">
+
+                <div class="text-center">
+
+                <!-- Masthead Subheading-->
+                </div>
+
+        </div>            
+    </div>
+</div>
