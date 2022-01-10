@@ -131,3 +131,4 @@ dmypy.json
 # Configuration files
 data/config.py
 .DS_Store
+server/scripts/app_repo
