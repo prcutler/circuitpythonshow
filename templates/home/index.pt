@@ -2,17 +2,41 @@
     <div metal:fill-slot="content" tal:omit-tag="True">
 
 
-    <div class="container-fluid pt-3 d-flex align-items-center bg-dark pt-3 align-items-center flex-column vh-75">
+<div class="bg-image d-flex align-items-center justify-content-center">
+  <img
+    src="/static/img/cps-bg2.png"
+    class="w-100"
+    alt="CircuitPython Show logo"
+  />
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
 
-                <!-- Icon Divider-->
+  <!-- Jumbotron -->
+  <div class="p-5 text-center">
+    <h1 class="mb-3 d-flex justify-content-center text-white">The CircuitPython Show</h1>
+    <h4 class="mb-3 d-flex justify-content-center text-white">A podcast with the people in and around CircuitPython</h4>
+</div>
 
-            <hr class="pt-3 bg-light">
+<div class="text-center">
+    <a class="btn btn-primary" href="" role="button"><i class="fas fa-rss"></i>  Latest</a>
+    <a class="btn btn-secondary" href="" role="button"><i class="fas fa-rss"></i>  Episodes</a>
+    <a class="btn btn-success" href="" role="button"><i class="far fa-envelope"></i>  Newsletter</a>
+    <!-- /div -->
+  <!-- Jumbotron -->
+</div>
 
-                <div class="text-center">
+<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    <p class="text-white">
+      The CircuitPython Show is hosted by Paul Cutler. 
+      The podcast features interviews with people in and around CircuitPython.
+      Have something to share about the show? Send it to paul@circuitpythonshow.com.
+       I'd love to hear from you.
+    </p>
+    <p class="text-white">
+      Get the latest news and updates on the CircuitPython Show.
+    </p>
+</div>
 
-                <!-- Masthead Subheading-->
-                </div>
-
-        </div>            
+</div>
+</div>
     </div>
 </div>

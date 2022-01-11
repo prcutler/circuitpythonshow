@@ -132,3 +132,4 @@ dmypy.json
 data/config.py
 .DS_Store
 server/scripts/app_repo
+.vscode/settings.json
