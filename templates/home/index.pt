@@ -37,11 +37,12 @@
                     <div class="about-content">
                         <h2>About The Show</h2>
                         <hr class="divider about-divider">
-                        <p>The CircuitPython Show is an independent podcast hosted by Paul Cutler focused on 
-                        the people doing awesome things with CircuitPython.  Each episode features a person interviewed
-                        by Paul in a thirty minute question and answer format.  </p>
-                        <p>Let me know how the show is doing.  
-                        Contact me via email at paul@circuitpythonshow.com or via Twitter at @prcutler. Don't be shy!</p>
+                        <p>The CircuitPython Show is an independent podcast hosted by 
+                        <a href="https://paulcutler.org">Paul Cutler</a> focused on 
+                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
+                        Each episode features an interview by Paul and a guest in a thirty minute question and answer format.  </p>
+                        <p>Let me know how the show is doing.  Contact me via email 
+                        at paul@circuitpythonshow.com or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. Don't be shy!</p>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
