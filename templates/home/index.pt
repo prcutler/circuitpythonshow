@@ -1,28 +1,24 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
 
-
-<div class="bg-image d-flex align-items-center justify-content-center">
-  <img
-    src="/static/img/cps-bg2.png"
-    class="w-100"
-    alt="CircuitPython Show logo"
-  />
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
-
   <!-- Jumbotron -->
-  <div class="p-5 text-center">
-    <h1 class="mb-3 d-flex justify-content-center text-white">The CircuitPython Show</h1>
-    <h4 class="mb-3 d-flex justify-content-center text-white">A podcast with the people in and around CircuitPython</h4>
-</div>
+ <div class="p5 text-center">
+ <img class="img-responsive" src="static/img/cps-logo1k.png" alt="CircuitPython Show logo" />
 
-<div class="text-center">
+
+  <!-- div class="p-5 text-center"-->
+    <h1 class="mb-3 d-flex justify-content-center text-white">The CircuitPython Show</h1>
+    <h4 class="mb-3 d-flex justify-content-center text-white">A podcast with the people in and around CircuitPython</h4 -->
+
+
+<!-- div class="text-center" -->
     <a class="btn btn-primary" href="" role="button"><i class="fas fa-rss"></i>  Latest</a>
     <a class="btn btn-secondary" href="" role="button"><i class="fas fa-rss"></i>  Episodes</a>
     <a class="btn btn-success" href="" role="button"><i class="far fa-envelope"></i>  Newsletter</a>
     <!-- /div -->
   <!-- Jumbotron -->
 </div>
+
 
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     <p class="text-white">
@@ -37,6 +33,6 @@
 </div>
 
 </div>
-</div>
-    </div>
+
+
 </div>
