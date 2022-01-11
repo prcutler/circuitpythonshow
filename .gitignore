@@ -133,3 +133,4 @@ data/config.py
 .DS_Store
 server/scripts/app_repo
 .vscode/settings.json
+templates/home/index.pt
