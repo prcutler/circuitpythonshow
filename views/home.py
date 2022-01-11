@@ -16,12 +16,8 @@ def index(request: Request):
     return vm.to_dict()
 
 
-@router.post("/home/index")
-@template()
-async def index(request: Request):
+@router.get("/home/about")
+@template(template_file="home/about.pt")
+def index(request: Request):
     vm = IndexViewModel(request)
-    await vm.load
-
-    resp = fastapi.responses.RedirectResponse(
-        url="/play/now-playing", status_code=status.HTTP_302_FOUND
-    )
+    return vm.to_dict()

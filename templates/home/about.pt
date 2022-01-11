@@ -1,15 +1,64 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
 
-<div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column">
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
 
-        <div class="page-core">
-            <h1>About</h1>
-
-            <div>
-                We shall fill this in later.
+            <h1>About the Show</h1>
+                        <p>The CircuitPython Show is an independent podcast hosted by 
+                        <a href="https://paulcutler.org">Paul Cutler</a> focused on 
+                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
+                        Each episode features an interview by Paul and a guest in a thirty minute question and answer format.  </p>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about.jpg" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
+    </section>
+
+        <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+        <h1>About the Host</h1>
+            <p>
+                Paul Cutler is a married father of three, living in the suburbs of Minneapolis, Minnesota. 
+                When he's not attending his kids sports activities or introducing them to classic 80s movies, 
+                you can find him listening to records from his vinyl collection, tinkering with Python or CircuitPython, 
+                playing with his dog, or watching a movie.</p>
+
+            <p>
+                Paul believes strongly in the power of open source, both software and hardware.  Paul has contributed
+                to a number of open source projects in the past, most notably with <a href="https://gnome.org">GNOME</a>.
+                In the past, he contributed to GNOME's marketing and system administration teams; was the managing editor of 
+                GNOME Journal, a quarterly magazine about GNOME; wrote documentation for a number of applications 
+                including Banshee, Tomboy, and Recipes; and served one term on the GNOME Board of Directors as 
+                President and Chairman.
+            </p>    
+            <p>
+                You can contact Paul at paul@circuitpythonshow.com or read 
+                <a href="https://paulcutler.org/posts">his blog</a> at his homepage.
+            </p></div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about-personal.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        </div>
+        </div>
+
+
+            
