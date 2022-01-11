@@ -16,7 +16,7 @@ def index(request: Request):
     return vm.to_dict()
 
 
-@router.get("/home/about")
+@router.get("/about")
 @template(template_file="home/about.pt")
 def index(request: Request):
     vm = IndexViewModel(request)

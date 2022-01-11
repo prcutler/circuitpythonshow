@@ -44,6 +44,9 @@
                         <p>Let me know how the show is doing.  Contact me via email 
                         at paul@circuitpythonshow.com or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. Don't be shy!</p>
                     </div>
+                <div>
+                            <a href="/about" class="btn btn-primary btn-rounded btn-lg">Learn More</a>
+              </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
