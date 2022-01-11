@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/static/style.css">
-    <title>Document</title>
+    <title>The CircuitPython Show podcast</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Episode</a>
+                            <a class="nav-link" href="#">Episodes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
@@ -62,14 +62,11 @@
                     <div class="col-lg-5">
                         <div class="footer__subscriber__text">
                             <h3>Sign up for our newsletter!</h3>
-                            <p>Subscribe to receive info on our latest news and episodes</p>
+                            <p>Subscribe to receive info on our latest news and episodes.  No spam, ever.</p>
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-2">
-                        <form action="#" class="footer__subscriber__form">
-                            <input type="text" placeholder="Your email address">
-                            <button type="submit" class="site-btn">Subscribe</button>
-                        </form>
+                            <a href="https://buttondown.email/circuitpythonshow" class="btn btn-success btn-rounded btn-lg">Subscribe</a>
                     </div>
                 </div>
             </div>
@@ -77,12 +74,11 @@
             <div class="row">
                 <!--Grid column-->
                 <div class="col-lg-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Footer Content</h5>
+                    <h5 class="text-uppercase">The CircuitPython Show</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Iste atque ea quis molestias. Fugiat pariatur maxime quis
-                        culpa corporis vitae repudiandae aliquam voluptatem
-                        veniam, est atque cumque eum delectus sint!
+                        The CircuitPython Show is an independent podcast hosted and produced by 
+                        <a href = "https://paulcutler.org" > Paul Cutler</a>.  Made with <i class="fas fa-heart"></i> in Minnesota with 
+                        <a href="https://fastapi.tiangolo.com/">FastAPI</a> and <a href="https://python.org/">Python</a>.
                     </p>
                 </div>
 
@@ -90,39 +86,30 @@
                     <h5 class="text-uppercase">Links</h5>
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!" class="text-white">Link 1</a>
+                            <a href="#" class="text-white">Home</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Link 2</a>
+                            <a href="/episodes/all" class="text-white">Episodes</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Link 3</a>
+                            <a href="/about" class="text-white">About</a>
                         </li>
                         <li>
-                            <a href="#!" class="text-white">Link 4</a>
+                            <a href="https://www.paulcutler.org" class="text-white">Blog</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Contact</h5>
                     <div class="footer-social">
-                        <a href="#" class="btn btn-primary btn-floating me-1">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="btn btn-primary btn-floating me-1">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="btn btn-primary btn-floating me-1">
+                        <a href="https://twitter.com/circuitpyshow" class="btn btn-primary btn-floating me-1">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="btn btn-primary btn-floating me-1">
+                        <a href="https://github.com/prcutler/circuitpythonshow" class="btn btn-primary btn-floating me-1">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="btn btn-primary btn-floating me-1">
+                        <a href="mailto:paul@circuitpythonshow.com" class="btn btn-primary btn-floating me-1">
                             <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="#" class="btn btn-primary btn-floating me-1">
-                            <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
                 </div>
@@ -132,7 +119,7 @@
 
         <!-- Copyright -->
         <div class="footer-bottom p-3">
-            <div>© 2022 Copyright</div>
+            <div>© 2022 Paul Cutler</div>
         </div>
         <!-- Copyright -->
     </footer>
