@@ -1,38 +1,104 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
+    
+    <!-- jumbotron -->
+    <section class="slider-area" style="background-image: url(/static/img/slider.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="slider-content">
+                        <h2>The CircuitPython Show</h2>
+                        <p>A podcast about the people in and around CircuitPython.</p>
+                        <hr class="divider slider-divider">
+                        <div class="pc-btn-group py-2">
+                            <a href="#" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
+                                Latest</a>
+                            <a href="#" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
+                                Episodes</a>
+                            <a href="#" class="btn btn-info btn-rounded btn-lg"><i class="fa fa-envelope-open-text"></i>
+                                Newsletter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- about -->
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2>About The Host</h2>
+                        <hr class="divider about-divider">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quod sequi expedita
+                            repudiandae eum natus facilis soluta a. Labore quod odio eligendi molestiae eveniet vitae a
+                            eos error ut quaerat?</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos quod sequi expedita
+                            repudiandae eum natus facilis soluta a. Labore quod odio eligendi molestiae eveniet vitae a
+                            eos error ut quaerat?</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about-personal.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Jumbotron -->
- <div class="p5 text-center">
- <img class="img-responsive" src="static/img/cps-logo1k.png" alt="CircuitPython Show logo" />
-
-
-  <!-- div class="p-5 text-center"-->
-    <h1 class="mb-3 d-flex justify-content-center text-white">The CircuitPython Show</h1>
-    <h4 class="mb-3 d-flex justify-content-center text-white">A podcast with the people in and around CircuitPython</h4 -->
-
-
-<!-- div class="text-center" -->
-    <a class="btn btn-primary" href="" role="button"><i class="fas fa-rss"></i>  Latest</a>
-    <a class="btn btn-secondary" href="" role="button"><i class="fas fa-rss"></i>  Episodes</a>
-    <a class="btn btn-success" href="" role="button"><i class="far fa-envelope"></i>  Newsletter</a>
-    <!-- /div -->
-  <!-- Jumbotron -->
-</div>
-
-
-<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    <p class="text-white">
-      The CircuitPython Show is hosted by Paul Cutler. 
-      The podcast features interviews with people in and around CircuitPython.
-      Have something to share about the show? Send it to paul@circuitpythonshow.com.
-       I'd love to hear from you.
-    </p>
-    <p class="text-white">
-      Get the latest news and updates on the CircuitPython Show.
-    </p>
-</div>
-
-</div>
-
-
+    <!-- news -->
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title mb-5">
+                        <h2>News</h2>
+                        <hr class="divider news-divider">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card mb-4 bg-transparent">
+                        <div class="row g-0">
+                            <div class="col-lg-3">
+                                <img src="/static/img/news.webp" class="img-fluid">
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="card-body bg-dark">
+                                    <h3 class="card-title">6 Powerful Tips To Creating Testimonials That Sell Your</h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                                        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.</p>
+                                    <p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-4 bg-transparent">
+                        <div class="row g-0">
+                            <div class="col-lg-3">
+                                <img src="/static/img/news.webp" class="img-fluid">
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="card-body bg-dark">
+                                    <h3 class="card-title">6 Powerful Tips To Creating Testimonials That Sell Your</h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum
+                                        suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel
+                                        facilisis.</p>
+                                    <p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
 </div>

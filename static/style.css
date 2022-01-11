@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&display=swap');
+:root{
+    --dark: #343a40;
+    --white: #fff;
+}
+
+body{
+    background: var(--dark);
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: white;
+}
+
+/* navbar */
+.navbar-dark .navbar-nav .nav-link {
+    padding: 0px 15px;
+}
+.navbar-dark .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* slider */
+.slider-area {
+    padding: 80px 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.slider-area:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* background: #0000009e; */
+    background: #333a40ad;
+}
+.slider-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+.slider-content h2 {
+    font-size: 80px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.slider-content p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.divider {
+    opacity: .6;
+    border-radius: 50px;
+    background: white;
+    padding: 3px;
+}
+/* about */
+.about-divider{
+    width: 100px;
+}
+.slider-divider{
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-area {
+    padding: 50px 0px;
+}
+.about-content p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 30px;
+}
+.about-img img {
+    border-radius: 20px;
+    border: 5px solid #262626;
+    width: 100%;
+}
+/* news */
+.news-divider{
+    margin: auto;
+    width: 80px;
+}
+.news {
+    padding: 50px 0px 100px 0px;
+}
+.section-title h2 {
+    font-size: 60px;
+    text-align: center;
+}
+.card-text{
+    color: #ddd;
+}
+.news .card-body {
+    padding: 45px 35px 46px 40px;
+    border-radius: 0 20px 20px 0;
+    height: 100%;
+}
+.news img{
+    border-radius: 20px 0 0 20px;
+    width: 100%;
+}
+/* footer */
+.footer__subscriber {
+    background: #6763fd;
+    padding: 40px;
+    border-radius: 10px;
+    top: -80px;
+    position: relative;
+}
+.footer__subscriber__text h3 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.footer__subscriber__text p {
+    color: #fff;
+    margin-bottom: 0;
+}
+.footer__subscriber__form {
+    position: relative;
+    margin-top: 7px;
+}
+.footer__subscriber__form input {
+    height: 52px;
+    width: 100%;
+    padding-left: 28px;
+    background: #fff;
+    border: none;
+    color: #b7b7b7;
+    border-radius: 50px;
+}
+.footer__subscriber__form input:focus{
+    outline: 0;
+}
+.site-btn {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    background: #6763fd;
+    display: inline-block;
+    padding: 9px 26px 8px;
+    border-radius: 50px;
+    border: none;
+}
+.footer__subscriber__form button {
+    position: absolute;
+    right: 7px;
+    top: 6px;
+}
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+@media(max-width: 768px){
+    .footer__subscriber__text {
+        text-align: center;
+    }
+    .news .card-body {
+        padding: 45px 25px 46px 25px;
+    }
+    .news .card-body {
+        border-radius: 0 0px 20px 20px;
+    }
+    .news img {
+        border-radius: 20px 20px 0 0px;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0px;
+        border-bottom: 1px solid #ffffff2e;
+    }
+    .about-content {
+        margin-bottom: 30px;
+    }
+    .slider-divider{
+        width: 160px;
+    }
+    .pc-btn-group .btn {
+        margin-bottom: 15px;
+    }
+    .slider-content p {
+        font-size: 20px;
+    }
+    .slider-content h2 {
+        font-size: 30px;
+    }
+    .about-img img {
+        width: 100%;
+    }
+}
+
+@media (min-width:1000px){
+    .footer-social .btn {
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+}
