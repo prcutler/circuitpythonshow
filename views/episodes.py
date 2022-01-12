@@ -4,7 +4,7 @@ from fastapi_chameleon import template
 router = fastapi.APIRouter()
 
 
-@router.get("/today")
-@template(template_file="today/today.pt")
-def today():
+@router.get("/episodes/all")
+@template(template_file="episodes/all.pt")
+def all():
     return {}
