@@ -15,7 +15,7 @@
                                 Latest</a>
                             <a href="#" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
                                 Episodes</a>
-                            <a href="#" class="btn btn-info btn-rounded btn-lg"><i class="fa fa-envelope-open-text"></i>
+                            <a href="https://buttondown.email/circuitpythonshow" class="btn btn-info btn-rounded btn-lg"><i class="fa fa-envelope-open-text"></i>
                                 Newsletter</a>
                         </div>
                     </div>
@@ -41,8 +41,8 @@
                         <a href="https://paulcutler.org">Paul Cutler</a> focused on 
                         the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
                         Each episode features an interview by Paul and a guest in a thirty minute question and answer format.  </p>
-                        <p>Let me know how the show is doing.  Contact me via email 
-                        at paul@circuitpythonshow.com or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. Don't be shy!</p>
+                        <p>Let me know how the show is doing.  Contact me <a href="mailto:paul@circuitpythonshow.com">via email </a>
+                        or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. Don't be shy!</p>
                     </div>
                 <div>
                             <a href="/about" class="btn btn-primary btn-rounded btn-lg">Learn More</a>
