@@ -8,7 +8,7 @@
                 <div class="col-lg-8">
                     <div class="slider-content">
                         <h2>The CircuitPython Show</h2>
-                        <p>A podcast about the people in and around CircuitPython.</p>
+                        <p>A podcast with people in and around CircuitPython.</p>
                         <hr class="divider slider-divider">
                         <div class="pc-btn-group py-2">
                             <a href="#" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>

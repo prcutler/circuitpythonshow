@@ -1,0 +1,63 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+            <h1>Thank You</h1>
+                        <p>Thank you for subscribing to The CircuitPython Show Newsletter.  I promise to never spam you and 
+                        only send you occasional updates about the podcast and episodes.  You can unsubscribe at any time by clicking the
+                        unsubscribe link in your email.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+        <h1>About the Host</h1>
+            <p>
+                Paul Cutler is a married father of three, living in the suburbs of Minneapolis, Minnesota. 
+                When he's not attending his kids sports activities or introducing them to classic 80s movies, 
+                you can find him listening to records from his vinyl collection, tinkering with Python or CircuitPython, 
+                playing with his dog, or watching a movie.</p>
+
+            <p>
+                Paul believes strongly in the power of open source, both software and hardware.  Paul has contributed
+                to a number of open source projects in the past, most notably with <a href="https://gnome.org">GNOME</a>.
+                In the past, he contributed to GNOME's marketing and system administration teams; was the managing editor of 
+                GNOME Journal, a quarterly magazine about GNOME; wrote documentation for a number of applications 
+                including Banshee, Tomboy, and Recipes; and served one term on the GNOME Board of Directors as 
+                President and Chairman.
+            </p>    
+            <p>
+                You can  <a href="mailto:paul@circuitpythonshow.com">email Paul</a> or read 
+                <a href="https://paulcutler.org/posts">his blog</a> at his homepage.
+            </p></div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about-personal.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        </div>
+        </div>
+
+
+            
