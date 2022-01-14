@@ -2,7 +2,7 @@
     <div metal:fill-slot="content" tal:omit-tag="True">
     
     <!-- jumbotron -->
-    <section class="slider-area" style="background-image: url(/static/img/slider.jpg);">
+    <section class="slider-area" style="background-image: url(/static/img/cps-bg2.png);">
         <div class="container">
             <div class="row align-items-lg-center">
                 <div class="col-lg-8">
