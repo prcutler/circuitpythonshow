@@ -134,3 +134,4 @@ data/config.py
 server/scripts/app_repo
 .vscode/settings.json
 templates/home/index.pt
+server/scripts/app_repo
