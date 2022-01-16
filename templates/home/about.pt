@@ -9,14 +9,14 @@
 
             <h1>About the Show</h1>
                         <p>The CircuitPython Show is an independent podcast hosted by 
-                        <a href="https://paulcutler.org">Paul Cutler</a> focused on 
+                        <a href="https://paulcutler.org">Paul Cutler</a> with  
                         the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
-                        Each episode features an interview by Paul and a guest in a thirty minute question and answer format.  </p>
+                        Each episode features an interview by Paul with a guest for twenty to thirty minutes in a question and answer format.  </p>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/about.jpg" alt="">
+                        <img src="/static/img/cps-tagline-500.png" alt="CircuitPython Show logo">
                     </div>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/about-personal.jpg" alt="">
+                        <img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab">
                     </div>
                 </div>
             </div>
