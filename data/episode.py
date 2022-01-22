@@ -2,7 +2,7 @@ from datetime import datetime
 from typing import List, Optional
 
 
-class AlbumInfo:
+class Episode:
     def __init__(
         self,
         record_date: datetime.date,
