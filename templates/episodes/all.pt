@@ -16,7 +16,8 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/cps-show-logo-600.png" alt="Circuit Python Show Podcast">
+                        <img src="/static/img/cps-tagline-500.png" alt="Circuit Python Show Podcast">
+                        <br /><br />
                     </div>
                 </div>
             </div>

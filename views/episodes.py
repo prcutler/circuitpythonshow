@@ -8,3 +8,8 @@ router = fastapi.APIRouter()
 @template(template_file="episodes/all.pt")
 def all():
     return {}
+
+@router.get("/episodes/episode-template")
+@template(template_file="episodes/episode-template.pt")
+def all():
+    return {}
