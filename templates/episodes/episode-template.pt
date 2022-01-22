@@ -1,0 +1,92 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+            <h2>In Conversation with Kattni Rembor</h2>
+                        <p class="fs-6">Episode 1, published Friday, January 21st, recorded Tuesday, January 18th.  </p>
+                        <p>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no"
+     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1198337107&color=ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false">
+</iframe>
+</p>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/cps-tagline-500.png" alt="CircuitPython Show logo">
+                    </div>
+                    <p class="text-white">
+                    I'm called Kattni, and I am, among other things, a mentor, maker, open source community leader, 
+                    technical writer, and embedded software developer. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+        <h2>Show Notes</h2>
+            <p>
+                Paul Cutler is a married father of three, living in the suburbs of Minneapolis, Minnesota. 
+                When he's not attending his kids sports activities or introducing them to classic 80s movies, 
+                you can find him listening to records from his vinyl collection, tinkering with Python or CircuitPython, 
+                playing with his dog, or watching a movie.</p>
+
+            </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+<section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+        <h2>Transcript</h2>
+            <p>
+                Thank you to everyone who has contributed anything to CircuitPython and / or Python.  Thank you
+                to <a href="https://talkpython.fm">Talk Python to Me</a>, where I have learned almost all of the 
+                Python I know, starting from their first Kickstarter through the 
+                <a href="https://training.talkpython.fm/courses/full-html-web-applications-with-fastapi">Full Web Apps with FastAPI course</a> 
+                to build this site. The show also inspired me to start this podcast, and thank you to the host, Michael Kennedy, 
+                for answering all my questions when starting out. Thank you to Brian Okken, 
+                host of the <a href="https://testandcode.com">Test and Code podcast</a>, 
+                whose podcast interview prep I have shamelessly stole (with his permission, of course). </p>
+
+                <p>
+                The CircuitPython community wouldn't be who it is without the <a href="http://adafru.it/discord">Adafruit Discord</a>.  
+                Thanks to everyone who has answered one of my many questions.  
+                </p>
+                <p>
+                Lastly, thank you for listening and taking a chance on the show.
+                </p>
+                <br />
+                <br />
+
+            </div>
+                
+        </div>
+        </section>
+
+        </div>
+        </div>
+
+
+            
