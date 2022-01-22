@@ -63,7 +63,7 @@
                         </div>
                     </div>
                     <div class="col-lg-5 offset-lg-2">
-                            <a href="https://buttondown.email/circuitpythonshow" class="btn btn-success btn-rounded btn-lg">Subscribe</a>
+                            <a href="https://buttondown.email/circuitpythonshow" class="btn btn-success btn-rounded btn-lg float-end">Subscribe</a>
                     </div>
                 </div>
             </div>
