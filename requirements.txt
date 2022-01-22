@@ -5,10 +5,9 @@ starlette==0.16.0
 aiofiles
 requests
 python-multipart
-python3-discogs-client
 gunicorn
 sqlalchemy
 progressbar2
 python-dateutil
-paho-mqtt
-
+aiosqlite
+black
