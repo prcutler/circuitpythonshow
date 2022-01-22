@@ -14,9 +14,9 @@ class AlbumInfo:
         guest_image: Optional[str],
         guest_bio: Optional[str],
    ):
-        self.record_date = release_date
+        self.record_date = record_date
         self.release_date = release_date
-        self.guset = guest
+        self.guest = guest
         self.topic = topic
         self.season = season
         self.episode = episode
