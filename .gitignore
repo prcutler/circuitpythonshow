@@ -136,6 +136,7 @@ server/scripts/app_repo
 templates/home/index.pt
 server/scripts/app_repo
 server/scripts/app_repo
+<<<<<<< HEAD
 
 # Database file(s)
 *.sqlite3
@@ -143,3 +144,5 @@ server/scripts/app_repo
 *.sqlite3-wal
 *.sqlite
 *.db
+db/*
+
