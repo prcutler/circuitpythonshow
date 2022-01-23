@@ -102,6 +102,8 @@
                         <a href="https://twitter.com/circuitpyshow" class="btn btn-primary btn-floating me-1">
                             <i class="fab fa-twitter"></i>
                         </a>
+                        <a href="https://discord.gg/S29PHC8knT" class="btn btn-primary btn-floating me-1">
+                            <i class="fab fa-discord"></i>
                         <a href="https://github.com/prcutler/circuitpythonshow" class="btn btn-primary btn-floating me-1">
                             <i class="fab fa-github"></i>
                         </a>
