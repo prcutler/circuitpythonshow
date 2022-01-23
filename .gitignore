@@ -136,3 +136,4 @@ server/scripts/app_repo
 templates/home/index.pt
 server/scripts/app_repo
 server/scripts/app_repo
+db/*
