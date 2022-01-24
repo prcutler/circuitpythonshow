@@ -11,3 +11,4 @@ progressbar2
 python-dateutil
 aiosqlite
 black
+passlib

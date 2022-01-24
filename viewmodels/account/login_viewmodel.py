@@ -25,4 +25,4 @@ class LoginViewModel(ViewModelBase):
             not self.username == config.username
             and not self.password == config.password
         ):
-            self.error = "You don't belong here.  Go away!"
+            self.error = "You must specify a password."
