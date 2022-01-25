@@ -1,17 +1,26 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
-    <div class="form-container">
-        <form action="" method="POST" class="account-form">
-            <h1>Register</h1>
 
-            <input name="name" type="text" placeholder=" Username" class="form-control" value="${ name }" required>
-            <input name="password" minlength="5" type="password" placeholder=" Password" class="form-control" value="${ password }" required>
-            <button type="submit" class="btn btn-danger">Register</button>
-            <div style="clear: both;"></div>
-            <br /><br /><br />
 
-            <div class="error-msg" tal:condition="error">${ error }</div>
-        </form>
+    <div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column ">
+
+        <div class="form-container">
+            <form action="" method="POST" class="account-form">
+                <h1>Register</h1>
+
+                <input name="name" type="text" placeholder=" Username" class="form-control" value="${ name }" required>
+                <input name="password" minlength="5" type="password" placeholder=" Password" class="form-control" value="${ password }" required>
+            <br />
+                <button type="submit" class="btn btn-danger">Register</button>
+            <br />
+            <br />
+                <div style="clear: both;"></div>
+                <br /><br /><br />
+
+                <div class="error-msg" tal:condition="error">${ error }</div>
+            </form>
+
+        </div>
     </div>
     </div>
 
