@@ -11,9 +11,9 @@
                         <p>An independent podcast with the people in and around CircuitPython.</p>
                         <hr class="divider slider-divider">
                         <div class="pc-btn-group py-2">
-                            <a href="#" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
-                                Latest</a>
-                            <a href="#" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
+                            <a href="episodes/episodes/0/trailer" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw">
+                            </i>Latest</a>
+                            <a href="episodes/episodes/0/trailer" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
                                 Episodes</a>
                             <a href="https://buttondown.email/circuitpythonshow" class="btn btn-info btn-rounded btn-lg"><i class="fa fa-envelope-open-text"></i>
                                 Newsletter</a>
