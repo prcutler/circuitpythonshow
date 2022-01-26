@@ -20,6 +20,8 @@ class Episode(SqlAlchemyBase):
     guest_image: str = sa.Column(sa.String)
     guest_bio: str = sa.Column(sa.String)
     show_notes: str = sa.Column(sa.String)
+    sponsor_1: str = sa.Column(sa.String)
+    sponsor_2 = sa.Column(sa.String)
 
     
     
