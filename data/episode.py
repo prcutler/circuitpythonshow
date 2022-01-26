@@ -15,10 +15,10 @@ class Episode(SqlAlchemyBase):
     publish_date: datetime.datetime = sa.Column(sa.DateTime)
     topic: str = sa.Column(sa.String)
     season: int = sa.Column(sa.Integer)
-    episode: int = sa.Column(sa.Integer)
+    episode_number: int = sa.Column(sa.Integer)
     guest_image: str = sa.Column(sa.String)
     guest_bio: str = sa.Column(sa.String)
-    show_notes : str = sa.Column(sa.String)
-    
+    show_notes: str = sa.Column(sa.String)
+    youtube_link: str = sa.Column(sa.String)
     
     

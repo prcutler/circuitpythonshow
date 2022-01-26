@@ -1,5 +1,13 @@
+import asyncio
+
 import fastapi
 from fastapi_chameleon import template
+from starlette import status
+from starlette.requests import Request
+
+from services import episode_service
+
+from viewmodels.episodes.episodes_viewmodel import EpisodeEntryViewModel
 
 router = fastapi.APIRouter()
 
@@ -23,3 +31,21 @@ def all():
 @template(template_file="episodes/transcripts/episode0-transcript.pt")
 def all():
     return {}
+
+@router.post('/episodes/add-episode', include_in_schema=False)
+@template()
+async def register(request: Request):
+    vm = EpisodesViewModel(request)
+    await vm.load()
+
+    if vm.error:
+        return vm.to_dict()
+
+    # Create the account
+    account = await user_service.create_account(vm.username, vm.email, vm.password)
+
+    # Login user
+    response = fastapi.responses.RedirectResponse(url='/account', status_code=status.HTTP_302_FOUND)
+    # cookie_auth.set_auth(response, account.id)
+
+    return response
