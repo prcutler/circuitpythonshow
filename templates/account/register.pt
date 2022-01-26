@@ -8,10 +8,14 @@
             <form action="" method="POST" class="account-form">
                 <h1>Register</h1>
 
-                <input name="name" type="text" placeholder=" Username" class="form-control" value="${ name }" required>
-                <input name="password" minlength="5" type="password" placeholder=" Password" class="form-control" value="${ password }" required>
+            <input name="username" type="text" placeholder=" Your username" class="form-control" value="${ name }" required>
             <br />
-                <button type="submit" class="btn btn-danger">Register</button>
+            <input name="email" type="email" placeholder=" Your email address" class="form-control" value="${ email }" required>
+            <br />
+            <input name="password" minlength="5" type="password" placeholder=" Password" class="form-control" value="${ password }" required>
+            <!-- input name="age" type="number" min="18" max="120" placeholder=" Your age in years" style="display: block; width: 100%" required -->
+            <br />
+            <button type="submit" class="btn btn-danger">Register</button>
             <br />
             <br />
                 <div style="clear: both;"></div>
