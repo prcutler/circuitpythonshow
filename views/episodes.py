@@ -35,7 +35,7 @@ def all():
 @router.post('/episodes/add-episode', include_in_schema=False)
 @template()
 async def register(request: Request):
-    vm = EpisodesViewModel(request)
+    vm = EpisodeEntryViewModel(request)
     await vm.load()
 
     if vm.error:
