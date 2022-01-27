@@ -32,6 +32,13 @@ def all():
 def all():
     return {}
 
+########## ADD EPISODE ##############
+
+@router.get("/episodes/add_episode")
+@template(template_file="episodes/transcripts/add-episode.pt")
+def all():
+    return {}
+
 @router.post('/episodes/add-episode', include_in_schema=False)
 @template()
 async def register(request: Request):
@@ -42,10 +49,9 @@ async def register(request: Request):
         return vm.to_dict()
 
     # Create the account
-    account = await user_service.create_account(vm.username, vm.email, vm.password)
+    # account = await user_service.create_account(vm.username, vm.email, vm.password)
 
-    # Login user
-    response = fastapi.responses.RedirectResponse(url='/account', status_code=status.HTTP_302_FOUND)
+    response = fastapi.responses.RedirectResponse(url='/episodes/all_episodes', status_code=status.HTTP_302_FOUND)
     # cookie_auth.set_auth(response, account.id)
 
     return response

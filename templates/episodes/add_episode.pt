@@ -1,0 +1,38 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+<div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column ">
+
+        <div class="form-container">
+            <form action="" method="POST" class="account-form">
+                <h1>Add an Episode</h1>
+                <br />
+                <input name="season" type="text" placeholder=" Season Number"> class="form-control"
+                    value="${ season }" required><br />
+                <input name="episode_number" type="text" placeholder=" Episode Number"> class="form-control"
+                    value="${ episode_number }" required><br />
+
+                <input name="episode_title" type="text" placeholder=" Episode Title"> class="form-control" value="${ episode_title }" required><br />
+                <input name="youtube" type="text" placeholder=" YouTube Link"> class="form-control" value="${ youtube }" required><br />
+                <input name="first_name" type="text" placeholder=" Guest First Name"> class="form-control" value="${ guest_first_name }" required><br />
+                 <input name="last_name" type="text" placeholder=" Guest Last Name"> class="form-control" value="${ guest_last_name }" required><br />
+                <input name="topic" type="text" placeholder=" Topic"> class="form-control" value="${ topic }" required><br />
+                <input name="record_date" type="text" placeholder=" Recorded On"> class="form-control" value="${ record_date }" required><br />
+                <input name="publish_date" type="text" placeholder=" Published Date"> class="form-control" value="${ publish_date }" required><br />
+                <input name="guest_image" type="text" placeholder=" Guest Image"> class="form-control" value="${ guest_image }" required><br />
+                <input name="guest_bio" type="text" placeholder=" Guest Bio"> class="form-control" value="${ guest_bio }" required><br />
+                <input name="record_date" type="text" placeholder=" Recorded On"> class="form-control" value="${ record_date }" required><br />
+
+
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea> 
+
+        </form>
+        <div>
+        <button type="submit" class="btn btn-danger">Add Episode</button>
+        </div>
+        </div>
+        </div>
+
+    </div>
+</div>
