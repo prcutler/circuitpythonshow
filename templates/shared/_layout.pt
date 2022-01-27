@@ -74,7 +74,7 @@
                     <h5 class="text-uppercase">The CircuitPython Show</h5>
                     <p>
                         The CircuitPython Show is an independent podcast hosted and produced by 
-                        <a href = "https://paulcutler.org" > Paul Cutler</a>.  Made with <i class="fas fa-heart"></i> in Minnesota with 
+                        <a href = "https://paulcutler.org" > Paul Cutler</a>.  Made with <i class="fas fa-heart" style="color:red"></i> in Minnesota with 
                         <a href="https://fastapi.tiangolo.com/">FastAPI</a> and <a href="https://python.org/">Python</a>.
                     </p>
                 </div>
