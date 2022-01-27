@@ -1,9 +1,7 @@
-
 import datetime
 import sqlalchemy as sa
 
 from data.modelbase import SqlAlchemyBase
-
 
 class User(SqlAlchemyBase):
     __tablename__ = 'users'

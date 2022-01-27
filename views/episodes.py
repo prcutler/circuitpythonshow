@@ -7,7 +7,9 @@ from starlette.requests import Request
 
 from services import episode_service
 
-from viewmodels.episodes.episodes_viewmodel import EpisodeEntryViewModel
+from viewmodels.episodes.add_episode import EpisodeAddViewModel
+
+
 
 router = fastapi.APIRouter()
 
@@ -32,26 +34,28 @@ def all():
 def all():
     return {}
 
-########## ADD EPISODE ##############
+###########  ADD EPISODE  ##############
 
-@router.get("/episodes/add_episode")
-@template(template_file="episodes/transcripts/add-episode.pt")
-def all():
-    return {}
+@router.get('/episodes/add-episode', include_in_schema=False)
+@template(template_file="episodes/add-episode.pt")
+def register(request: Request):
+    vm = EpisodeAddViewModel(request)
+    return vm.to_dict()
+
 
 @router.post('/episodes/add-episode', include_in_schema=False)
 @template()
 async def register(request: Request):
-    vm = EpisodeEntryViewModel(request)
+    vm = EpisodeAddViewModel(request)
     await vm.load()
 
     if vm.error:
         return vm.to_dict()
 
-    # Create the account
-    # account = await user_service.create_account(vm.username, vm.email, vm.password)
+    # Add the episode
+    #episode = await episode.create_account(vm.season)
 
-    response = fastapi.responses.RedirectResponse(url='/episodes/all_episodes', status_code=status.HTTP_302_FOUND)
-    # cookie_auth.set_auth(response, account.id)
+    # Login user
+    response = fastapi.responses.RedirectResponse(url='/episodes/all', status_code=status.HTTP_302_FOUND)
 
     return response

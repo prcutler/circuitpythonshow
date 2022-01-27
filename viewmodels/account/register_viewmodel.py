@@ -17,8 +17,9 @@ class RegisterViewModel(ViewModelBase):
     async def load(self):
         form = await self.request.form()
         self.username = form.get('username')
-        self.password = form.get('password')
         self.email = form.get('email')
+        self.password = form.get('password')
+
 
         if not self.username or not self.username.strip():
             self.error = "Your username is required."
