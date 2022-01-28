@@ -24,7 +24,7 @@ def all():
 def all():
     return {}
 
-@router.get("/episodes/episodes/0/trailer")
+@router.get("/episodes/0/trailer")
 @template(template_file="episodes/episode0-trailer.pt")
 def all():
     return {}
