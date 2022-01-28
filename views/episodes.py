@@ -53,9 +53,12 @@ async def register(request: Request):
         return vm.to_dict()
 
     # Add the episode
-    #episode = await episode.create_account(vm.season)
+    episode = await episode_service.create_episode(vm.season, vm.episode_number, vm.episode_title, 
+                                                vm.youtube, vm.guest_first_name, vm.guest_last_name, vm.guest_bio,
+                                                vm.topic, vm.record_date, vm.publish_date, vm.guest_image, vm.sponsor1,
+                                                vm.sponsor2, vm.published)
 
-    # Login user
+    # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(url='/episodes/all', status_code=status.HTTP_302_FOUND)
 
     return response

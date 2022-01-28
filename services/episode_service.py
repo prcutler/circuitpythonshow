@@ -6,7 +6,7 @@ from sqlalchemy.future import select
 import datetime
 
 from data import db_session
-from data.user import Episode
+from data.episode import Episode
 
 async def create_episode(season: int, episode_number: int, episode_title: str, youtube: str, 
                          first_name: str, last_name: str, topic: str, record_date: datetime.datetime,
