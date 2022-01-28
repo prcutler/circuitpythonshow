@@ -21,6 +21,7 @@ class EpisodeAddViewModel(ViewModelBase):
         self.publish_date: Optional[str] = None
         self.guest_image: Optional[str] = None
         self.guest_bio: Optional[str] = None
+        self.show_notes: Optional[str] = None
         self.sponsor1: Optional[str] = None
         self.sponsor2: Optional[str] = None
         self.published: Optional[str] = None
@@ -38,6 +39,7 @@ class EpisodeAddViewModel(ViewModelBase):
         self.publish_date = form.get('publish_date')
         self.guest_image = form.get('guest_image')
         self.guest_bio = form.get('guest_bio')
+        self.show_notes = form.get('show_notes')
         self.sponsor1 = form.get('sponsor1')
         self.sponsor2 = form.get('sponsor2')
         self.published = form.get('published')
