@@ -43,7 +43,7 @@ async def login_user(email: str, password: str) -> Optional[User]:
         except ValueError:
             return None
 
-        return 
+        return
 
 
 async def get_user_by_id(user_id: int) -> Optional[User]:

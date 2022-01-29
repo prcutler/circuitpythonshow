@@ -16,10 +16,9 @@ class RegisterViewModel(ViewModelBase):
 
     async def load(self):
         form = await self.request.form()
-        self.username = form.get('username')
-        self.email = form.get('email')
-        self.password = form.get('password')
-
+        self.username = form.get("username")
+        self.email = form.get("email")
+        self.password = form.get("password")
 
         if not self.username or not self.username.strip():
             self.error = "Your username is required."
@@ -28,4 +27,4 @@ class RegisterViewModel(ViewModelBase):
         elif not self.password or len(self.password) < 5:
             self.error = "Your password is required and must be at 5 characters."
         elif await user_service.get_user_by_email(self.email):
-           self.error = "That email is already taken. Log in instead?"
+            self.error = "That email is already taken. Log in instead?"

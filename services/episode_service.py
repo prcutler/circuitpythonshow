@@ -8,30 +8,45 @@ import datetime
 from data import db_session
 from data.episode import Episode
 
-async def create_episode(season: int, episode_number: int, episode_title: str, youtube: str, 
-                         first_name: str, last_name: str, topic: str, record_date: datetime.datetime,
-                         publish_date: datetime.datetime, guest_image: str, guest_bio: str, sponsor_1: str, 
-                         sponsor_2: str, published: bool):
+
+async def create_episode(
+    season: int,
+    episode_number: int,
+    episode_title: str,
+    youtube_url: str,
+    guest_firstname: str,
+    guest_lastname: str,
+    topic: str,
+    record_date: str,
+    publish_date: str,
+    guest_image: str,
+    guest_bio: str,
+    sponsor_1: str,
+    sponsor_2: str,
+    published: int,
+    show_notes: str,
+) -> Episode:
+
     episode = Episode()
-    
-    create_episode.season = season
-    create_episode.episode_number = episode_number
-    create_episode.episode_title = episode_title
-    create_episode.youtube = youtube
-    create_episode.first_name = first_name
-    create_episode.last_name = last_name
-    create_episode.topic = topic
-    create_episode.record_date = record_date
-    create_episode.publish_date = publish_date
-    create_episode.guest_image = guest_image
-    create_episode.guest_bio = guest_bio
-    create_episode.sponsor_1 = sponsor_1
-    create_episode.sponsor_2 = sponsor_2
-    create_episode.published = published
-    
+
+    episode.season = season
+    episode.episode_number = episode_number
+    episode.episode_title = episode_title
+    episode.youtube_url = youtube_url
+    episode.guest_firstname = guest_firstname
+    episode.guest_lastname = guest_lastname
+    episode.topic = topic
+    episode.record_date = record_date
+    episode.publish_date = publish_date
+    episode.guest_image = guest_image
+    episode.guest_bio = guest_bio
+    episode.sponsor_1 = sponsor_1
+    episode.sponsor_2 = sponsor_2
+    episode.published = published
+    episode.show_notes = show_notes
+
     async with db_session.create_async_session() as session:
         session.add(episode)
         await session.commit()
-        
-    return episode
 
+    return episode
