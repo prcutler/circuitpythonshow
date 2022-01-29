@@ -40,8 +40,8 @@ class EpisodeAddViewModel(ViewModelBase):
         self.publish_date = form.get("publish_date")
         self.guest_image = form.get("guest_image")
         self.guest_bio = form.get("guest_bio")
-        self.sponsor1 = form.get("sponsor_1")
-        self.sponsor2 = form.get("sponsor_2")
+        self.sponsor_1 = form.get("sponsor_1")
+        self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")
         self.show_notes = form.get("show_notes")
 
