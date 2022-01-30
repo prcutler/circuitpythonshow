@@ -1,0 +1,53 @@
+<div metal:use-macro="load: ../../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+            <h2>The CircuitPython Season 1 Trailer</h2>
+                        <p class="fs-6">Episode 0, published Tuesday, January 25th, 2022.  </p>
+                        <p>
+                        <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
+                        <iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" seamless 
+                        src="https://player.captivate.fm/episode/69f3195d-2164-4633-999b-4ccc0f7ee679"></iframe></div>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+        <h2>Transcript</h2>
+            <p>
+
+                Welcome to The CIrcuitPython Show, an independent podcast hosted by me, Paul Cutler.  Each episode I'll have 
+                an interview with someone in or around the CIrcuitPython community.  In Season 1 I'll be talking to Kattni Rembor,
+                Professor John Gallaugher, Tod Kurt and more guests to be announced.  Season One of The CircuitPython Show 
+                starts the first week of March.  You can find more information about the show at 
+                <a href="https://circuitpythonshow.com/">circuitpythonshow.com</a> or follow the show on Twitter at 
+                <a href="https://twitter.com/CircuitPyShow">@CircuitPyShow</a>.  Use your favorite podcast app and hit subscribe today!
+            </p>
+                <br />
+                <br />
+                    </div>
+                </div>
+            </div>
+                
+            </div>
+        </section>
+
+            </div>
+        </div>
+
+
+            
