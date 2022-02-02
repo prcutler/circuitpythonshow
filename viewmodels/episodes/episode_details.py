@@ -29,7 +29,8 @@ class EpisodeDetailsViewModel(ViewModelBase):
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
         self.show_notes: Optional[str] = None
-
+        self.episode_length: Optional[str] = None
+        
     async def load(self):
         self.episode_number = await episode_service.latest_episode_id(self.episode_number)
   

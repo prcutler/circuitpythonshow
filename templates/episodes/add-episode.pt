@@ -52,6 +52,9 @@
             Show Notes: <input name="show_notes" type="text" placeholder=" Show Notes"" 
             class="form-control" value="${ show_notes }" required><br />
 
+            Show Notes: <input name="episode_length" type="text" placeholder=" Episode Length"" 
+            class="form-control" value="${ episode_length }" required><br />
+
 
             <br />
             <button type="submit" class="btn btn-danger">Add Episode</button>
