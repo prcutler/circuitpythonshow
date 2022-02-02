@@ -1,5 +1,6 @@
-from typing import Optional
+from typing import List, Optional
 
+import sqlalchemy.orm
 from sqlalchemy import func
 from sqlalchemy.future import select
 
@@ -50,3 +51,25 @@ async def create_episode(
         await session.commit()
 
     return episode
+
+
+async def latest_episodes(limit: int = 5) -> List[Episode]:
+    async with db_session.create_async_session() as session:
+        query = select(Episode) \
+            .options(
+            sqlalchemy.orm.joinedload(Episode.Episode)) \
+            .order_by(Episode.created_date.desc()) \
+            .limit(limit)
+
+        results = await session.execute(query)
+        episodes = results.scalars()
+
+        return list({r.episode for r in episodes})
+    
+    
+    async def get_episode_by_id(episode_name: str) -> Optional[Episode]:
+        async with db_session.create_async_session() as session:
+            query = select(Episode).filter(Episode.id == episode_name)
+            result = await session.execute(query)
+
+            return result.scalar_one_or_none()
