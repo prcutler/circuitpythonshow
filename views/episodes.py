@@ -62,3 +62,7 @@ async def register(request: Request):
     response = fastapi.responses.RedirectResponse(url='/episodes/all', status_code=status.HTTP_302_FOUND)
 
     return response
+
+
+################# EPISODE DETAILS #####################
+
