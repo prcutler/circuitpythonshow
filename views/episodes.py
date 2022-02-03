@@ -56,7 +56,8 @@ async def register(request: Request):
     episode = await episode_service.create_episode(vm.season, vm.episode_number, vm.episode_title, 
                                                 vm.youtube_url, vm.guest_firstname, vm.guest_lastname, vm.topic,
                                                 vm.record_date, vm.publish_date, vm.guest_image, vm.guest_bio,
-                                                vm.sponsor_1, vm.sponsor_2, vm.published, vm.show_notes)
+                                                vm.sponsor_1, vm.sponsor_2, vm.published, vm.show_notes,
+                                                vm.episode_length)
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(url='/episodes/all', status_code=status.HTTP_302_FOUND)
