@@ -11,7 +11,7 @@
                     <div class="about-content">
                         <h2>Podcast Episodes</h2>
                         <hr class="divider about-divider">
-                        <p><a href="episodes/0/trailer">Season 1 Trailer</a></p>
+                        <p><a href="/episodes/0/trailer">Season 1 Trailer</a></p>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
