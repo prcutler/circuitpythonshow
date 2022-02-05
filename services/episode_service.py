@@ -69,29 +69,29 @@ async def latest_episodes(limit: int = 5) -> List[Episode]:
         return list({r.episode for r in episodes})
     
     
-    ### GET ALL EPISODES ###
-    
-    async def get_episode_by_id() -> Optional[Episode]:
-        async with db_session.create_async_session() as session:
-            query = select(Episode).filter(Episode.id).order_by(Episode.id.desc())
-            result = await session.execute(query)
+### GET ALL EPISODES ###
 
-            
-            results = await session.execute(query)
-            episodes = results.scalar()
-            
-            print(episodes, type(episodes))
-            return episodes
+async def get_episode_by_id() -> Optional[Episode]:
+    async with db_session.create_async_session() as session:
+        query = select(Episode).filter(Episode.id).order_by(Episode.id.desc())
+        result = await session.execute(query)
+
+        
+        results = await session.execute(query)
+        episodes = results.scalar()
+        
+        print(episodes, type(episodes))
+        return episodes
         
         
-    #### GET EPISODE COUNT ####
+#### GET EPISODE COUNT ####
     
-    async def get_episode_count() -> int:
-        async with db_session.create_async_session() as session:
-            query = select([func.count(Episode.id)])
-            result = await session.execute(query)
-            
-            print("Result: ", result.scalar())
-            return result.scalar()
+async def get_episode_count() -> int:
+    async with db_session.create_async_session() as session:
+        query = select(func.count(Episode.id))
+        result = await session.execute(query)
+        
+        print("Result: ", result.scalar())
+        return result.scalar()
         
         

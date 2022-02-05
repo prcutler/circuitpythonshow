@@ -11,7 +11,7 @@
                     <div class="about-content">
                         <h2>Podcast Episodes</h2>
                         <hr class="divider about-divider">
-                        <p>There have been  episodes published so far.</p>
+                        <p>There have been ${episode_count} episodes published so far.</p>
                         <p><a href="/episodes/0/trailer">{id}</a></p>
                     </div>
                 </div>

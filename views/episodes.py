@@ -8,22 +8,28 @@ from starlette.requests import Request
 from services import episode_service
 
 from viewmodels.episodes.add_episode import EpisodeAddViewModel
-
+from viewmodels.episodes.all_episodes import IndexViewModel
+from viewmodels.shared.viewmodel import ViewModelBase
 
 
 router = fastapi.APIRouter()
 
 
+#### SHOW ALL EPISODES ####
 @router.get("/episodes/all")
 @template(template_file="episodes/all.pt")
-def all():
-    return {}
+async def all(request: Request):
+    vm = IndexViewModel(request)
+    await vm.load
+    return vm.to_dict()
 
+#### EPISODE DETAIL TEMPLATE ####
 @router.get("/episodes/episode-template")
 @template(template_file="episodes/episode-template.pt")
 def all():
     return {}
 
+#### TEMP FILES UNTIL DONE ####
 @router.get("/episodes/0/trailer")
 @template(template_file="episodes/episode0-trailer.pt")
 def all():
@@ -64,6 +70,4 @@ async def register(request: Request):
 
     return response
 
-
-################# EPISODE DETAILS #####################
 
