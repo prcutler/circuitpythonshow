@@ -71,9 +71,9 @@ async def latest_episodes(limit: int = 5) -> List[Episode]:
     
     ### GET ALL EPISODES ###
     
-    async def get_episode_by_id(episode_name: str) -> Optional[Episode]:
+    async def get_episode_by_id() -> Optional[Episode]:
         async with db_session.create_async_session() as session:
-            query = select(Episode).filter(Episode.id == episode_name)
+            query = select(Episode).filter(Episode.id).order_by(Episode.id.desc())
             result = await session.execute(query)
 
             
@@ -82,3 +82,16 @@ async def latest_episodes(limit: int = 5) -> List[Episode]:
             
             print(episodes, type(episodes))
             return episodes
+        
+        
+    #### GET EPISODE COUNT ####
+    
+    async def get_episode_count() -> int:
+        async with db_session.create_async_session() as session:
+            query = select([func.count(Episode.id)])
+            result = await session.execute(query)
+            
+            print("Result: ", result.scalar())
+            return result.scalar()
+        
+        
