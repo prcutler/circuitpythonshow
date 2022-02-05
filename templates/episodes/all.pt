@@ -12,6 +12,7 @@
                         <h2>Podcast Episodes</h2>
                         <hr class="divider about-divider">
                         <p>There have been ${episode_count} episodes published so far.</p>
+                        <table class="table table-striped"></table>
                         <p><a href="/episodes/0/trailer">{id}</a></p>
                     </div>
                 </div>
