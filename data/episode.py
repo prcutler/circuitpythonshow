@@ -9,7 +9,7 @@ class Episode(SqlAlchemyBase):
 
     __tablename__ = "episodes"
 
-    id: str = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
+    id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
 
     season: int = sa.Column(sa.Integer)
     episode_number: int = sa.Column(sa.Integer)
@@ -27,3 +27,5 @@ class Episode(SqlAlchemyBase):
     published: int = sa.Column(sa.Integer)
     show_notes: str = sa.Column(sa.String)
     episode_length: str = sa.Column(sa.String)
+    
+    
