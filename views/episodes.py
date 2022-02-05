@@ -1,5 +1,3 @@
-import asyncio
-
 import fastapi
 from fastapi_chameleon import template
 from starlette import status
@@ -8,7 +6,7 @@ from starlette.requests import Request
 from services import episode_service
 
 from viewmodels.episodes.add_episode import EpisodeAddViewModel
-from viewmodels.episodes.all_episodes import IndexViewModel
+from viewmodels.episodes.all_episodes import AllEpisodesViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
 
 
@@ -19,8 +17,9 @@ router = fastapi.APIRouter()
 @router.get("/episodes/all")
 @template(template_file="episodes/all.pt")
 async def all(request: Request):
-    vm = IndexViewModel(request)
-    await vm.load
+    vm = AllEpisodesViewModel(request)
+    print("Loading viewmodel")
+    await vm.load()
     return vm.to_dict()
 
 #### EPISODE DETAIL TEMPLATE ####

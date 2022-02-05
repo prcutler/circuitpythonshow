@@ -6,7 +6,7 @@ from services import episode_service
 from data.episode import Episode
 
 
-class IndexViewModel(ViewModelBase):
+class AllEpisodesViewModel(ViewModelBase):
     def __init__(self, request: Request):
         super().__init__(request)
         
@@ -17,5 +17,5 @@ class IndexViewModel(ViewModelBase):
     async def load(self):
         
         #self.episode_list = await episode_service.get_episode_by_id()
-
+        print("Loading...")
         self.episode_count: int = await episode_service.get_episode_count()
