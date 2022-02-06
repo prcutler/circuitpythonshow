@@ -13,12 +13,11 @@ async def user_count() -> int:
         query = select(func.count(User.id))
         result = await session.execute(query)
         return result.scalar()
-
-
-async def create_account(username: str, email: str, password: str) -> User:
+    
+    
+async def create_account(email: str, password: str) -> User:
     user = User()
     user.email = email
-    user.username = username
     user.hash_password = crypto.hash(password, rounds=172_434)
 
     async with db_session.create_async_session() as session:
@@ -43,7 +42,7 @@ async def login_user(email: str, password: str) -> Optional[User]:
         except ValueError:
             return None
 
-        return
+        return user
 
 
 async def get_user_by_id(user_id: int) -> Optional[User]:
@@ -60,3 +59,4 @@ async def get_user_by_email(email: str) -> Optional[User]:
         result = await session.execute(query)
 
         return result.scalar_one_or_none()
+
