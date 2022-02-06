@@ -55,33 +55,21 @@ async def create_episode(
     return episode
 
 
-async def latest_episodes(limit: int = 5) -> List[Episode]:
+    
+    
+### GET LIST OF ALL EPISODES ###
+
+async def latest_episodes() -> List[Episode]:
     async with db_session.create_async_session() as session:
-        query = select(Episode) \
-            .options(
-            sqlalchemy.orm.joinedload(Episode.Episode)) \
-            .order_by(Episode.created_date.desc()) \
-            .limit(limit)
+        query = select(Episode).order_by(Episode.episode_number.desc())
 
         results = await session.execute(query)
         episodes = results.scalars()
+        print("Episodes: ", episodes, type(episodes))
 
-        return list({r.episode for r in episodes})
-    
-    
-### GET ALL EPISODES ###
-
-async def get_episode_by_id() -> Optional[Episode]:
-    async with db_session.create_async_session() as session:
-        query = select(Episode).filter(Episode.id).order_by(Episode.id.desc())
-        
-        results = await session.execute(query)
-        episodes = results.scalar()
-        
-        print(episodes, type(episodes))
         return episodes
-        
-        
+    
+
 #### GET EPISODE COUNT ####
     
 async def get_episode_count() -> int:
