@@ -23,7 +23,7 @@
                             </tr>
                             <span>
                             <tr tal:repeat = "e episodes">
-                                <td>${e.episode_number}</td>
+                                <td><a href="${e.episode_number}">${e.episode_number}</a></td>
                                 <td>${e.guest_firstname} ${e.guest_lastname}</td>
                                 <td>${e.publish_date}</td>
                                 <td>${e.episode_length}</td>
