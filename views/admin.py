@@ -7,16 +7,29 @@ from services import episode_service
 
 from viewmodels.admin.add_episode import EpisodeAddViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
+from viewmodels.admin.admin_viewmodel import AdminViewModel
 
 router = fastapi.APIRouter()
 
 
-###########  ADD EPISODE  ##############
+###########  ADMIN HOMEPAGE ##############
 
 @router.get("/admin/index")
 @template(template_file="admin/index.pt")
-def all():
-    return {}
+async def index(request: Request):
+    vm = AdminViewModel(request)
+    await vm.load()
+    
+    print(vm.user)
+    if vm.user == None:
+        return fastapi.responses.RedirectResponse(url='/about', status_code=status.HTTP_302_FOUND)
+    
+    else:
+            
+        return vm.to_dict()
+
+
+###########  ADD EPISODE ##############
 
 @router.get('/admin/add-episode', include_in_schema=False)
 @template(template_file="admin/add-episode.pt")

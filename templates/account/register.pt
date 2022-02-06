@@ -8,8 +8,6 @@
             <form action="" method="POST" class="account-form">
                 <h1>Register</h1>
 
-            <input name="username" type="text" placeholder=" Your username" class="form-control" value="${ name }" required>
-            <br />
             <input name="email" type="email" placeholder=" Your email address" class="form-control" value="${ email }" required>
             <br />
             <input name="password" minlength="5" type="password" placeholder=" Password" class="form-control" value="${ password }" required>

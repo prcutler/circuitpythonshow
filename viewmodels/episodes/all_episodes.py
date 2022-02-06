@@ -16,6 +16,6 @@ class AllEpisodesViewModel(ViewModelBase):
         
     async def load(self):
         
-        print("Loading all viemodel...")
+        print("Loading all viewmodel...")
         self.episodes = await episode_service.latest_episodes()
         self.episode_count: int = await episode_service.get_episode_count()
