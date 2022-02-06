@@ -25,7 +25,6 @@ class Episode(SqlAlchemyBase):
     sponsor_1: str = sa.Column(sa.String)
     sponsor_2 = sa.Column(sa.String)
     published: int = sa.Column(sa.Integer)
-    show_notes: str = sa.Column(sa.String)
     episode_length: str = sa.Column(sa.String)
     
     

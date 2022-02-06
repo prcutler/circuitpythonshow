@@ -13,9 +13,7 @@ class EpisodeDetailsViewModel(ViewModelBase):
         super().__init__(request)
 
         self.season: Optional[int] = None
-        
         self.episode_number: Optional[int] = episode_id
-        
         self.episode_title: Optional[str] = None
         self.youtube_url: Optional[str] = None
         self.guest_firstname: Optional[str] = None
@@ -28,7 +26,6 @@ class EpisodeDetailsViewModel(ViewModelBase):
         self.sponsor_1: Optional[str] = None
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
-        self.show_notes: Optional[str] = None
         self.episode_length: Optional[str] = None
         
     async def load(self):

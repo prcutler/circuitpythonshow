@@ -20,11 +20,13 @@ async def all(request: Request):
     await vm.load()
     return vm.to_dict()
 
+
 #### EPISODE DETAIL TEMPLATE ####
 @router.get("/episodes/{episode_number}")
 @template(template_file="episodes/episode-template.pt")
 def all():
     return {}
+
 
 #### TEMP FILES UNTIL DONE ####
 @router.get("/episodes/0/trailer")
@@ -32,8 +34,8 @@ def all():
 def all():
     return {}
 
+
 @router.get("/episodes/0/transcripts/episode0-transcript")
 @template(template_file="episodes/transcripts/episode0-transcript.pt")
 def all():
     return {}
-

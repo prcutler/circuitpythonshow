@@ -25,7 +25,6 @@ async def create_episode(
     sponsor_1: str,
     sponsor_2: str,
     published: int,
-    show_notes: str,
     episode_length: str
 ) -> Episode:
 
@@ -45,7 +44,6 @@ async def create_episode(
     episode.sponsor_1 = sponsor_1
     episode.sponsor_2 = sponsor_2
     episode.published = published
-    episode.show_notes = show_notes
     episode.episode_length = episode_length
 
     async with db_session.create_async_session() as session:
