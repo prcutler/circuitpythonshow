@@ -24,6 +24,8 @@ class EpisodeDetailsViewModel(ViewModelBase):
         # self.guest_lastname: Optional[str] = None
         # self.guest_biography: Optional[str] = None
         
+        self.episode_count: int = 0
+                
         
     async def load(self, episode_number):
     
@@ -33,4 +35,6 @@ class EpisodeDetailsViewModel(ViewModelBase):
   
        self.topic = await episode_service.get_episode_topic(self.episode_number)
        print("Topic: ", self.topic)
+       
+       self.episode_count: int = await episode_service.get_episode_count()
     
