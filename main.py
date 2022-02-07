@@ -8,6 +8,10 @@ from starlette.staticfiles import StaticFiles
 from data import db_session
 from views import account, home, episodes, admin
 
+from pydantic import BaseModel
+from beanie import Document, Indexed, init_beanie
+import motor.motor_asyncio
+
 app = fastapi.FastAPI()
 
 
@@ -21,12 +25,10 @@ def configure():
     configure_routes()
     configure_db(dev_mode=True)
     
-
-def configure_db(dev_mode: bool):
+def  configure_db(dev_mode: bool):
     file = (Path(__file__).parent / 'db' / 'cps_db.sqlite').absolute()
     db_session.global_init(file.as_posix())
-
-
+    
 def configure_templates():
     fastapi_chameleon.global_init("templates")
 

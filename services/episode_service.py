@@ -67,12 +67,36 @@ async def latest_episodes() -> List[Episode]:
 
         return episodes
     
+    
+### GET EPISODE INFO BY ID ###
+
+async def get_episode_info(episode_id) -> (Episode):
+    async with db_session.create_async_session() as session:
+        query = select(Episode).filter(Episode.episode_number == episode_id).order_by(Episode.episode_number.desc())
+
+        results = await session.execute(query)
+        episode_info = results.scalars()
+        # print("Episodes: ", episodes, type(episodes))
+
+        return episode_info
+    
 
 #### GET EPISODE COUNT ####
     
 async def get_episode_count() -> int:
     async with db_session.create_async_session() as session:
         query = select(func.count(Episode.id).filter(Episode.published == 1))
+        result = await session.execute(query)
+        
+        # print("Result: ", type(result.scalar), result.scalar())
+
+        return  result.scalar()
+    
+    
+#### GET THE EPISODE TOPIC ####
+async def get_episode_topic(episode_number) -> str:
+    async with db_session.create_async_session() as session:
+        query = select(Episode).filter(Episode.episode_number == episode_number)
         result = await session.execute(query)
         
         # print("Result: ", type(result.scalar), result.scalar())

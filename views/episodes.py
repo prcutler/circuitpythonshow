@@ -5,7 +5,8 @@ from starlette.requests import Request
 
 from services import episode_service
 
-from viewmodels.episodes.all_episodes import AllEpisodesViewModel
+from viewmodels.episodes.all_episodes_list_viewmodel import AllEpisodesViewModel
+from viewmodels.episodes.episode_details_viewmodel import EpisodeDetailsViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
 
 router = fastapi.APIRouter()
@@ -14,8 +15,8 @@ router = fastapi.APIRouter()
 #### SHOW ALL EPISODES ####
 @router.get("/episodes/all")
 @template(template_file="episodes/all.pt")
-async def all(request: Request):
-    vm = AllEpisodesViewModel(request)
+async def all(self, episode_number, request: Request):
+    vm = AllEpisodesViewModel(episode_number, request)
     print("Loading viewmodel")
     await vm.load()
     return vm.to_dict()
@@ -23,9 +24,12 @@ async def all(request: Request):
 
 #### EPISODE DETAIL TEMPLATE ####
 @router.get("/episodes/{episode_number}")
-@template(template_file="episodes/episode-template.pt")
-def all():
-    return {}
+@template(template_file="episodes/episode-detail.pt")
+async def details(episode_number, request: Request):
+    vm = EpisodeDetailsViewModel(episode_number, request)
+    await vm.load(episode_number)
+
+    return vm.to_dict()
 
 
 #### TEMP FILES UNTIL DONE ####
