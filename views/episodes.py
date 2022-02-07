@@ -15,8 +15,8 @@ router = fastapi.APIRouter()
 #### SHOW ALL EPISODES ####
 @router.get("/episodes/all")
 @template(template_file="episodes/all.pt")
-async def all(self, episode_number, request: Request):
-    vm = AllEpisodesViewModel(episode_number, request)
+async def all(request: Request):
+    vm = AllEpisodesViewModel(request)
     print("Loading viewmodel")
     await vm.load()
     return vm.to_dict()
