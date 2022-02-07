@@ -32,4 +32,5 @@ class EpisodeDetailsViewModel(ViewModelBase):
        #self.publish_date = await episode_service.get_publish_date(self.episode_number)
   
        self.topic = await episode_service.get_episode_topic(self.episode_number)
+       print("Topic: ", self.topic)
     
