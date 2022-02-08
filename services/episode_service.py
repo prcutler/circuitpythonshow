@@ -8,6 +8,7 @@ import datetime
 
 from data import db_session
 from data.episode import Episode
+from data.show_notes import ShowNotes
 
 
 async def create_episode(
@@ -147,4 +148,48 @@ async def get_episode_topic(episode_number) -> str:
 
         return  result.scalar()
         
-        
+#### ADD SHOW NOTES ####
+async def create_show_notes(
+    season: int,
+    episode_number: int,
+    timestamp_1: int,
+    notes_1: str,
+    timestamp_2: int,
+    notes_2: str,
+    timestamp_3: int,
+    notes_3: str,
+    timestamp_4: int,
+    notes_4: str,
+    timestamp_5: int,
+    notes_5: str,
+    timestamp_6: int,
+    notes_6: str,
+    timestamp_7: int,
+    notes_7: str,
+    timestamp_8: int,
+    notes_8: str,
+    timestamp_9: int,
+    notes_9: str,
+    timestamp_10: int,
+    notes_10: str,
+    timestamp_11: int,
+    notes_11: str,
+    timestamp_12: int,
+    notes_12: str
+    
+    
+    
+) -> ShowNotes:
+
+    shownotes = ShowNotes()
+
+    shownotes.season = season
+    shownotes.episode_number = episode_number
+    shownotes.timestamp_1 = timestamp_1
+    shownotes.notes_1 = notes_1
+
+    async with db_session.create_async_session() as session:
+        session.add(shownotes)
+        await session.commit()
+
+    return shownotes
