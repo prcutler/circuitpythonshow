@@ -13,8 +13,8 @@ async def user_count() -> int:
         query = select(func.count(User.id))
         result = await session.execute(query)
         return result.scalar()
-    
-    
+
+
 async def create_account(email: str, password: str) -> User:
     user = User()
     user.email = email
@@ -59,4 +59,3 @@ async def get_user_by_email(email: str) -> Optional[User]:
         result = await session.execute(query)
 
         return result.scalar_one_or_none()
-

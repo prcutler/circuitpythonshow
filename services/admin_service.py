@@ -9,22 +9,21 @@ from data import db_session
 from data.user import User
 
 
-
 async def get_login_status(user_id) -> int:
     async with db_session.create_async_session() as session:
         query = select(User).filter(User.id == user_id)
         result = await session.execute(query)
 
         return result.scalar_one_or_none()
-    
+
 
 async def user_count() -> int:
     async with db_session.create_async_session() as session:
         query = select(func.count(User.id))
         result = await session.execute(query)
         return result.scalar()
-    
-    
+
+
 async def create_account(email: str, password: str) -> User:
     user = User()
     user.email = email
