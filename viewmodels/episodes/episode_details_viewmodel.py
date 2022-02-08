@@ -15,18 +15,14 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.episode_number: Optional[int] = episode_number
         # print(self.episode_number)
-        self.episode_info: List[Episode] = []    
-
         self.topic: Optional[str] = None
         
         self.publish_date: Optional[str] = None
-        # self.guest_firstname: Optional[str] = None
-        # self.guest_lastname: Optional[str] = None
-        # self.guest_biography: Optional[str] = None
+        self.record_date: Optional[str] = None
         
-        self.episode_count: int = 0
-        
+   
         self.episode_info = []
+        self.episode_length = "0"
                 
         
     async def load(self, episode_number):
@@ -38,7 +34,7 @@ class EpisodeDetailsViewModel(ViewModelBase):
        self.topic = await episode_service.get_episode_topic(self.episode_number)
        print("Topic: ", self.topic)
        
-       self.episode_count: int = await episode_service.get_episode_count()
-       
        self.episode_info = await episode_service.get_episode_info(self.episode_number)
+       self.episode_length = await episode_service.get_episode_length(self.episode_number)
+       print("Viewmodel conversion: ", self.episode_length)
     

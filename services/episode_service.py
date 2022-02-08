@@ -53,9 +53,7 @@ async def create_episode(
     return episode
 
 
-    
-    
-### GET LIST OF ALL EPISODES ###
+ ### GET LIST OF ALL EPISODES ###
 
 async def latest_episodes() -> List[Episode]:
     async with db_session.create_async_session() as session:
@@ -80,6 +78,21 @@ async def get_episode_info(episode_id) -> (Episode):
 
         return episode_info
     
+    
+async def get_episode_length(episode_number) -> int:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.episode_length).filter(Episode.episode_number == episode_number)
+        result = await session.execute(query)
+        
+        results_seconds =  result.scalar()
+        def convert(results_seconds):
+            string_result = str(datetime.timedelta(seconds = results_seconds))
+            print("Conversion: ", string_result)
+          
+            return string_result
+        
+        conversion_time = convert(results_seconds)
+        return conversion_time        
 
 #### GET EPISODE COUNT ####
     
