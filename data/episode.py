@@ -27,5 +27,3 @@ class Episode(SqlAlchemyBase):
     published: int = sa.Column(sa.Integer)
     episode_length: int = sa.Column(sa.Integer)
     captivate_url: str = sa.Column(sa.String, nullable=True)
-    
-    
