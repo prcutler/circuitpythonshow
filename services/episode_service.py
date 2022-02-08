@@ -93,6 +93,35 @@ async def get_episode_length(episode_number) -> int:
         
         conversion_time = convert(results_seconds)
         return conversion_time        
+    
+#### GET EPISODE PUBLISH AND RECORDED DATES ####
+async def get_publish_date(episode_number) -> int:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.publish_date).filter(Episode.episode_number == episode_number)
+        result = await session.execute(query)
+        
+    publish_results = result.scalar()
+    format = "%Y%m%d"
+    results_datetime = datetime.datetime.strptime(publish_results, format)
+    print(results_datetime)
+    
+    format_time = results_datetime.strftime('%B %d %Y')
+    
+    return format_time
+
+async def get_record_date(episode_number) -> int:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.record_date).filter(Episode.episode_number == episode_number)
+        result = await session.execute(query)
+        
+        publish_results = result.scalar()
+    format = "%Y%m%d"
+    results_datetime = datetime.datetime.strptime(publish_results, format)
+    print(results_datetime)
+    
+    record_time = results_datetime.strftime('%B %d %Y')
+    
+    return record_time
 
 #### GET EPISODE COUNT ####
     
