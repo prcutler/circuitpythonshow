@@ -7,24 +7,20 @@
                 <div class="col-lg-6">
                     <div class="about-content">
 
-            <h2>In Conversation with ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
-                        <p class="fs-6">Episode  ${episode_info.episode_number}, published Friday, January 21st, recorded ${episode_info.publish_date}.  </p>
-                        <p>There have been ${episode_count} episodes published so far.</p>
-                        <p>
-                <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">
-                <iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" seamless 
-                src="https://player.captivate.fm/episode/69f3195d-2164-4633-999b-4ccc0f7ee679"></iframe></div>
-</p>
+            <h2>Episode  ${episode_info.episode_number} with Guest ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
+                        <br />
+                        <p>Topic: ${topic.topic} </p>
+                        <p>YouTube link: ${episode_info.youtube_url}</p>
+                        <p>Guest: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
+                        <p>Guest Bio: ${episode_info.guest_bio}</p>
+                        <p>Episode length: ${episode_info.episode_length}</p>
+                    
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
                         <img src="/static/img/cps-tagline-500.png" class="img-thumbnail" alt="CircuitPython Show logo">
                     </div>
-                    <p class="text-white">
-                    I'm called Kattni, and I am, among other things, a mentor, maker, open source community leader, 
-                    technical writer, and embedded software developer. 
-                    </p>
                 </div>
             </div>
         </div>
