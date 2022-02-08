@@ -14,7 +14,6 @@ class TranscriptAddViewModel(ViewModelBase):
         self.episode_number: Optional[int] = None
         self.transcript_1: Optional[str] = None
         self.transcript_2: Optional[int] = None
-      
 
     async def load(self):
         form = await self.request.form()
@@ -23,8 +22,6 @@ class TranscriptAddViewModel(ViewModelBase):
         self.episode_number = form.get("episode_number")
         self.transcript_1 = form.get("transcript_1")
         self.transcript_2 = form.get("transcript_2")
-
-
 
         if not self.season or not self.season.strip():
             self.error = "The season is required."

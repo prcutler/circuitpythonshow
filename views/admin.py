@@ -21,7 +21,7 @@ router = fastapi.APIRouter()
 @template(template_file="admin/index.pt")
 async def index(request: Request):
     vm = AdminViewModel(request)
-    
+
     await vm.load()
 
     print(vm.user)
@@ -71,7 +71,7 @@ async def register(request: Request):
         vm.sponsor_2,
         vm.published,
         vm.episode_length,
-        vm.captivate_url
+        vm.captivate_url,
     )
 
     # Redirect to the episode page
@@ -80,6 +80,7 @@ async def register(request: Request):
     )
 
     return response
+
 
 ###########  EDIT EPISODE ##############
 
@@ -117,7 +118,7 @@ async def register(request: Request):
         vm.sponsor_2,
         vm.published,
         vm.episode_length,
-        vm.captivate_url
+        vm.captivate_url,
     )
 
     # Redirect to the episode page
@@ -126,6 +127,7 @@ async def register(request: Request):
     )
 
     return response
+
 
 ###########  ADD SHOWNOTES ##############
 
@@ -174,7 +176,6 @@ async def add_show_notes(request: Request):
         vm.timestamp_11,
         vm.notes_12,
         vm.timestamp_12,
-        
     )
 
     # Redirect to the episode page
@@ -183,6 +184,7 @@ async def add_show_notes(request: Request):
     )
 
     return response
+
 
 ###########  ADD Transcripts ##############
 @router.get("/admin/add-transcripts", include_in_schema=False)
@@ -207,7 +209,7 @@ async def add_transcripts(request: Request):
         vm.episode_number,
         vm.transcript_1,
         vm.transcript_2,
-        )
+    )
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(

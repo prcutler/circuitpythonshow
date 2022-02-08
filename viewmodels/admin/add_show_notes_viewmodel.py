@@ -36,7 +36,6 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.timestamp_11: Optional[int] = None
         self.notes_12: Optional[str] = None
         self.timestamp_12: Optional[int] = None
-        
 
     async def load(self):
         form = await self.request.form()
@@ -51,11 +50,11 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.timestamp_3 = form.get("timestamp_3")
         self.notes_4 = form.get("notes_4")
         self.timestamp_4 = form.get("timestamp_4")
-        self.notes_5  = form.get("notes_5")
+        self.notes_5 = form.get("notes_5")
         self.timestamp_5 = form.get("timestamp_5")
         self.notes_6 = form.get("notes_6")
         self.timestamp_6 = form.get("timestamp_6")
-        self.notes_7 = form.get("notes_7")  
+        self.notes_7 = form.get("notes_7")
         self.timestamp_7 = form.get("timestamp_7")
         self.notes_8 = form.get("notes_8")
         self.timestamp_8 = form.get("timestamp_8")
@@ -67,7 +66,6 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.timestamp_11 = form.get("timestamp_11")
         self.notes_12 = form.get("notes_12")
         self.timestamp_12 = form.get("timestamp_12")
-
 
         if not self.season or not self.season.strip():
             self.error = "The season is required."
