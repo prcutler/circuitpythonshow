@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab">
+                        <!-- img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab"-->
                     </div>
                 </div>
             </div>
