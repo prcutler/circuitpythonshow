@@ -47,7 +47,7 @@ async def create_episode(
     episode.sponsor_2 = sponsor_2
     episode.published = published
     episode.episode_length = episode_length
-    captivate_url = captivate_url
+    episode.captivate_url = captivate_url
 
     async with db_session.create_async_session() as session:
         session.add(episode)
@@ -97,7 +97,7 @@ async def get_episode_length(episode_number) -> int:
         conversion_time = convert(results_seconds)
         return conversion_time        
     
-#### GET EPISODE PUBLISH AND RECORDED DATES ####
+#### GET LAST EPISODE PUBLISH AND RECORDED DATES ####
 async def get_publish_date(episode_number) -> int:
     async with db_session.create_async_session() as session:
         query = select(Episode.publish_date).filter(Episode.episode_number == episode_number)
@@ -118,6 +118,7 @@ async def get_record_date(episode_number) -> int:
         result = await session.execute(query)
         
         publish_results = result.scalar()
+        
     format = "%Y%m%d"
     results_datetime = datetime.datetime.strptime(publish_results, format)
     print(results_datetime)
@@ -127,18 +128,39 @@ async def get_record_date(episode_number) -> int:
     return record_time
 
 #### GET EPISODE COUNT ####
-    
 async def get_episode_count() -> int:
     async with db_session.create_async_session() as session:
         query = select(func.count(Episode.id).filter(Episode.published == 1))
         result = await session.execute(query)
-        
-        # print("Result: ", type(result.scalar), result.scalar())
 
+        return  result.scalar()
+
+#### GET LAST GUEST NAMES ####
+async def get_guest_firstname() -> str:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.guest_firstname).filter(Episode.published == 1).order_by(Episode.episode_number.desc())
+        result = await session.execute(query)
+        
+        return result.scalar()
+    
+async def get_guest_lastname() -> str:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.guest_lastname).filter(Episode.published == 1).order_by(Episode.episode_number.desc())
+        result = await session.execute(query)
+        
+        return result.scalar()
+    
+
+#### GET LAST EPISODE NUMBER ####
+async def get_last_episode_number() -> int:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.episode_number).filter(Episode.published == 1).order_by(Episode.episode_number.desc())
+        result = await session.execute(query)
+        
         return  result.scalar()
     
     
-#### GET THE EPISODE TOPIC ####
+#### GET THE EPISODE TOPIC BY EPISODE NUMBER ####
 async def get_episode_topic(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode).filter(Episode.episode_number == episode_number)
@@ -147,6 +169,15 @@ async def get_episode_topic(episode_number) -> str:
         # print("Result: ", type(result.scalar), result.scalar())
 
         return  result.scalar()
+    
+#### GET LAST EPISODE TOPIC ####
+async def get_last_topic() -> int:
+    async with db_session.create_async_session() as session:
+        query = select(Episode.topic).filter(Episode.published == 1).order_by(Episode.episode_number.desc())
+        result = await session.execute(query)
+        
+        return  result.scalar()
+    
         
 #### ADD SHOW NOTES ####
 async def create_show_notes(
@@ -175,11 +206,7 @@ async def create_show_notes(
     timestamp_11: int,
     notes_11: str,
     timestamp_12: int,
-    notes_12: str
-    
-    
-    
-) -> ShowNotes:
+    notes_12: str) -> ShowNotes:
 
     shownotes = ShowNotes()
 

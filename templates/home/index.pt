@@ -77,10 +77,8 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
-                                    <h3 class="card-title">Episodes Coming Soon</h3>
-                                    <p class="card-text">The <a href="episodes/episodes/0/trailer">trailer for Season One</a> 
-                                    of The CircuitPython Show is now out!  Listen now and learn when the show will be debuting 
-                                    and who some of the guests will be.</p>
+                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with guest ${guest_firstname} ${guest_lastname}</h3>
+                                    <p class="card-text">Paul and ${guest_firstname} talk ${topic}. </p>
                                     <!-- p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p -->
                                 </div>
                             </div>

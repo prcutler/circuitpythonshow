@@ -9,6 +9,7 @@ from viewmodels.admin.add_episode import EpisodeAddViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
 from viewmodels.admin.admin_viewmodel import AdminViewModel
 from viewmodels.admin.add_show_notes_viewmodel import ShowNotesAddViewModel
+from viewmodels.admin.add_transcripts_viewmodel import TranscriptAddViewModel
 
 router = fastapi.APIRouter()
 
@@ -175,6 +176,38 @@ async def add_show_notes(request: Request):
         vm.timestamp_12,
         
     )
+
+    # Redirect to the episode page
+    response = fastapi.responses.RedirectResponse(
+        url="/episodes/all", status_code=status.HTTP_302_FOUND
+    )
+
+    return response
+
+###########  ADD Transcripts ##############
+@router.get("/admin/add-transcripts", include_in_schema=False)
+@template(template_file="admin/add-transcripts.pt")
+def add_show_notes(request: Request):
+    vm = TranscriptAddViewModel(request)
+    return vm.to_dict()
+
+
+@router.post("/admin/add-transcripts", include_in_schema=False)
+@template()
+async def add_transcripts(request: Request):
+    vm = TranscriptAddViewModel(request)
+    await vm.load()
+
+    if vm.error:
+        return vm.to_dict()
+
+    # Add the episode
+    episode = await episode_service.create_transcripts(
+        vm.season,
+        vm.episode_number,
+        vm.transcript_1,
+        vm.transcript_2,
+        )
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(
