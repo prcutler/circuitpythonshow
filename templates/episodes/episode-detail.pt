@@ -7,8 +7,8 @@
                 <div class="col-lg-6">
                     <div class="about-content">
 
-            <h2>In Conversation with ${topic}</h2>
-                        <p class="fs-6">Episode  ${episode_number}, published Friday, January 21st, recorded Tuesday, January 18th.  </p>
+            <h2>In Conversation with ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
+                        <p class="fs-6">Episode  ${episode_info.episode_number}, published Friday, January 21st, recorded ${episode_info.publish_date}.  </p>
                         <p>There have been ${episode_count} episodes published so far.</p>
                         <p>
                 <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;">

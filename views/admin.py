@@ -19,10 +19,11 @@ router = fastapi.APIRouter()
 @template(template_file="admin/index.pt")
 async def index(request: Request):
     vm = AdminViewModel(request)
+    
     await vm.load()
 
     print(vm.user)
-    if vm.user == None:
+    if vm.admin == False:
         return fastapi.responses.RedirectResponse(
             url="/about", status_code=status.HTTP_302_FOUND
         )
@@ -76,3 +77,4 @@ async def register(request: Request):
     )
 
     return response
+

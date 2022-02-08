@@ -75,7 +75,7 @@ async def get_episode_info(episode_id) -> (Episode):
         query = select(Episode).filter(Episode.episode_number == episode_id).order_by(Episode.episode_number.desc())
 
         results = await session.execute(query)
-        episode_info = results.scalars()
+        episode_info = results.scalar()
         # print("Episodes: ", episodes, type(episodes))
 
         return episode_info
