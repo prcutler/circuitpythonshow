@@ -25,7 +25,8 @@ async def create_episode(
     sponsor_1: str,
     sponsor_2: str,
     published: int,
-    episode_length: str
+    episode_length: str,
+    captivate_url: str,
 ) -> Episode:
 
     episode = Episode()
@@ -45,6 +46,7 @@ async def create_episode(
     episode.sponsor_2 = sponsor_2
     episode.published = published
     episode.episode_length = episode_length
+    captivate_url = captivate_url
 
     async with db_session.create_async_session() as session:
         session.add(episode)

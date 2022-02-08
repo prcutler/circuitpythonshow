@@ -69,6 +69,7 @@ async def register(request: Request):
         vm.sponsor_2,
         vm.published,
         vm.episode_length,
+        vm.captivate_url
     )
 
     # Redirect to the episode page

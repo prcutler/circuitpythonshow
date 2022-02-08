@@ -25,6 +25,7 @@ class EpisodeAddViewModel(ViewModelBase):
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
         self.episode_length: Optional[str] = None
+        self.captivate_url: Optional[str] = None
 
     async def load(self):
         form = await self.request.form()
@@ -44,6 +45,7 @@ class EpisodeAddViewModel(ViewModelBase):
         self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")
         self.episode_length = form.get("episode_length")
+        self.captivate_url = form.get("captivate_url")
 
         if not self.season or not self.season.strip():
             self.error = "The season is required."
