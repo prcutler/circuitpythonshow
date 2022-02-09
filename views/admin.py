@@ -3,7 +3,7 @@ from fastapi_chameleon import template
 from starlette import status
 from starlette.requests import Request
 
-from services import episode_service
+from services import episode_service, transcripts_service
 
 from viewmodels.admin.add_episode import EpisodeAddViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
@@ -204,7 +204,7 @@ async def add_transcripts(request: Request):
         return vm.to_dict()
 
     # Add the episode
-    episode = await episode_service.create_transcripts(
+    episode = await transcripts_service.create_transcript(
         vm.season,
         vm.episode_number,
         vm.transcript_1,

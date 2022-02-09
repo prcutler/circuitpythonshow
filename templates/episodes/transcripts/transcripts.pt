@@ -30,13 +30,9 @@
         <h2>Transcript</h2>
             <p>
 
-                Welcome to The CIrcuitPython Show, an independent podcast hosted by me, Paul Cutler.  Each episode I'll have 
-                an interview with someone in or around the CIrcuitPython community.  In Season 1 I'll be talking to Kattni Rembor,
-                Professor John Gallaugher, Tod Kurt and more guests to be announced.  Season One of The CircuitPython Show 
-                starts the first week of March.  You can find more information about the show at 
-                <a href="https://circuitpythonshow.com/">circuitpythonshow.com</a> or follow the show on Twitter at 
-                <a href="https://twitter.com/CircuitPyShow">@CircuitPyShow</a>.  Use your favorite podcast app and hit subscribe today!
-            </p>
+                ${transcript_1}
+
+                  </p>
                 <br />
                 <br />
                     </div>

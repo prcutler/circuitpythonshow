@@ -4,7 +4,7 @@ import sqlalchemy.orm
 from sqlalchemy import func
 from sqlalchemy.future import select
 
-import datetime
+from datetime import datetime, timedelta
 
 from data import db_session
 from data.episode import Episode
@@ -100,9 +100,10 @@ async def get_episode_length(episode_number) -> int:
         result = await session.execute(query)
 
         results_seconds = result.scalar()
+        print(type(results_seconds), results_seconds)
 
         def convert(results_seconds):
-            string_result = str(datetime.timedelta(seconds=results_seconds))
+            string_result = str(timedelta(seconds=results_seconds))
             print("Conversion: ", string_result)
 
             return string_result
@@ -121,7 +122,7 @@ async def get_publish_date(episode_number) -> int:
 
     publish_results = result.scalar()
     format = "%Y%m%d"
-    results_datetime = datetime.datetime.strptime(publish_results, format)
+    results_datetime = datetime.strptime(publish_results, format)
     print(results_datetime)
 
     format_time = results_datetime.strftime("%B %d %Y")
@@ -139,7 +140,7 @@ async def get_record_date(episode_number) -> int:
         publish_results = result.scalar()
 
     format = "%Y%m%d"
-    results_datetime = datetime.datetime.strptime(publish_results, format)
+    results_datetime = datetime.strptime(publish_results, format)
     print(results_datetime)
 
     record_time = results_datetime.strftime("%B %d %Y")

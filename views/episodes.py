@@ -7,6 +7,8 @@ from services import episode_service
 
 from viewmodels.episodes.all_episodes_list_viewmodel import AllEpisodesViewModel
 from viewmodels.episodes.episode_details_viewmodel import EpisodeDetailsViewModel
+from viewmodels.episodes.transcripts_viewmodel import TranscriptsViewModel
+
 from viewmodels.shared.viewmodel import ViewModelBase
 
 router = fastapi.APIRouter()
@@ -27,6 +29,16 @@ async def all(request: Request):
 @template(template_file="episodes/episode-detail.pt")
 async def details(episode_number, request: Request):
     vm = EpisodeDetailsViewModel(episode_number, request)
+    await vm.load(episode_number)
+
+    return vm.to_dict()
+
+
+#### TRANSCRIPTS ####
+@router.get("/episodes/{episode_number}/transcripts")
+@template(template_file="episodes/transcripts/transcripts.pt")
+async def transcripts(episode_number, request: Request):
+    vm = TranscriptsViewModel(episode_number, request)
     await vm.load(episode_number)
 
     return vm.to_dict()
