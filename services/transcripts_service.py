@@ -13,6 +13,7 @@ from data.episode import Episode
 async def create_transcript(
     season: int, 
     episode_number: int,
+    published: int,
     transcript_1: str,
     transcript_2: str,
 ) -> Transcript:
@@ -21,6 +22,7 @@ async def create_transcript(
     
     transcript.season = season
     transcript.episode_number = episode_number
+    transcript.published = published
     transcript.transcript_1 = transcript_1
     transcript.transcript_2 = transcript_2
     

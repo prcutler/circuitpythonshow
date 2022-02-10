@@ -133,7 +133,7 @@ async def register(request: Request):
 
 
 @router.get("/admin/add-show-notes", include_in_schema=False)
-@template(template_file="admin/add-show-notes.pt")
+@template("admin/add_show_notes.pt")
 def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
     return vm.to_dict()
@@ -148,10 +148,11 @@ async def add_show_notes(request: Request):
     if vm.error:
         return vm.to_dict()
 
-    # Add the episode
-    episode = await episode_service.create_show_notes(
+    # Add the show notes
+    show_notes = await episode_service.create_show_notes(
         vm.season,
         vm.episode_number,
+        vm.published,
         vm.notes_1,
         vm.timestamp_1,
         vm.notes_2,
@@ -203,12 +204,13 @@ async def add_transcripts(request: Request):
     if vm.error:
         return vm.to_dict()
 
-    # Add the episode
-    episode = await transcripts_service.create_transcript(
+    # Add the transcript
+    transcript = await transcripts_service.create_transcript(
         vm.season,
         vm.episode_number,
         vm.transcript_1,
         vm.transcript_2,
+        vm.published,
     )
 
     # Redirect to the episode page

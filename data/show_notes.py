@@ -13,6 +13,7 @@ class ShowNotes(SqlAlchemyBase):
         sa.Integer,
         index=True,
     )
+    published: int = sa.Column(sa.Integer)
     timestamp_1: int = sa.Column(sa.Integer)
     notes_1: str = sa.Column(sa.String)
     timestamp_2: int = sa.Column(sa.Integer)

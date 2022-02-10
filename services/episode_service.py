@@ -223,6 +223,7 @@ async def get_last_topic() -> int:
 async def create_show_notes(
     season: int,
     episode_number: int,
+    published: int,
     timestamp_1: int,
     notes_1: str,
     timestamp_2: int,

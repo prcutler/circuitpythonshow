@@ -12,6 +12,7 @@ class ShowNotesAddViewModel(ViewModelBase):
 
         self.season: Optional[int] = None
         self.episode_number: Optional[int] = None
+        self.published: Optional[int] = None
         self.notes_1: Optional[str] = None
         self.timestamp_1: Optional[int] = None
         self.notes_2: Optional[str] = None
@@ -42,6 +43,7 @@ class ShowNotesAddViewModel(ViewModelBase):
 
         self.season = form.get("season")
         self.episode_number = form.get("episode_number")
+        self.published = form.get("published")
         self.note_1 = form.get("notes_1")
         self.timestamp_1 = form.get("timestamp_1")
         self.notes_2 = form.get("notes_2")

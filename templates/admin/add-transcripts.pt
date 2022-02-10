@@ -12,6 +12,8 @@
             <br />
             Episode #: <input name="episode_number" type="text" placeholder="Episode" class="form-control"
             value="${ episode_number }" required><br />
+
+            Published: <input name="published" type="text" placeholder="Published" class="form-control" value="${ published }" required><br />
             
             Transcript #1: <input name="transcript_1" type="text" placeholder=" Transcript #1" 
             class="form-control" value="${ transcript_1 }" required><br />
