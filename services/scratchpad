@@ -1,0 +1,214 @@
+viewmodel
+
+        self.notes_3: Optional[str] = None
+        self.timestamp_3: Optional[str] = None
+        self.notes_4: Optional[str] = None
+        self.timestamp_4: Optional[str] = None
+        self.notes_5: Optional[str] = None
+        self.timestamp_5: Optional[str] = None
+        self.notes_6: Optional[str] = None
+        self.timestamp_6: Optional[str] = None
+        self.notes_7: Optional[str] = None
+        self.timestamp_7: Optional[str] = None
+        self.notes_8: Optional[str] = None
+        self.timestamp_8: Optional[str] = None
+        self.notes_9: Optional[str] = None
+        self.timestamp_9: Optional[str] = None
+        self.notes_10: Optional[str] = None
+        self.timestamp_10: Optional[str] = None
+        self.notes_11: Optional[str] = None
+        self.timestamp_11: Optional[str] = None
+        self.notes_12: Optional[str] = None
+        self.timestamp_12: Optional[str] = None
+        
+        
+        self.notes_3 = form.get("notes_3")
+        self.timestamp_3 = form.get("timestamp_3")
+        self.notes_4 = form.get("notes_4")
+        self.timestamp_4 = form.get("timestamp_4")
+        self.notes_5 = form.get("notes_5")
+        self.timestamp_5 = form.get("timestamp_5")
+        self.notes_6 = form.get("notes_6")
+        self.timestamp_6 = form.get("timestamp_6")
+        self.notes_7 = form.get("notes_7")
+        self.timestamp_7 = form.get("timestamp_7")
+        self.notes_8 = form.get("notes_8")
+        self.timestamp_8 = form.get("timestamp_8")
+        self.notes_9 = form.get("notes_9")
+        self.timestamp_9 = form.get("timestamp_9")
+        self.notes_10 = form.get("notes_10")
+        self.timestamp_10 = form.get("timestamp_10")
+        self.notes_11 = form.get("notes_11")
+        self.timestamp_11 = form.get("timestamp_11")
+        self.notes_12 = form.get("notes_12")
+        self.timestamp_12 = form.get("timestamp_12")
+        
+        
+        
+admin.py
+
+        vm.notes_3,
+        vm.timestamp_3,
+        vm.notes_4,
+        vm.timestamp_4,
+        vm.notes_5,
+        vm.timestamp_5,
+        vm.notes_6,
+        vm.timestamp_6,
+        vm.notes_7,
+        vm.timestamp_7,
+        vm.notes_8,
+        vm.timestamp_8,
+        vm.notes_9,
+        vm.timestamp_9,
+        vm.notes_10,
+        vm.timestamp_10,
+        vm.notes_11,
+        vm.timestamp_11,
+        vm.notes_12,
+        vm.timestamp_12,
+        
+        
+                    Show Notes #3: <input name="notes_3" type="text" placeholder=" Show Notes #3" 
+            class="form-control" value="${ notes_3 }" ><br />
+            
+            Timestamp #3: <input name="timestamp_3" type="text" placeholder=" Timestamp #3" 
+            class="form-control" value="${ timestamp_3}" ><br />
+            
+            Show Notes #4: <input name="notes_4" type="text" placeholder=" Show Notes #4" 
+            class="form-control" value="${ notes_4 }" ><br />
+            
+            Timestamp #4: <input name="timestamp_4" type="text" placeholder=" Timestamp #4" 
+            class="form-control" value="${ timestamp_4}" ><br />
+            
+            Show Notes #5: <input name="notes_5" type="text" placeholder=" Show Notes #5" 
+            class="form-control" value="${ notes_5 }" ><br />
+            
+            Timestamp #5: <input name="timestamp_5" type="text" placeholder=" Timestamp #5" 
+            class="form-control" value="${ timestamp_5}" ><br />
+            
+            Show Notes #6: <input name="notes_6" type="text" placeholder=" Show Notes #6" 
+            class="form-control" value="${ notes_6 }" ><br />
+            
+            Timestamp #6: <input name="timestamp_6" type="text" placeholder=" Timestamp #6" 
+            class="form-control" value="${ timestamp_6}" ><br />
+            
+            Show Notes #7: <input name="notes_7" type="text" placeholder=" Show Notes #7" 
+            class="form-control" value="${ notes_7 }" ><br />
+            
+            Timestamp #7: <input name="timestamp_7" type="text" placeholder=" Timestamp #7" 
+            class="form-control" value="${ timestamp_7}" ><br />
+            
+            Show Notes #8: <input name="notes_8" type="text" placeholder=" Show Notes #8" 
+            class="form-control" value="${ notes_8 }" ><br />
+            
+            Timestamp #8: <input name="timestamp_8" type="text" placeholder=" Timestamp #8" 
+            class="form-control" value="${ timestamp_8}" ><br />
+            
+            Show Notes #9: <input name="notes_9" type="text" placeholder=" Show Notes #9" 
+            class="form-control" value="${ notes_9 }" ><br />
+            
+            Timestamp #9: <input name="timestamp_9" type="text" placeholder=" Timestamp #9" 
+            class="form-control" value="${ timestamp_9}" ><br />
+            
+            Show Notes #10: <input name="notes_10" type="text" placeholder=" Show Notes #10" 
+            class="form-control" value="${ notes_10 }" ><br />
+            
+            Timestamp #10: <input name="timestamp_10" type="text" placeholder=" Timestamp #10" 
+            class="form-control" value="${ timestamp_10}" ><br />
+            
+            Show Notes #11: <input name="notes_11" type="text" placeholder=" Show Notes #11" 
+            class="form-control" value="${ notes_11 }" ><br />
+            
+            Timestamp #11: <input name="timestamp_11" type="text" placeholder=" Timestamp #11" 
+            class="form-control" value="${ timestamp_11}" ><br />
+
+            Show Notes #12: <input name="notes_12" type="text" placeholder=" Show Notes #12" 
+            class="form-control" value="${ notes_12 }" ><br />
+            
+            Timestamp #12: <input name="timestamp_12" type="text" placeholder=" Timestamp #12" 
+            class="form-control" value="${ timestamp_12}" ><br />
+
+
+            Shownotes service
+                timestamp_3: int,
+    notes_3: str,
+    timestamp_4: int,
+    notes_4: str,
+    timestamp_5: int,
+    notes_5: str,
+    timestamp_6: int,
+    notes_6: str,
+    timestamp_7: int,
+    notes_7: str,
+    timestamp_8: int,
+    notes_8: str,
+    timestamp_9: int,
+    notes_9: str,
+    timestamp_10: int,
+    notes_10: str,
+    timestamp_11: int,
+    notes_11: str,
+    timestamp_12: int,
+    notes_12: str,
+
+
+    shownotes.py
+
+    timestamp_3: int = sa.Column(sa.Integer)
+    notes_3: str = sa.Column(sa.String)
+    timestamp_4: int = sa.Column(sa.Integer)
+    notes_4: str = sa.Column(sa.String)
+    timestamp_5: int = sa.Column(sa.Integer)
+    notes_5: str = sa.Column(sa.String)
+    timestamp_6: int = sa.Column(sa.Integer)
+    notes_6: str = sa.Column(sa.String)
+    timestamp_7: int = sa.Column(sa.Integer)
+    notes_7: str = sa.Column(sa.String)
+    timestamp_8: int = sa.Column(sa.Integer)
+    notes_8: str = sa.Column(sa.String)
+    timestamp_9: int = sa.Column(sa.Integer)
+    notes_9: str = sa.Column(sa.String)
+    timestamp_10: int = sa.Column(sa.Integer)
+    notes_10: str = sa.Column(sa.String)
+    timestamp_11: int = sa.Column(sa.Integer)
+    notes_11: str = sa.Column(sa.String)
+    timestamp_12: int = sa.Column(sa.Integer)
+    notes_12: str = sa.Column(sa.String)
+
+
+
+        season: int,
+    episode_number: int,
+    published: int,
+    timestamp_1: int,
+    notes_1: str,
+    timestamp_2: int,
+    notes_2: str,
+
+
+                Timestamp 4: <input name="timestamp_4" type="text" placeholder="Timestamp 4" class="form-control" value="${ timestamp_4 }" >
+            Notes 4: <input name="notes_4" type="text" placeholder="Notes 4" class="form-control" value="${ notes_4 }" >
+            Link 4: <input name="link_4" type="text" placeholder="Link 4" class="form-control" value="${ link_4 }" >
+            Link 4 Text: <input name="link_text_4" type="text" placeholder="Link 4 Text" class="form-control" value="${ link_text_4 }" >
+            <br />
+
+            Timestamp 5: <input name="timestamp_5" type="text" placeholder="Timestamp 5" class="form-control" value="${ timestamp_5 }" >
+            Notes 5: <input name="notes_5" type="text" placeholder="Notes 5" class="form-control" value="${ notes_5 }" >
+            Link 5: <input name="link_5" type="text" placeholder="Link 5" class="form-control" value="${ link_5 }" >
+            Link 5 Text: <input name="link_text_5" type="text" placeholder="Link 5 Text" class="form-control" value="${ link_text_5 }" >
+            <br />
+
+            Timestamp 6: <input name="timestamp_6" type="text" placeholder="Timestamp " class="form-control" value="${ timestamp_6 }" >
+            Notes 6: <input name="notes_6" type="text" placeholder="Notes 6" class="form-control" value="${ notes_6 }" >
+            Link 6: <input name="link_6" type="text" placeholder="Link 6" class="form-control" value="${ link_6 }" >
+            Link 6 Text: <input name="link_text_6" type="text" placeholder="Link 6 Text" class="form-control" value="${ link_text_6 }" >
+            <br />
+
+
+
+2022-02-11 13:05:02,723 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2022-02-11 13:05:02,726 INFO sqlalchemy.engine.Engine INSERT INTO shownotes (season, episode, published, timestamp_1, notes_1, link_1, link_text_1, timestamp_2, notes_2, link_2, link_text_2, timestamp_3, notes_3, link_3, link_text_3, timestamp_4, notes_4, link_4, link_text_4, timestamp_5, notes_5, link_5, link_text_5, timestamp_6, notes_6, link_6, link_text_6) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-11 13:05:02,727 INFO sqlalchemy.engine.Engine [generated in 0.00048s] ('2', '2', '1', '100', 'notes1', 'link1', 'li', '200', 'notes2', 'link2', 'text2', '300', 'notes3', 'link3', 'text3', None, None, None, None, None, None, None, None, None, None, None, None)
+2022-02-11 13:05:02,728 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     127.0.0.1:61085 - "POST /admin/add-show-notes HTTP/1.1" 302 Found
