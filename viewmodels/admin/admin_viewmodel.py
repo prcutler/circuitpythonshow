@@ -1,4 +1,5 @@
 from typing import Optional
+from sqlalchemy import false
 
 from starlette.requests import Request
 
@@ -11,12 +12,20 @@ class AdminViewModel(ViewModelBase):
     def __init__(self, request: Request):
         super().__init__(request)
 
-        self.user: Optional[User] = None
-
-        user_id = self.user_id
-
+        self.logged_in = None
+        
     async def load(self):
-        self.user = await user_service.get_user_by_id(self.user_id)
+        
+        print(self.is_logged_in)
+        if self.is_logged_in is False:
+            self.logged_in = False
+        else:
+            print("Viewmodel True statement")
+            self.logged_in = True
+        
+        
 
-        if self.user_id == None:
-            self.error = "You must be logged in to view this page."
+
+    
+        
+        

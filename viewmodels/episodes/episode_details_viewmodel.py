@@ -1,5 +1,7 @@
 from typing import List, Optional
 from xmlrpc.client import Boolean
+import fastapi
+import fastapi_chameleon
 
 from starlette.requests import Request
 
@@ -32,6 +34,7 @@ class EpisodeDetailsViewModel(ViewModelBase):
         print("Topic: ", self.topic)
 
         self.episode_info = await episode_service.get_episode_info(self.episode_number)
+        
         self.episode_length = await episode_service.get_episode_length(
             self.episode_number
         )

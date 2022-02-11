@@ -3,7 +3,9 @@ from fastapi_chameleon import template
 from starlette import status
 from starlette.requests import Request
 
-from services import episode_service, transcripts_service
+from services import episode_service
+from services import transcripts_service
+from services import shownotes_service
 
 from viewmodels.admin.add_episode import EpisodeAddViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
@@ -21,18 +23,9 @@ router = fastapi.APIRouter()
 @template(template_file="admin/index.pt")
 async def index(request: Request):
     vm = AdminViewModel(request)
-
     await vm.load()
 
-    print(vm.user)
-    if vm.admin == False:
-        return fastapi.responses.RedirectResponse(
-            url="/about", status_code=status.HTTP_302_FOUND
-        )
-
-    else:
-
-        return vm.to_dict()
+    return vm.to_dict()
 
 
 ###########  ADD EPISODE ##############
@@ -133,14 +126,14 @@ async def register(request: Request):
 
 
 @router.get("/admin/add-show-notes", include_in_schema=False)
-@template("admin/add_show_notes.pt")
+@template("admin/add-show-notes.pt")
 def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
     return vm.to_dict()
 
 
 @router.post("/admin/add-show-notes", include_in_schema=False)
-@template()
+@template("admin/add-show-notes.pt")
 async def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
     await vm.load()
@@ -149,39 +142,55 @@ async def add_show_notes(request: Request):
         return vm.to_dict()
 
     # Add the show notes
-    show_notes = await episode_service.create_show_notes(
+    show_notes = await shownotes_service.create_show_notes(
         vm.season,
-        vm.episode_number,
+        vm.episode,
         vm.published,
-        vm.notes_1,
+        
         vm.timestamp_1,
-        vm.notes_2,
+        vm.notes_1,
+        vm.link_1,
+        
         vm.timestamp_2,
-        vm.notes_3,
+        vm.notes_2,
+        vm.link_2,
+        
         vm.timestamp_3,
-        vm.notes_4,
+        vm.notes_3,
+        vm.link_3,
+        
         vm.timestamp_4,
-        vm.notes_5,
+        vm.notes_4,
+        vm.link_4,
+        
         vm.timestamp_5,
-        vm.notes_6,
+        vm.notes_5,
+        vm.link_5,
+        
         vm.timestamp_6,
-        vm.notes_7,
+        vm.notes_6,
+        vm.link_6,
+        
         vm.timestamp_7,
-        vm.notes_8,
+        vm.notes_7,
+        vm.link_7,
+        
         vm.timestamp_8,
-        vm.notes_9,
+        vm.notes_8,
+        vm.link_8,
+        
         vm.timestamp_9,
-        vm.notes_10,
+        vm.notes_9,
+        vm.link_9,
+        
         vm.timestamp_10,
-        vm.notes_11,
-        vm.timestamp_11,
-        vm.notes_12,
-        vm.timestamp_12,
-    )
+        vm.notes_10,
+        vm.link_10,
+        )
 
-    # Redirect to the episode page
+    # Redirect to the admin page
     response = fastapi.responses.RedirectResponse(
-        url="/episodes/all", status_code=status.HTTP_302_FOUND
+        url="/admin/index", status_code=status.HTTP_302_FOUND
     )
 
     return response

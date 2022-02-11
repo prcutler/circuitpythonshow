@@ -30,3 +30,5 @@ class IndexViewModel(ViewModelBase):
         self.guest_lastname = await episode_service.get_guest_lastname()
 
         self.topic = await episode_service.get_last_topic()
+        
+    

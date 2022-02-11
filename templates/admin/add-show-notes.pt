@@ -9,84 +9,53 @@
                 <h1>Add Show Notes</h1>
 
             Season: <input name="season" type="text" placeholder="Season" class="form-control" value="${ season }" required>
+            Episode: <input name="episode" type="text" placeholder="Episode" class="form-control" value="${ episode }" required>
+            Published: <input name="published" type="text" placeholder="Published 1 or 0" class="form-control" value="${ published }" required>
             <br />
-            Episode: <input name="episode" type="text" placeholder="Episode" class="form-control" value="${ episode_number }" required>
+            Timestamp 1: <input name="timestamp_1" type="text" placeholder="Timestamp 1" class="form-control" value="${ timestamp_1 }" required>
+            Notes 1: <input name="notes_1" type="text" placeholder="Notes 1" class="form-control" value="${ notes_1 }" required>
+            Link 1: <input name="link_1" type="text" placeholder="Link 1" class="form-control" value="${ link_1 }" >
             <br />
+            Timestamp 2: <input name="timestamp_2" type="text" placeholder="Timestamp 2" class="form-control" value="${ timestamp_2 }" >
+            Notes 2: <input name="notes_2" type="text" placeholder="Notes 2" class="form-control" value="${ notes_2 }" >
+            Link 2: <input name="link_2" type="text" placeholder="Link 2" class="form-control" value="${ link_2 }" >
+            <br />
+            Timestamp 3: <input name="timestamp_3" type="text" placeholder="Timestamp 3" class="form-control" value="${ timestamp_3 }" >
+            Notes 3: <input name="notes_3" type="text" placeholder="Notes 3" class="form-control" value="${ notes_3 }" >
+            Link 3: <input name="link_3" type="text" placeholder="Link 3" class="form-control" value="${ link_3 }" >
+            <br />
+            Timestamp 4: <input name="timestamp_4" type="text" placeholder="Timestamp 4" class="form-control" value="${ timestamp_4 }" >
+            Notes 4: <input name="notes_4" type="text" placeholder="Notes 4" class="form-control" value="${ notes_4 }" >
+            Link 4: <input name="link_4" type="text" placeholder="Link 4" class="form-control" value="${ link_4 }" >
+            <br />
+            Timestamp 5: <input name="timestamp_5" type="text" placeholder="Timestamp 5" class="form-control" value="${ timestamp_5 }" >
+            Notes 5: <input name="notes_5" type="text" placeholder="Notes 5" class="form-control" value="${ notes_5 }" >
+            Link 5: <input name="link_5" type="text" placeholder="Link 5" class="form-control" value="${ link_5 }" >
+            <br />
+            Timestamp 6: <input name="timestamp_6" type="text" placeholder="Timestamp 6" class="form-control" value="${ timestamp_6 }" >
+            Notes 6: <input name="notes_6" type="text" placeholder="Notes 6" class="form-control" value="${ notes_6 }" >
+            Link 6: <input name="link_6" type="text" placeholder="Link 6" class="form-control" value="${ link_6 }" >
+            <br />
+            Timestamp 7: <input name="timestamp_7" type="text" placeholder="Timestamp 7" class="form-control" value="${ timestamp_7 }" >
+            Notes 7: <input name="notes_7" type="text" placeholder="Notes 7" class="form-control" value="${ notes_7 }" >
+            Link 7: <input name="link_7" type="text" placeholder="Link 7" class="form-control" value="${ link_7 }" >
+            <br />
+            Timestamp 8: <input name="timestamp_8" type="text" placeholder="Timestamp 8" class="form-control" value="${ timestamp_8 }" >
+            Notes 8: <input name="notes_8" type="text" placeholder="Notes 8" class="form-control" value="${ notes_8 }" >
+            Link 8: <input name="link_8" type="text" placeholder="Link 8" class="form-control" value="${ link_8 }" >
+            <br />
+            Timestamp 9: <input name="timestamp_9" type="text" placeholder="Timestamp 9" class="form-control" value="${ timestamp_9 }" >
+            Notes 9: <input name="notes_9" type="text" placeholder="Notes 9" class="form-control" value="${ notes_9 }" >
+            Link 9: <input name="link_9" type="text" placeholder="Link 9" class="form-control" value="${ link_9 }" >
+            <br />
+            Timestamp 10: <input name="timestamp_10" type="text" placeholder="Timestamp 10" class="form-control" value="${ timestamp_10 }" >
+            Notes 10: <input name="notes_10" type="text" placeholder="Notes 10" class="form-control" value="${ notes_10 }" >
+            Link 10: <input name="link_10" type="text" placeholder="Link 10" class="form-control" value="${ link_10 }" >
+            <br />            
 
-            Published: <input name="published" type="text" placeholder="Published" class="form-control" value="${ published }" required><br />
 
-            Show Notes #1: <input name="notes_1" type="text" placeholder=" Show Notes #1" 
-            class="form-control" value="${ notes_1 }" required><br />
-            
-            Timestamp #1: <input name="timestamp_1" type="text" placeholder=" Timestamp #1" 
-            class="form-control" value="${ timestamp_1}" required><br />
-            
-            Show Notes #2: <input name="notes_2" type="text" placeholder=" Show Notes #2" 
-            class="form-control" value="${ notes_2 }" required><br />
-            
-            Timestamp #2: <input name="timestamp_2" type="text" placeholder=" Timestamp #2" 
-            class="form-control" value="${ timestamp_2}" required><br />
-            
-            Show Notes #3: <input name="notes_3" type="text" placeholder=" Show Notes #3" 
-            class="form-control" value="${ notes_3 }" required><br />
-            
-            Timestamp #3: <input name="timestamp_3" type="text" placeholder=" Timestamp #3" 
-            class="form-control" value="${ timestamp_3}" required><br />
-            
-            Show Notes #4: <input name="notes_4" type="text" placeholder=" Show Notes #4" 
-            class="form-control" value="${ notes_4 }" required><br />
-            
-            Timestamp #4: <input name="timestamp_4" type="text" placeholder=" Timestamp #4" 
-            class="form-control" value="${ timestamp_4}" required><br />
-            
-            Show Notes #5: <input name="notes_5" type="text" placeholder=" Show Notes #5" 
-            class="form-control" value="${ notes_5 }" required><br />
-            
-            Timestamp #5: <input name="timestamp_5" type="text" placeholder=" Timestamp #5" 
-            class="form-control" value="${ timestamp_5}" required><br />
-            
-            Show Notes #6: <input name="notes_6" type="text" placeholder=" Show Notes #6" 
-            class="form-control" value="${ notes_6 }" required><br />
-            
-            Timestamp #6: <input name="timestamp_6" type="text" placeholder=" Timestamp #6" 
-            class="form-control" value="${ timestamp_6}" required><br />
-            
-            Show Notes #7: <input name="notes_7" type="text" placeholder=" Show Notes #7" 
-            class="form-control" value="${ notes_7 }" required><br />
-            
-            Timestamp #7: <input name="timestamp_7" type="text" placeholder=" Timestamp #7" 
-            class="form-control" value="${ timestamp_7}" required><br />
-            
-            Show Notes #8: <input name="notes_8" type="text" placeholder=" Show Notes #8" 
-            class="form-control" value="${ notes_8 }" required><br />
-            
-            Timestamp #8: <input name="timestamp_8" type="text" placeholder=" Timestamp #8" 
-            class="form-control" value="${ timestamp_8}" required><br />
-            
-            Show Notes #9: <input name="notes_9" type="text" placeholder=" Show Notes #9" 
-            class="form-control" value="${ notes_9 }" required><br />
-            
-            Timestamp #9: <input name="timestamp_9" type="text" placeholder=" Timestamp #9" 
-            class="form-control" value="${ timestamp_9}" required><br />
-            
-            Show Notes #10: <input name="notes_10" type="text" placeholder=" Show Notes #10" 
-            class="form-control" value="${ notes_10 }" required><br />
-            
-            Timestamp #10: <input name="timestamp_10" type="text" placeholder=" Timestamp #10" 
-            class="form-control" value="${ timestamp_10}" required><br />
-            
-            Show Notes #11: <input name="notes_11" type="text" placeholder=" Show Notes #10" 
-            class="form-control" value="${ notes_11 }" required><br />
-            
-            Timestamp #11: <input name="timestamp_11" type="text" placeholder=" Timestamp #11" 
-            class="form-control" value="${ timestamp_11}" required><br />
 
-            Show Notes #12: <input name="notes_12" type="text" placeholder=" Show Notes #12" 
-            class="form-control" value="${ notes_12 }" required><br />
-            
-            Timestamp #12: <input name="timestamp_12" type="text" placeholder=" Timestamp #12" 
-            class="form-control" value="${ timestamp_12}" required><br />
-
+        
 
             <br />
             <button type="submit" class="btn btn-danger">Add Show Notes</button>
