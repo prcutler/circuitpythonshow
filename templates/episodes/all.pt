@@ -17,6 +17,7 @@
                             <tr>
                                 <th>Episode</th>
                                 <th>Guest</th>
+                                <th>Topics</th>
                                 <th>Date</th>
                                 <th>Length</th>
 
@@ -25,6 +26,7 @@
                             <tr tal:repeat = "e episodes">
                                 <td><a href="${e.episode_number}">${e.episode_number}</a></td>
                                 <td>${e.guest_firstname} ${e.guest_lastname}</td>
+                                <td>${e.topic}</td>
                                 <td>${e.publish_date}</td>
                                 <td>${e.episode_length}</td>
                             </tr>
