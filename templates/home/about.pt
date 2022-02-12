@@ -72,10 +72,12 @@
             <p>
             Music by <a href="https://bartlebeats.bandcamp.com/releases">Bartlebeats</a> under a 
             <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons  CC-BY-SA 3.0 license</a>.
+            
+            <p>Raspberry Pi Pico and host photographs by Kelly Cutler.</p>
 
             <p>
-                Thank you to everyone who has contributed anything to CircuitPython and / or Python.  Thank you
-                to <a href="https://talkpython.fm">Talk Python to Me</a>, where I have learned almost all of the 
+                Thank you to everyone who has contributed anything to CircuitPython, MicroPython, and / or Python.  
+                Thank you to <a href="https://talkpython.fm">Talk Python to Me</a>, where I have learned almost all of the 
                 Python I know, starting from their first Kickstarter through the 
                 <a href="https://training.talkpython.fm/courses/full-html-web-applications-with-fastapi">Full Web Apps with FastAPI course</a> 
                 to build this site. The show also inspired me to start this podcast, and thank you to the host, Michael Kennedy, 
