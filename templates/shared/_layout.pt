@@ -40,7 +40,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/episodes/all">Episodes</a>
                         </li>
-                    </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://circuitpythonshow.captivate.fm/listen" target="_blank">Subscribe</a>
+                    </ul> 
                 </div>
             </div>
         </nav>
@@ -93,6 +95,8 @@
                             <a href="/" class="text-white">Home</a>
                         </li>
                         <li>
+                            <a href="https://circuitpythonshow.captivate.fm/listen" target="_blank" class="text-white">Subscribe</a>
+                        <li>
                             <a href="/episodes/all" class="text-white">Episodes</a>
                         </li>
                         <li>
@@ -120,7 +124,7 @@
                         <a href="mailto:paul@circuitpythonshow.com" class="btn btn-primary btn-floating me-1">
                             <i class="fas fa-envelope"></i>
                         </a>
-                        <a href="https://feeds.captivate.fm/circuitpythonshow/" class="btn btn-primary btn-floating me-1">
+                        <a href="https://paulcutler.org" class="btn btn-primary btn-floating me-1">
                             <i class="fas fa-home"></i>
                         </a>
                         <a href="https://feeds.captivate.fm/circuitpythonshow/" class="btn btn-primary btn-floating me-1">
