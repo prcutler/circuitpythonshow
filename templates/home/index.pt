@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="slider-img">
-                        <img src="/static/img/boards.jpg" alt="Over a dozen CircuitPython boards laid out">
+                        <img src="/static/img/coverart-no-500.png" class="img-responsive" alt="The Circuit Python Show podcast logo">
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/about-personal.jpg" alt="">
+                        <img src="/static/img/boards.jpg" alt="Over a dozen CircuitPython boards laid out">
                     </div>
                 </div>
             </div>
