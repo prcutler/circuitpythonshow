@@ -8,20 +8,22 @@
                     <div class="about-content">
 
             <h2>Episode  ${episode_info.episode_number} with Guest ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
-                        <br />
-                        <p>Topics: ${topic.topic} </p>
-                        <p>YouTube link: ${episode_info.youtube_url}</p>
-                        <p>Guest: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
-                        <p>Guest Bio: ${episode_info.guest_bio}</p>
-                        <p>Episode length: ${episode_length}</p>
-                        <p>Episode release date: ${publish_date}</p>
-                        <p>Episode recorded date: ${record_date}</p>
-                    
+                        <a href="https://circuitpythonshow.captivate.fm/listen" target="_blank" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
+                            Subscribe</a>
+                            <br /><br />
+                        <p><b>Topics</b>: ${topic.topic} </p>
+                        <p><b>Guest</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
+                        <p><b>Episode length</b>: ${episode_length}</p>
+                        <p><b>Episode released</b>: ${publish_date}</p>
+                        <p><b>Episode recorded</b>: ${record_date}</p>
+                        <p><b>YouTube link</b>: ${episode_info.youtube_url}</p>
+                        <p><b>Guest Bio</b>: ${episode_info.guest_bio}</p>
+                      
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/cps-tagline-500.png" class="img-thumbnail" alt="CircuitPython Show logo">
+                        <div style="width: 100%; height: 600px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 600px;" frameborder="no" scrolling="no" seamless src="https://player.captivate.fm/show/e28e83a7-99fb-4877-8147-e20456377e01"></iframe></div>
                     </div>
                 </div>
             </div>
