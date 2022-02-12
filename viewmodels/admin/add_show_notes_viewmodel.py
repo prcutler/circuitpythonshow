@@ -82,8 +82,6 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.link_6 = form.get("link_6")
         self.link_text_6 = form.get("link_text_6")
         
-        print("Adding show notes from viewmodel", self.season, self.episode)
-
         if not self.season or not self.season.strip():
             self.error = "The season is required."
         if not self.episode or not self.episode.strip():
