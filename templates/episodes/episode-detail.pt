@@ -37,11 +37,10 @@
                     <div class="about-content">
 
         <h2>Show Notes</h2>
-            <p>
-                Paul Cutler is a married father of three, living in the suburbs of Minneapolis, Minnesota. 
-                When he's not attending his kids sports activities or introducing them to classic 80s movies, 
-                you can find him listening to records from his vinyl collection, tinkering with Python or CircuitPython, 
-                playing with his dog, or watching a movie.</p>
+
+                       <p> ${shownotes.notes_1}</p>
+                        <p>${shownotes.link_1}</p>
+
 
             </div>
                 </div>

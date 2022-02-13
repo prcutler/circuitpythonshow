@@ -212,3 +212,54 @@ admin.py
 2022-02-11 13:05:02,727 INFO sqlalchemy.engine.Engine [generated in 0.00048s] ('2', '2', '1', '100', 'notes1', 'link1', 'li', '200', 'notes2', 'link2', 'text2', '300', 'notes3', 'link3', 'text3', None, None, None, None, None, None, None, None, None, None, None, None)
 2022-02-11 13:05:02,728 INFO sqlalchemy.engine.Engine COMMIT
 INFO:     127.0.0.1:61085 - "POST /admin/add-show-notes HTTP/1.1" 302 Found
+
+
+        self.shownotes_timestamp_1 = None
+        self.shownotes_notes_1 = None
+        self.shownotes_link_1 = None
+        self.shownotes_link_text_1 = None
+        
+        self.shownotes_timestamp_2 = None
+        self.shownotes_notes_2 = None
+        self.shownotes_link_2 = None
+        self.shownotes_link_text_2 = None
+        
+        self.shownotes_timestamp_3 = None
+        self.shownotes_notes_3 = None
+        self.shownotes_link_3 = None
+        self.shownotes_link_text_3 = None
+        
+        self.shownotes_timestamp_4 = None
+        self.shownotes_notes_4 = None
+        self.shownotes_link_4 = None
+        self.shownotes_link_text_4 = None
+        
+        self.shownotes_timestamp_5 = None
+        self.shownotes_notes_5 = None
+        self.shownotes_link_5 = None
+        self.shownotes_link_text_5 = None
+        
+        self.shownotes_timestamp_6 = None
+        self.shownotes_notes_6 = None
+        self.shownotes_link_6 = None
+        self.shownotes_link_text_6 = None
+        
+        self.shownotes_timestamp_7 = None
+        self.shownotes_notes_7 = None
+        self.shownotes_link_7 = None
+        self.shownotes_link_text_7 = None
+        
+        self.shownotes_timestamp_8 = None
+        self.shownotes_notes_8 = None
+        self.shownotes_link_8 = None
+        self.shownotes_link_text_8 = None
+        
+        self.shownotes_timestamp_9 = None
+        self.shownotes_notes_9 = None
+        self.shownotes_link_9 = None
+        self.shownotes_link_text_9 = None
+        
+        self.shownotes_timestamp_10 = None
+        self.shownotes_notes_10 = None
+        self.shownotes_link_10 = None
+        self.shownotes_link_text_10 = None

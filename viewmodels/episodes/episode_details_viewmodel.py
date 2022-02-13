@@ -7,7 +7,10 @@ from starlette.requests import Request
 
 from viewmodels.shared.viewmodel import ViewModelBase
 from services import episode_service
+from services import shownotes_service
 from data.episode import Episode
+from data.shownotes import ShowNotes
+
 
 
 class EpisodeDetailsViewModel(ViewModelBase):
@@ -23,6 +26,9 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.episode_info = []
         self.episode_length = "0"
+        
+        self.shownotes: List[ShowNotes] = []
+        
 
     async def load(self, episode_number):
 
@@ -42,3 +48,6 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.publish_date = await episode_service.get_publish_date(self.episode_number)
         self.record_date = await episode_service.get_record_date(self.episode_number)
+        
+        episode = int(episode_number)
+        self.shownotes = await shownotes_service.get_shownotes(episode)
