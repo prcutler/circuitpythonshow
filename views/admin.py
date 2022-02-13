@@ -177,7 +177,26 @@ async def add_show_notes(request: Request):
         vm.link_6,
         vm.link_text_6,
         
-        )
+        vm.timestamp_7,
+        vm.notes_7,
+        vm.link_7,
+        vm.link_text_7,
+        
+        vm.timestamp_8,
+        vm.notes_8,
+        vm.link_8,
+        vm.link_text_8,
+        
+        vm.timestamp_9,
+        vm.notes_9,
+        vm.link_9,
+        vm.link_text_9,
+        
+        vm.timestamp_10,
+        vm.notes_10,
+        vm.link_10,
+        vm.link_text_10,
+    )
 
     # Redirect to the admin page
     response = fastapi.responses.RedirectResponse(

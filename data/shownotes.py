@@ -43,3 +43,23 @@ class ShowNotes(SqlAlchemyBase):
     link_6: str = sa.Column(sa.String)
     link_text_6: str = sa.Column(sa.String)
     
+    timestamp_: int = sa.Column(sa.Integer)
+    notes_7: str = sa.Column(sa.String)
+    link_7: str = sa.Column(sa.String)
+    link_text_7: str = sa.Column(sa.String)
+    
+    timestamp_8: int = sa.Column(sa.Integer)
+    notes_8: str = sa.Column(sa.String)
+    link_8: str = sa.Column(sa.String)
+    link_text_8: str = sa.Column(sa.String)
+    
+    timestamp_9: int = sa.Column(sa.Integer)
+    notes_9: str = sa.Column(sa.String)
+    link_9: str = sa.Column(sa.String)
+    link_text_9: str = sa.Column(sa.String)
+   
+    timestamp_10: int = sa.Column(sa.Integer)
+    notes_10: str = sa.Column(sa.String)
+    link_10: str = sa.Column(sa.String)
+    link_text_10: str = sa.Column(sa.String)
+    

@@ -44,6 +44,26 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.link_6: Optional[str] = None
         self.link_text_6: Optional[str] = None
         
+        self.timestamp_7: Optional[int] = None
+        self.notes_7: Optional[str] = None
+        self.link_7: Optional[str] = None
+        self.link_text_7: Optional[str] = None
+        
+        self.timestamp_8: Optional[int] = None
+        self.notes_8: Optional[str] = None
+        self.link_8: Optional[str] = None
+        self.link_text_8: Optional[str] = None
+        
+        self.timestamp_9: Optional[int] = None
+        self.notes_9: Optional[str] = None
+        self.link_9: Optional[str] = None
+        self.link_text_9: Optional[str] = None
+        
+        self.timestamp_10: Optional[int] = None
+        self.notes_10: Optional[str] = None
+        self.link_10: Optional[str] = None
+        self.link_text_10: Optional[str] = None
+        
 
     async def load(self):
         form = await self.request.form()
@@ -82,6 +102,27 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.link_6 = form.get("link_6")
         self.link_text_6 = form.get("link_text_6")
         
+        self.timestamp_7 = form.get("timestamp_7")
+        self.notes_7 = form.get("notes_7")
+        self.link_7 = form.get("link_7")
+        self.link_text_7 = form.get("link_text_7")
+        
+        self.timestamp_8 = form.get("timestamp_8")
+        self.notes_8 = form.get("notes_8")
+        self.link_8 = form.get("link_8")
+        self.link_text_8 = form.get("link_text_8")
+        
+        self.timestamp_9 = form.get("timestamp_9")
+        self.notes_9 = form.get("notes_9")
+        self.link_9 = form.get("link_9")
+        self.link_text_9 = form.get("link_text_9")
+        
+        self.timestamp_10 = form.get("timestamp_10")
+        self.notes_10 = form.get("notes_10")
+        self.link_10 = form.get("link_10")
+        self.link_text_10 = form.get("link_text_10")
+      
+    
         if not self.season or not self.season.strip():
             self.error = "The season is required."
         if not self.episode or not self.episode.strip():

@@ -44,6 +44,28 @@ async def create_show_notes(
     link_6: str,
     link_text_6: str,
     
+    timestamp_7: int,
+    notes_7: str,
+    link_7: str,
+    link_text_7: str,
+    
+    timestamp_8: int,
+    notes_8: str,
+    link_8: str,
+    link_text_8: str,
+    
+    timestamp_9: int,
+    notes_9: str,
+    link_9: str,
+    link_text_9: str,
+    
+    timestamp_10: int,
+    notes_10: str,
+    link_10: str,
+    link_text_10: str,
+    
+    
+    
 ) -> ShowNotes:
     
     shownotes = ShowNotes()
@@ -82,6 +104,27 @@ async def create_show_notes(
     shownotes.notes_6 = notes_6
     shownotes.link_6 = link_6
     shownotes.link_text_6 = link_text_6
+    
+    shownotes.timestamp_7 = timestamp_7
+    shownotes.notes_7 = notes_7
+    shownotes.link_7 = link_7
+    shownotes.link_text_7 = link_text_7
+    
+    shownotes.timestamp_8 = timestamp_8
+    shownotes.notes_8 = notes_8
+    shownotes.link_8 = link_8
+    shownotes.link_text_8 = link_text_8
+    
+    shownotes.timestamp_9 = timestamp_9
+    shownotes.notes_9 = notes_9
+    shownotes.link_9 = link_9
+    shownotes.link_text_9 = link_text_9
+    
+    shownotes.timestamp_10 = timestamp_10
+    shownotes.notes_10 = notes_10
+    shownotes.link_10 = link_10
+    shownotes.link_text_10 = link_text_10
+    
     
   
     async with db_session.create_async_session() as session:

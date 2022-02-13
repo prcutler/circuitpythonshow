@@ -48,6 +48,29 @@
             Link 6 Text: <input name="link_text_6" type="text" placeholder="Link 6 Text" class="form-control" value="${ link_text_6 }" >
             <br />
 
+            Timestamp 7: <input name="timestamp_7" type="text" placeholder="Timestamp 7" class="form-control" value="${ timestamp_7 }" >
+            Notes 7: <input name="notes_7" type="text" placeholder="Notes 7" class="form-control" value="${ notes_7 }" >
+            Link 7: <input name="link_7" type="text" placeholder="Link 7" class="form-control" value="${ link_7 }" >
+            Link 7 Text: <input name="link_text_7" type="text" placeholder="Link 7 Text" class="form-control" value="${ link_text_7 }" >
+            <br />
+
+            Timestamp 8: <input name="timestamp_8" type="text" placeholder="Timestamp 8" class="form-control" value="${ timestamp_8 }" >
+            Notes 8: <input name="notes_8" type="text" placeholder="Notes 8" class="form-control" value="${ notes_8 }" >
+            Link 8: <input name="link_8" type="text" placeholder="Link 8" class="form-control" value="${ link_8 }" >
+            Link 8 Text: <input name="link_text_8" type="text" placeholder="Link 8 Text" class="form-control" value="${ link_text_8 }" >
+            <br />
+
+            Timestamp 9: <input name="timestamp_9" type="text" placeholder="Timestamp 9" class="form-control" value="${ timestamp_9 }" >
+            Notes 9: <input name="notes_9" type="text" placeholder="Notes 9" class="form-control" value="${ notes_9 }" >
+            Link 9: <input name="link_9" type="text" placeholder="Link 9" class="form-control" value="${ link_9 }" >
+            Link 9 Text: <input name="link_text_9" type="text" placeholder="Link 9 Text" class="form-control" value="${ link_text_9 }" >
+            <br />
+
+            Timestamp 10: <input name="timestamp_10" type="text" placeholder="Timestamp 10" class="form-control" value="${ timestamp_10 }" >
+            Notes 10: <input name="notes_10" type="text" placeholder="Notes 10" class="form-control" value="${ notes_10 }" >
+            Link 10: <input name="link_10" type="text" placeholder="Link 10" class="form-control" value="${ link_10 }" >
+            Link 10 Text: <input name="link_text_10" type="text" placeholder="Link 10 Text" class="form-control" value="${ link_text_10 }" >
+
 
         
 
