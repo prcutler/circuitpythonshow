@@ -37,13 +37,57 @@
                     <div class="about-content">
 
         <h2>Show Notes</h2>
-
+            <div tal:condition="shownotes.link_1">
                        <p> ${shownotes.notes_1}</p>
-                        <p>${shownotes.link_1}</p>
-
-
+                       <p tal:condition="shownotes.link_1"> <a href="${shownotes.link_1}">${shownotes.link_text_1}</a></p>
             </div>
-                </div>
+
+            <div tal:condition="shownotes.link_2">
+                       <p> ${shownotes.notes_2}</p>
+                       <p tal:condition="shownotes.link_2"> <a href="${shownotes.link_2}">${shownotes.link_text_2}</a></p>
+            </div>
+
+            <div tal:condition="shownotes.link_3">
+                       <p> ${shownotes.notes_3}</p>
+                       <p tal:condition="shownotes.link_3"> <a href="${shownotes.link_3}">${shownotes.link_text_3}</a></p>
+            </div>
+
+            <div tal:condition="shownotes.link_4">
+                       <p> ${shownotes.notes_4}</p>
+                       <p tal:condition="shownotes.link_4"> <a href="${shownotes.link_4}">${shownotes.link_text_4}</a></p>
+            </div>
+
+            <div tal:condition="shownotes.link_5">
+                       <p> ${shownotes.notes_5}</p>
+                       <p tal:condition="shownotes.link_5"> <a href="${shownotes.link_5}">${shownotes.link_text_5}</a></p>
+            </div>
+
+            <div tal:condition="shownotes.link_6">
+                       <p> ${shownotes.notes_6}</p>
+                       <p tal:condition="shownotes.link_6"> <a href="${shownotes.link_6}">${shownotes.link_text_6}</a></p>
+                    </div>
+
+                    <div tal:condition="shownotes.link_7">
+                       <p> ${shownotes.notes_7}</p>
+                       <p tal:condition="shownotes.link_7"> <a href="${shownotes.link_7}">${shownotes.link_text_7}</a></p>
+                    </div>
+
+                    <div tal:condition="shownotes.link_8">
+                       <p> ${shownotes.notes_8}</p>
+                       <p tal:condition="shownotes.link_8"> <a href="${shownotes.link_8}">${shownotes.link_text_8}</a></p>
+                    </div>
+
+                    <div tal:condition="shownotes.link_9">
+                       <p> ${shownotes.notes_9}</p>
+                       <p tal:condition="shownotes.link_9"> <a href="${shownotes.link_9}">${shownotes.link_text_9}</a></p>
+                    </div>
+
+                    <div tal:condition="shownotes.link_10">
+                       <p> ${shownotes.notes_10}</p>
+                       <p tal:condition="shownotes.link_10"> <a href="${shownotes.link_10}">${shownotes.link_text_10}</a></p>
+                    </div>
+
+        </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
                         <!-- img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab"-->
