@@ -8,15 +8,14 @@
                     <div class="about-content">
 
             <h2>Episode  ${episode_info.episode_number} with ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
-                <br />            
+            <p>Released ${publish_date} (recorded ${record_date})</p>    
+     
             <a href="https://circuitpythonshow.captivate.fm/listen" target="_blank" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
                             Subscribe</a>
                             <br /><br />
                             <p><b>Guest</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
                             <p><b>Topics</b>: ${topic.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
-                            <p><b>Episode released</b>: ${publish_date}</p>
-                            <p><b>Episode recorded</b>: ${record_date}</p>
                             <p><b>YouTube link</b>: ${episode_info.youtube_url}</p>
                             <p><b>Guest Bio</b>: ${episode_info.guest_bio}</p>
                       

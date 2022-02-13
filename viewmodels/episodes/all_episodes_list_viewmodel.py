@@ -11,14 +11,14 @@ class AllEpisodesViewModel(ViewModelBase):
         super().__init__(request)
 
         self.episodes: List[Episode] = []
-        self.episode_count: int = 0
+        # self.episode_count: int = 0
         # self.episode_number = episode_number
-        self.topic: str = ""
+        # self.topic: str = ""
 
     async def load(self):
 
         print("Loading all viewmodel...")
         self.episodes = await episode_service.latest_episodes()
-        self.episode_count: int = await episode_service.get_episode_count()
+        # self.episode_count: int = await episode_service.get_episode_count()
 
         # self.topic: str = await episode_service.get_episode_topic(self.episode_number)

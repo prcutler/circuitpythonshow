@@ -5,10 +5,12 @@ from sqlalchemy import func
 from sqlalchemy.future import select
 
 from datetime import datetime, timedelta
+import pendulum
 
 from data import db_session
 from data.episode import Episode
 from data.shownotes import ShowNotes
+
 
 
 async def create_episode(
@@ -108,11 +110,11 @@ async def get_episode_length(episode_number) -> int:
         result = await session.execute(query)
 
         results_seconds = result.scalar()
-        print(type(results_seconds), results_seconds)
+        # print(type(results_seconds), results_seconds)
 
         def convert(results_seconds):
             string_result = str(timedelta(seconds=results_seconds))
-            print("Conversion: ", string_result)
+            # print("Conversion: ", string_result)
 
             return string_result
 
@@ -122,7 +124,7 @@ async def get_episode_length(episode_number) -> int:
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
     episode_length_converted = str(timedelta(seconds=int_episode_length))
-    print(episode_length_converted, "in service")
+    #print(episode_length_converted, "in service")
             
     return episode_length_converted
 
@@ -136,13 +138,11 @@ async def get_publish_date(episode_number) -> int:
         result = await session.execute(query)
 
     publish_results = result.scalar()
-    format = "%Y%m%d"
-    results_datetime = datetime.strptime(publish_results, format)
-    print(results_datetime)
 
-    format_time = results_datetime.strftime("%B %d %Y")
+    pend_object = pendulum.parse(publish_results)
+    publish_date = pend_object.to_formatted_date_string()
 
-    return format_time
+    return publish_date
 
 
 async def get_record_date(episode_number) -> int:
@@ -154,17 +154,19 @@ async def get_record_date(episode_number) -> int:
 
         publish_results = result.scalar()
 
-    format = "%Y%m%d"
-    results_datetime = datetime.strptime(publish_results, format)
-    print(results_datetime)
+    pend_object = pendulum.parse(publish_results)
+    record_date = pend_object.to_formatted_date_string()
 
-    record_time = results_datetime.strftime("%B %d %Y")
-
-    return record_time
+    return record_date
 
 def convert_dates(form_date):
     format = "%Y%m%d"
-    results_dates_converted = datetime.strptime(form_date, format)    
+    print(form_date)
+    pend_object = pendulum.parse(form_date)
+    pend_convert = pend_object.to_date_string()
+    print("Pendulum says: ",pend_convert)
+    results_dates_converted = pend_convert
+    print("Convert in service: ",results_dates_converted) 
     
     return results_dates_converted
 
