@@ -2,6 +2,7 @@ from typing import Optional
 from xmlrpc.client import Boolean
 
 from starlette.requests import Request
+from services import episode_service
 
 from viewmodels.shared.viewmodel import ViewModelBase
 
@@ -18,13 +19,16 @@ class EpisodeAddViewModel(ViewModelBase):
         self.guest_lastname: Optional[str] = None
         self.topic: Optional[str] = None
         self.record_date: Optional[str] = None
+        # self.record_date_converted: Optional[str] = None
         self.publish_date: Optional[str] = None
+        # self.publish_date_converted: Optional[str] = None
         self.guest_image: Optional[str] = None
         self.guest_bio: Optional[str] = None
         self.sponsor_1: Optional[str] = None
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
-        self.episode_length: Optional[str] = None
+        self.episode_length: Optional[int] = None
+        # self.episode_length_string: Optional[str] = None
         self.captivate_url: Optional[str] = None
 
     async def load(self):
@@ -37,14 +41,25 @@ class EpisodeAddViewModel(ViewModelBase):
         self.guest_firstname = form.get("guest_firstname")
         self.guest_lastname = form.get("guest_lastname")
         self.topic = form.get("topic")
+        
         self.record_date = form.get("record_date")
+        print("record_date: ", self.record_date)
+        self.record_date_converted = episode_service.convert_dates(self.record_date)
+        print("record_date_converted: ", self.record_date_converted)
+        
         self.publish_date = form.get("publish_date")
+        self.publish_date_converted = episode_service.convert_dates(self.publish_date)
+        
         self.guest_image = form.get("guest_image")
         self.guest_bio = form.get("guest_bio")
         self.sponsor_1 = form.get("sponsor_1")
         self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")
-        self.episode_length = form.get("episode_length")
+        self.episode_length_seconds = form.get("episode_length")
+        
+        print("Episode length: ", self.episode_length_seconds)
+        self.episode_length_string = episode_service.convert_episode_length(self.episode_length_seconds)
+        
         self.captivate_url = form.get("captivate_url")
 
         if not self.season or not self.season.strip():
