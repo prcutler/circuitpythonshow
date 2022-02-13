@@ -19,16 +19,13 @@ class EpisodeAddViewModel(ViewModelBase):
         self.guest_lastname: Optional[str] = None
         self.topic: Optional[str] = None
         self.record_date: Optional[str] = None
-        # self.record_date_converted: Optional[str] = None
         self.publish_date: Optional[str] = None
-        # self.publish_date_converted: Optional[str] = None
         self.guest_image: Optional[str] = None
         self.guest_bio: Optional[str] = None
         self.sponsor_1: Optional[str] = None
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
         self.episode_length: Optional[int] = None
-        # self.episode_length_string: Optional[str] = None
         self.captivate_url: Optional[str] = None
 
     async def load(self):
@@ -55,10 +52,10 @@ class EpisodeAddViewModel(ViewModelBase):
         self.sponsor_1 = form.get("sponsor_1")
         self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")
-        self.episode_length_seconds = form.get("episode_length")
+        self.episode_length = form.get("episode_length")
         
-        print("Episode length: ", self.episode_length_seconds)
-        self.episode_length_string = episode_service.convert_episode_length(self.episode_length_seconds)
+        print("Episode length: ", self.episode_length)
+        self.episode_length_string = episode_service.convert_episode_length(self.episode_length)
         
         self.captivate_url = form.get("captivate_url")
 

@@ -26,8 +26,8 @@
                                 <td><a href="${e.episode_number}">${e.episode_number}</a></td>
                                 <td>${e.guest_firstname} ${e.guest_lastname}</td>
                                 <td><a href="${e.episode_number}">${e.topic}</a></td>
-                                <td>${e.publish_date}</td>
-                                <td>${e.episode_length}</td>
+                                <td>${e.publish_date_converted}</td>
+                                <td>${e.episode_length_string}</td>
                             </tr>
                             </span>
                         </p>

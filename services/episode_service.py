@@ -28,7 +28,7 @@ async def create_episode(
     sponsor_1: str,
     sponsor_2: str,
     published: int,
-    episode_length: str,
+    episode_length: int,
     episode_length_converted: str,
     captivate_url: str,
 ) -> Episode:
@@ -122,6 +122,7 @@ async def get_episode_length(episode_number) -> int:
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
     episode_length_converted = str(timedelta(seconds=int_episode_length))
+    print(episode_length_converted, "in service")
             
     return episode_length_converted
 
