@@ -57,13 +57,16 @@ async def register(request: Request):
         vm.guest_lastname,
         vm.topic,
         vm.record_date,
+        vm.record_date_converted,
         vm.publish_date,
+        vm.publish_date_converted,
         vm.guest_image,
         vm.guest_bio,
         vm.sponsor_1,
         vm.sponsor_2,
         vm.published,
         vm.episode_length,
+        vm.episode_length_string,
         vm.captivate_url,
     )
 

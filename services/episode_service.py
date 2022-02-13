@@ -20,13 +20,16 @@ async def create_episode(
     guest_lastname: str,
     topic: str,
     record_date: str,
+    record_date_converted: str,
     publish_date: str,
+    publish_date_converted: str,
     guest_image: str,
     guest_bio: str,
     sponsor_1: str,
     sponsor_2: str,
     published: int,
     episode_length: str,
+    episode_length_converted: str,
     captivate_url: str,
 ) -> Episode:
 
@@ -40,14 +43,19 @@ async def create_episode(
     episode.guest_lastname = guest_lastname
     episode.topic = topic
     episode.record_date = record_date
+    episode.record_date_converted = record_date_converted
     episode.publish_date = publish_date
+    episode.publish_date_converted = publish_date_converted
     episode.guest_image = guest_image
     episode.guest_bio = guest_bio
     episode.sponsor_1 = sponsor_1
     episode.sponsor_2 = sponsor_2
     episode.published = published
     episode.episode_length = episode_length
+    episode.episode_length_string = episode_length_converted
     episode.captivate_url = captivate_url
+    
+    
 
     async with db_session.create_async_session() as session:
         session.add(episode)
@@ -110,6 +118,12 @@ async def get_episode_length(episode_number) -> int:
 
         conversion_time = convert(results_seconds)
         return conversion_time
+    
+def convert_episode_length(episode_length):
+    int_episode_length = int(episode_length)
+    episode_length_converted = str(timedelta(seconds=int_episode_length))
+            
+    return episode_length_converted
 
 
 #### GET LAST EPISODE PUBLISH AND RECORDED DATES ####
@@ -146,6 +160,12 @@ async def get_record_date(episode_number) -> int:
     record_time = results_datetime.strftime("%B %d %Y")
 
     return record_time
+
+def convert_dates(form_date):
+    format = "%Y%m%d"
+    results_dates_converted = datetime.strptime(form_date, format)    
+    
+    return results_dates_converted
 
 
 #### GET EPISODE COUNT ####
