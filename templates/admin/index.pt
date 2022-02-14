@@ -15,6 +15,25 @@
                         <li>If you like the show, write a review.</li>
                         <li>Tell a friend or share it on social media.</li>
                         </ol></p>
+                        <br />
+                        <br /> 
+
+                        <h3>Edit Episode Information</h3>
+                        <p>Choose an episode:</p>
+                        
+
+                        <form class="form-horizontal" action="" method="POST">
+                            <div class="form-group">
+
+                        <p>Episodes: <select class="form-control" name="episode_number_list">
+                            <option tal:repeat="e episodes" value="${e.episode_number}">${e.episode_number}
+                            </option>
+                         </select></p>
+
+                        <button type="submit" class="btn-success">Submit</button>
+                        </div>
+                        </form>
+
 
                     </div>
                 </div>

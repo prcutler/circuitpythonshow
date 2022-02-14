@@ -66,7 +66,7 @@ async def create_episode(
     return episode
 
 
-### GET LIST OF ALL EPISODES ###
+### GET LIST OF ALL PUBLISHED EPISODES ###
 
 
 async def latest_episodes() -> List[Episode]:
@@ -240,3 +240,18 @@ async def get_last_topic() -> int:
         result = await session.execute(query)
 
         return result.scalar()
+    
+    
+### GET LIST OF ALL EPISODE NUMBERS FOR ADMIN PANEL ###
+async def get_episode_number_list() -> List[Episode]:
+    async with db_session.create_async_session() as session:
+        query = (
+            select(Episode)
+            .order_by(Episode.episode_number.desc())
+        )
+
+        results = await session.execute(query)
+        episode_number_list = results.scalars()
+        #print("Episodes: ", episodes, type(episodes))
+
+        return episode_number_list
