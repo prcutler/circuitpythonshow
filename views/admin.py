@@ -8,6 +8,7 @@ from services import transcripts_service
 from services import shownotes_service
 
 from viewmodels.admin.add_episode import EpisodeAddViewModel
+from viewmodels.admin.edit_episode_viewmodel import EditEpisodeViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
 from viewmodels.admin.admin_viewmodel import AdminViewModel
 from viewmodels.admin.add_show_notes_viewmodel import ShowNotesAddViewModel
@@ -17,8 +18,7 @@ router = fastapi.APIRouter()
 
 
 ###########  ADMIN HOMEPAGE ##############
-
-
+#### GET EPISODE LIST TO DISPLAY FOR EDIT ####
 @router.get("/admin/index")
 @template(template_file="admin/index.pt")
 async def index(request: Request):
@@ -28,9 +28,20 @@ async def index(request: Request):
     return vm.to_dict()
 
 
+#### EDIT EPISODE DETAIL TEMPLATE ####
+@router.get("/admin/edit-episode/{episode_number}")
+@template(template_file="admin/edit-episode.pt")
+async def details(episode_number, request: Request):
+
+    vm = EditEpisodeViewModel(episode_number, request)
+    await vm.load(episode_number)
+
+    return vm.to_dict()
+
+
+
+
 ###########  ADD EPISODE ##############
-
-
 @router.get("/admin/add-episode", include_in_schema=False)
 @template(template_file="admin/add-episode.pt")
 def register(request: Request):
@@ -88,17 +99,17 @@ def register(request: Request):
     return vm.to_dict()
 
 
-@router.post("/admin/add-episode", include_in_schema=False)
+@router.post("/admin/edit-episode", include_in_schema=False)
 @template()
-async def register(request: Request):
-    vm = EpisodeAddViewModel(request)
+async def edit_episode(request: Request):
+    vm = EditEpisodeViewModel(request)
     await vm.load()
 
     if vm.error:
         return vm.to_dict()
 
     # Add the episode
-    episode = await episode_service.create_episode(
+    episode = await episode_service.edit_episode(
         vm.season,
         vm.episode_number,
         vm.episode_title,
@@ -107,19 +118,22 @@ async def register(request: Request):
         vm.guest_lastname,
         vm.topic,
         vm.record_date,
+        vm.record_date_converted,
         vm.publish_date,
+        vm.publish_date_converted,
         vm.guest_image,
         vm.guest_bio,
         vm.sponsor_1,
         vm.sponsor_2,
         vm.published,
         vm.episode_length,
+        vm.episode_length_string,
         vm.captivate_url,
     )
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(
-        url="/admin/add-shown-notes", status_code=status.HTTP_302_FOUND
+        url="/admin/index", status_code=status.HTTP_302_FOUND
     )
 
     return response
@@ -203,7 +217,7 @@ async def add_show_notes(request: Request):
 
     # Redirect to the admin page
     response = fastapi.responses.RedirectResponse(
-        url="/admin/index", status_code=status.HTTP_302_FOUND
+        url="/admin/add_show_notes", status_code=status.HTTP_302_FOUND
     )
 
     return response
