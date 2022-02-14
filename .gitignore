@@ -147,3 +147,4 @@ workspace.code-workspacegit
 db/*
 
 
+templates/admin/edit-episode.pt
