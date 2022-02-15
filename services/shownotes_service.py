@@ -130,3 +130,5 @@ async def get_shownotes(episode_number) -> List[ShowNotes]:
         print(shownotes)
 
         return shownotes
+    
+    
