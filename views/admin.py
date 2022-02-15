@@ -29,7 +29,7 @@ async def index(request: Request):
     return vm.to_dict()
 
 
-@router.post("admin/index", include_in_schema=False)
+@router.post("/admin/index", include_in_schema=False)
 @template()
 async def edit_post(request: Request):
     vm = AdminViewModel(request)
@@ -37,7 +37,7 @@ async def edit_post(request: Request):
 
     # Redirect to Admin homepage on post
     response = fastapi.responses.RedirectResponse(
-        url="/admin/edit-episode/{vm.episode_number}", status_code=status.HTTP_302_FOUND
+        url="/admin/edit-episode/", status_code=status.HTTP_302_FOUND
     )
 
     return response
