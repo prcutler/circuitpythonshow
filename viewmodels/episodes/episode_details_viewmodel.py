@@ -12,7 +12,6 @@ from data.episode import Episode
 from data.shownotes import ShowNotes
 
 
-
 class EpisodeDetailsViewModel(ViewModelBase):
     def __init__(self, episode_number, request: Request):
         super().__init__(request)
