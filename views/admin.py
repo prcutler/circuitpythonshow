@@ -36,11 +36,10 @@ async def edit_post(request: Request):
     await vm.load()
     
     episode_number = vm.episode_number
-    print("Ep# in view: ", episode_number)
 
     # Redirect to Admin homepage on post
     response = fastapi.responses.RedirectResponse(
-        url="/admin/edit-episode/{episode_number}", status_code=status.HTTP_302_FOUND
+        url=f"/admin/edit-episode/{episode_number}", status_code=status.HTTP_302_FOUND
     )
 
     return response
