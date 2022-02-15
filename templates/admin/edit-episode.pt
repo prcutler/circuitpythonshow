@@ -6,7 +6,7 @@
 
         <div class="form-container">
             <form action="" method="POST" class="account-form" >
-                <h1>Add Episode</h1>
+                <h1>Edit Episode</h1>
 
             Season: <input name="season" type="text" placeholder=" ${episode_info.season}" class="form-control" value="${ season }" >
             <br />
@@ -20,19 +20,19 @@
             class="form-control" value="${ youtube_url }" ><br />
             
             Guest First Name: <input name="guest_firstname" type="text" placeholder=" ${episode_info.guest_firstname}" 
-            class="form-control" value="${ guest_firstname }" required><br />
+            class="form-control" value="${ guest_firstname }" ><br />
             
             Guest Last Name: <input name="guest_lastname" type="text" placeholder=" ${episode_info.guest_lastname}"
-            class="form-control" value="${ guest_lastname }" required><br />
+            class="form-control" value="${ guest_lastname }" ><br />
             
             Topic: <input name="topic" type="text" placeholder=" ${episode_info.topic}" 
-            class="form-control" value=" ${ topic }" required<br />
+            class="form-control" value=" ${ topic }" <br />
             
            Recorded Date: <input name="record_date" type="text" placeholder=" ${episode_info.record_date}" 
-            class="form-control" value="${ record_date }" required><br />
+            class="form-control" value="${ record_date }" ><br />
             
             Publish Date: <input name="publish_date" type="text" placeholder=" ${episode_info.publish_date}" 
-            class="form-control" value="${ publish_date }" required><br />
+            class="form-control" value="${ publish_date }" ><br />
             
             Guest image URL: <input name="guest_image" type="text" placeholder=" ${episode_info.guest_image}" 
             class="form-control" value="${ guest_image }" ><br />
@@ -47,7 +47,7 @@
             class="form-control" value="${ sponsor_2 }" ><br />
             
             Published: <input name="published" type="text" placeholder=" ${episode_info.published}"
-            class="form-control" value="${ published }" required><br />
+            class="form-control" value="${ published }" ><br />
 
             Episode Length: <input name="episode_length" type="text" placeholder=" ${episode_info.episode_length}" 
             class="form-control" value="${ episode_length }"><br />

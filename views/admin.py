@@ -22,24 +22,25 @@ router = fastapi.APIRouter()
 @router.get("/admin/index")
 @template(template_file="admin/index.pt")
 async def index(request: Request):
+
     vm = AdminViewModel(request)
     await vm.load()
 
     return vm.to_dict()
 
 
-#### EDIT EPISODE DETAIL TEMPLATE ####
-@router.get("/admin/edit-episode/{episode_number}")
-@template(template_file="admin/edit-episode.pt")
-async def details(episode_number, request: Request):
+@router.post("admin/index", include_in_schema=False)
+@template()
+async def edit_post(request: Request):
+    vm = AdminViewModel(request)
+    await vm.load()
 
-    vm = EditEpisodeViewModel(episode_number, request)
-    await vm.load(episode_number)
+    # Redirect to Admin homepage on post
+    response = fastapi.responses.RedirectResponse(
+        url="/admin/edit-episode/{vm.episode_number}", status_code=status.HTTP_302_FOUND
+    )
 
-    return vm.to_dict()
-
-
-
+    return response
 
 ###########  ADD EPISODE ##############
 @router.get("/admin/add-episode", include_in_schema=False)
@@ -89,17 +90,17 @@ async def register(request: Request):
     return response
 
 
-###########  EDIT EPISODE ##############
-
-
-@router.get("/admin/edit-episode", include_in_schema=False)
+#### EDIT EPISODE DETAIL TEMPLATE ####
+@router.get("/admin/edit-episode/{episode_number}")
 @template(template_file="admin/edit-episode.pt")
-def register(request: Request):
-    vm = EpisodeAddViewModel(request)
+async def details(episode_number, request: Request):
+    vm = EditEpisodeViewModel(episode_number, request)
+    await vm.load(episode_number)
+
     return vm.to_dict()
 
 
-@router.post("/admin/edit-episode", include_in_schema=False)
+@router.post("/admin/edit-episode/{episode-number}", include_in_schema=False)
 @template()
 async def edit_episode(request: Request):
     vm = EditEpisodeViewModel(request)
@@ -109,7 +110,7 @@ async def edit_episode(request: Request):
         return vm.to_dict()
 
     # Add the episode
-    episode = await episode_service.edit_episode(
+    episode = await episode_service.create_episode(
         vm.season,
         vm.episode_number,
         vm.episode_title,
@@ -163,52 +164,42 @@ async def add_show_notes(request: Request):
         vm.season,
         vm.episode,
         vm.published,
-        
         vm.timestamp_1,
         vm.notes_1,
         vm.link_1,
-        vm.link_text_1, 
-        
+        vm.link_text_1,
         vm.timestamp_2,
         vm.notes_2,
         vm.link_2,
         vm.link_text_2,
-        
         vm.timestamp_3,
         vm.notes_3,
         vm.link_3,
         vm.link_text_3,
-        
         vm.timestamp_4,
         vm.notes_4,
         vm.link_4,
         vm.link_text_4,
-        
         vm.timestamp_5,
         vm.notes_5,
         vm.link_5,
         vm.link_text_5,
-        
         vm.timestamp_6,
         vm.notes_6,
         vm.link_6,
         vm.link_text_6,
-        
         vm.timestamp_7,
         vm.notes_7,
         vm.link_7,
         vm.link_text_7,
-        
         vm.timestamp_8,
         vm.notes_8,
         vm.link_8,
         vm.link_text_8,
-        
         vm.timestamp_9,
         vm.notes_9,
         vm.link_9,
         vm.link_text_9,
-        
         vm.timestamp_10,
         vm.notes_10,
         vm.link_10,
