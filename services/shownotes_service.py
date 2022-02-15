@@ -132,3 +132,30 @@ async def get_shownotes(episode_number) -> List[ShowNotes]:
         return shownotes
     
     
+#### EDIT SHOW NOTES ####
+async def edit_show_notes(
+    season: int,
+    episode: int,
+    timestamp_1: int,
+    notes_1: str,
+    timestamp_2: int,
+    notes_2: str,
+):
+
+    shownotes = ShowNotes()
+    
+    shownotes.season = season
+    shownotes.episode = episode
+
+    shownotes.timestamp_1 = timestamp_1
+    shownotes.notes_1 = notes_1
+
+    shownotes.timestamp_2 = timestamp_2
+    shownotes.notes_2 = notes_2
+    
+    async with db_session.create_async_session() as session:
+        print("Add to database from service")
+        session.add(shownotes)
+        await session.commit()
+
+    return shownotes

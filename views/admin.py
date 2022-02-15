@@ -232,6 +232,33 @@ async def edit_show_notes(episode_number, request: Request):
 
     return vm.to_dict()
 
+@router.post("/admin/edit-shownotes", include_in_schema=False)
+@template("admin/edit-shownotes.pt")
+async def edit_show_notes(request: Request):
+    vm = EditShowNotesViewModel(request)
+    await vm.load()
+    
+    if vm.error:
+        return vm.to_dict()
+    
+    # Edit the show notes
+    show_notes = await shownotes_service.edit_show_notes(
+        vm.season,
+        vm.episode,
+        vm.published,
+        vm.timestamp_1,
+        vm.notes_1,
+        vm.timestamp_2,
+        vm.notes_2,
+
+    )
+        
+    # Redirect to the admin page
+    response = fastapi.responses.RedirectResponse(
+        url="/admin/index", status_code=status.HTTP_302_FOUND
+    )
+    
+    return response
 
 ###########  ADD Transcripts ##############
 @router.get("/admin/add-transcripts", include_in_schema=False)
