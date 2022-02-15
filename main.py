@@ -9,8 +9,6 @@ from data import db_session
 from views import account, home, episodes, admin
 
 from pydantic import BaseModel
-from beanie import Document, Indexed, init_beanie
-import motor.motor_asyncio
 
 app = fastapi.FastAPI()
 

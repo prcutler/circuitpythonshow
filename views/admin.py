@@ -7,12 +7,18 @@ from services import episode_service
 from services import transcripts_service
 from services import shownotes_service
 
-from viewmodels.admin.add_episode import EpisodeAddViewModel
-from viewmodels.admin.edit_episode_viewmodel import EditEpisodeViewModel
 from viewmodels.shared.viewmodel import ViewModelBase
 from viewmodels.admin.admin_viewmodel import AdminViewModel
+
+from viewmodels.admin.add_episode import EpisodeAddViewModel
 from viewmodels.admin.add_show_notes_viewmodel import ShowNotesAddViewModel
 from viewmodels.admin.add_transcripts_viewmodel import TranscriptAddViewModel
+
+from viewmodels.admin.edit_episode_viewmodel import EditEpisodeViewModel
+from viewmodels.admin.edit_show_notes_viewmodel import EditShowNotesViewModel
+
+
+
 
 router = fastapi.APIRouter()
 
@@ -86,8 +92,7 @@ async def register(request: Request):
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(
-        url="/episodes/all", status_code=status.HTTP_302_FOUND
-    )
+        url="/admin/index", status_code=status.HTTP_302_FOUND)
 
     return response
 
@@ -98,11 +103,13 @@ async def register(request: Request):
 async def details(episode_number, request: Request):
     vm = EditEpisodeViewModel(episode_number, request)
     await vm.load(episode_number)
+    
+    episode_number = vm.episode_number
 
     return vm.to_dict()
 
 
-@router.post("/admin/edit-episode/{episode-number}", include_in_schema=False)
+@router.post("/admin/edit-episode/{episode_number}", include_in_schema=False)
 @template()
 async def edit_episode(request: Request):
     vm = EditEpisodeViewModel(request)
@@ -143,8 +150,6 @@ async def edit_episode(request: Request):
 
 
 ###########  ADD SHOWNOTES ##############
-
-
 @router.get("/admin/add-show-notes", include_in_schema=False)
 @template("admin/add-show-notes.pt")
 def add_show_notes(request: Request):
@@ -210,10 +215,22 @@ async def add_show_notes(request: Request):
 
     # Redirect to the admin page
     response = fastapi.responses.RedirectResponse(
-        url="/admin/add_show_notes", status_code=status.HTTP_302_FOUND
+        url="/admin/index", status_code=status.HTTP_302_FOUND
     )
 
     return response
+
+
+#### EDIT SHOW NOTES ####
+@router.get("/admin/edit-shownotes/{episode_number}")
+@template(template_file="admin/edit-shownotes.pt")
+async def edit_show_notes(episode_number, request: Request):
+    vm = EditShowNotesViewModel(episode_number, request)
+    await vm.load(episode_number)
+    
+    episode_number = vm.episode_number
+
+    return vm.to_dict()
 
 
 ###########  ADD Transcripts ##############

@@ -7,6 +7,7 @@ from sqlalchemy.future import select
 
 from data import db_session
 from data.user import User
+from data.shownotes import Shownotes
 
 
 #async def get_login_status(user_id) -> int:
@@ -76,3 +77,8 @@ async def get_user_by_email(email: str) -> Optional[User]:
         result = await session.execute(query)
 
         return result.scalar_one_or_none()
+    
+
+
+
+        

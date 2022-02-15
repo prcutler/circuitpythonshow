@@ -66,6 +66,7 @@ class ShowNotesAddViewModel(ViewModelBase):
         
 
     async def load(self):
+        
         form = await self.request.form()
         
         self.season = form.get("season")
