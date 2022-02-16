@@ -233,10 +233,11 @@ async def edit_show_notes(episode_number, request: Request):
     return vm.to_dict()
 
 @router.post("/admin/edit-shownotes", include_in_schema=False)
-@template("admin/edit-shownotes.pt")
+@template("admin/edit-shownotes.pt{episode_number}")
 async def edit_show_notes(request: Request):
     vm = EditShowNotesViewModel(request)
     await vm.load()
+    print("Hi from the view")
     
     if vm.error:
         return vm.to_dict()
@@ -244,8 +245,6 @@ async def edit_show_notes(request: Request):
     # Edit the show notes
     show_notes = await shownotes_service.edit_show_notes(
         vm.season,
-        vm.episode,
-        vm.published,
         vm.timestamp_1,
         vm.notes_1,
         vm.timestamp_2,
