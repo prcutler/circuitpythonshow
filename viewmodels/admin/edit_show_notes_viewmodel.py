@@ -18,7 +18,6 @@ class EditShowNotesViewModel(ViewModelBase):
         
         self.timestamp_1: Optional[int] = None
         self.notes_1: Optional[str] = None
-
         
         self.timestamp_2: Optional[int] = None
         self.notes_2: Optional[str] = None
