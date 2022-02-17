@@ -64,8 +64,13 @@ class ShowNotesAddViewModel(ViewModelBase):
         self.link_10: Optional[str] = None
         self.link_text_10: Optional[str] = None
         
+        self.login_status = self.is_logged_in
 
     async def load(self):
+        
+        self.login_status = self.is_logged_in
+        print("login_status from viewmodel:", self.login_status)
+        
         form = await self.request.form()
         
         self.season = form.get("season")

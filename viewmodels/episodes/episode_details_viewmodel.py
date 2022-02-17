@@ -12,7 +12,6 @@ from data.episode import Episode
 from data.shownotes import ShowNotes
 
 
-
 class EpisodeDetailsViewModel(ViewModelBase):
     def __init__(self, episode_number, request: Request):
         super().__init__(request)
@@ -33,13 +32,15 @@ class EpisodeDetailsViewModel(ViewModelBase):
     async def load(self, episode_number):
 
         self.episode_number = episode_number
-        # self.episode_info = await episode_service.get_episode_info(self.episode_number)
-        # self.publish_date = await episode_service.get_publish_date(self.episode_number)
+
 
         self.topic = await episode_service.get_episode_topic(self.episode_number)
         print("Topic: ", self.topic)
 
         self.episode_info = await episode_service.get_episode_info(self.episode_number)
+        
+        if self.episode_info is None:
+            return
         
         self.episode_length = await episode_service.get_episode_length(
             self.episode_number

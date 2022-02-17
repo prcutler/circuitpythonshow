@@ -1,0 +1,47 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+
+    <div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column text-white">
+
+        <div class="form-container">
+            <form action="" method="POST" class="account-form" >
+                <h1>Edit Show Notes</h1>
+
+                <p>Episode #${shownotes.episode}</p>
+
+            Season: <input name="season" type="text" placeholder="${shownotes.season}" class="form-control" value="${ season }" >
+            <br />
+
+            Show Notes #1: <input name="notes_1" type="text" placeholder=" ${shownotes.notes_1}" 
+            class="form-control" value="${ notes_1 }" ><br />
+            
+            Timestamp #1: <input name="timestamp_1" type="text" placeholder=" ${shownotes.timestamp_1}" 
+            class="form-control" value="${ timestamp_1}" ><br />
+            
+            Show Notes #2: <input name="notes_2" type="text" placeholder=" ${shownotes.notes_2}" 
+            class="form-control" value="${ notes_2 }" ><br />
+            
+            Timestamp #2: <input name="timestamp_2" type="text" placeholder=" ${shownotes.timestamp_2}"
+            class="form-control" value="${ timestamp_2}" ><br />
+            
+
+            <br />
+            <button type="submit" class="btn btn-danger">Edit Shownotes</button>
+            <br />
+
+            <br />
+                <div style="clear: both;"></div>
+                <br /><br /><br />
+
+                <div class="error-msg" tal:condition="error">${ error }</div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+
+    <div metal:fill-slot="additional_css" tal:omit-tag="True">
+        <link rel="stylesheet" href="/static/css/account.css">
+    </div>
+</div>

@@ -15,8 +15,13 @@ class TranscriptAddViewModel(ViewModelBase):
         self.transcript_1: Optional[str] = None
         self.transcript_2: Optional[int] = None
         self.published: Optional[int] = None
+        
+        self.login_status = self.is_logged_in
 
     async def load(self):
+        
+        self.login_status = self.is_logged_in
+        
         form = await self.request.form()
 
         self.season = form.get("season")

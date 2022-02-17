@@ -7,9 +7,11 @@ from services import episode_service
 from viewmodels.shared.viewmodel import ViewModelBase
 
 
-class EpisodeAddViewModel(ViewModelBase):
+class EditEpisodeViewModel(ViewModelBase):
     def __init__(self, request: Request):
         super().__init__(request)
+        
+        self.login_status = None
 
         self.season: Optional[int] = None
         self.episode_number: Optional[int] = None
@@ -27,14 +29,10 @@ class EpisodeAddViewModel(ViewModelBase):
         self.published: Optional[str] = None
         self.episode_length: Optional[int] = None
         self.captivate_url: Optional[str] = None
-        
-        self.login_status = self.is_logged_in
 
     async def load(self):
         
         self.login_status = self.is_logged_in
-        
-        print("Add Episode Viewmodel: ", self.login_status)
         
         form = await self.request.form()
 
