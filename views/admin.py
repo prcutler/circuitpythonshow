@@ -34,8 +34,8 @@ async def index(request: Request):
     await vm.load()
     print("VMload is: ", vm.login_status)
     
-    if vm.load is False:
-        response = fastapi.responses.RedirectResponse(url="/index", status_code=status.HTTP_302_FOUND)
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
     
         return response 
         
