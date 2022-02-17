@@ -7,11 +7,13 @@
                 <div class="col-lg-6">
                     <div class="about-content">
 
+                        <h2 class="title">Oh no, it's not here!</h2>
 
+                        <p>
+                            The page you were looking for was not found.</p>
 
-            <iframe src="https://giphy.com/embed/YyKPbc5OOTSQE" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/gustavo-art-kidmograph-gustavo-YyKPbc5OOTSQE">via GIPHY</a></p>
-
-
+                            <img src=/static/img/404.gif />
+                            <br /><br /><br /><br />
             </div>
         </div>
     </div>
