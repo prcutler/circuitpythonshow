@@ -73,7 +73,7 @@ async def latest_episodes() -> List[Episode]:
 
         results = await session.execute(query)
         episodes = results.scalars()
-        print("Episodes: ", episodes, type(episodes))
+        # print("Episodes: ", episodes, type(episodes))
 
         return episodes
 
@@ -155,12 +155,12 @@ async def get_record_date(episode_number) -> int:
 
 def convert_dates(form_date):
     format = "%Y%m%d"
-    print(form_date)
+    # print(form_date)
     pend_object = pendulum.parse(form_date)
     pend_convert = pend_object.to_date_string()
-    print("Pendulum says: ", pend_convert)
+    # print("Pendulum says: ", pend_convert)
     results_dates_converted = pend_convert
-    print("Convert in service: ", results_dates_converted)
+    # print("Convert in service: ", results_dates_converted)
 
     return results_dates_converted
 

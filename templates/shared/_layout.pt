@@ -45,6 +45,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/support">Support</a>
+                            <li tal:condition="is_logged_in" class="nav-item"><a class="nav-link" href="/admin/index">Admin</a></li>
                     </ul> 
                 </div>
             </div>

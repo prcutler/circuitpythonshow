@@ -30,9 +30,17 @@ router = fastapi.APIRouter()
 async def index(request: Request):
 
     vm = AdminViewModel(request)
+    
     await vm.load()
-
-    return vm.to_dict()
+    print("VMload is: ", vm.login_status)
+    
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+    
+        return response 
+        
+    else:
+        return vm.to_dict()
 
 
 @router.post("/admin/index", include_in_schema=False)
