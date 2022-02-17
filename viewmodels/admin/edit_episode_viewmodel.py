@@ -11,6 +11,8 @@ class EditEpisodeViewModel(ViewModelBase):
     def __init__(self, episode_number, request: Request):
         super().__init__(request)
 
+        self.login_status = self.is_logged_in
+
         self.episode_number: Optional[int] = episode_number
         self.episode_info = []
         
@@ -31,6 +33,8 @@ class EditEpisodeViewModel(ViewModelBase):
         self.captivate_url: Optional[str] = None
 
     async def load(self, episode_number):
+        
+        self.login_status = self.is_logged_in
         
         self.episode_number = episode_number
         self.episode_info = await episode_service.get_episode_info(self.episode_number)

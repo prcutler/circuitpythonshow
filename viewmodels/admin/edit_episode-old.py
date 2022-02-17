@@ -10,6 +10,8 @@ from viewmodels.shared.viewmodel import ViewModelBase
 class EditEpisodeViewModel(ViewModelBase):
     def __init__(self, request: Request):
         super().__init__(request)
+        
+        self.login_status = None
 
         self.season: Optional[int] = None
         self.episode_number: Optional[int] = None
@@ -29,6 +31,9 @@ class EditEpisodeViewModel(ViewModelBase):
         self.captivate_url: Optional[str] = None
 
     async def load(self):
+        
+        self.login_status = self.is_logged_in
+        
         form = await self.request.form()
 
         self.season = form.get("season")

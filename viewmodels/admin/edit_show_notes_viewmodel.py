@@ -22,10 +22,12 @@ class EditShowNotesViewModel(ViewModelBase):
         self.timestamp_2: Optional[int] = None
         self.notes_2: Optional[str] = None
         
-        self.login_status = None
+        self.login_status = self.is_logged_in
 
         
     async def load(self, episode_number):
+        
+        self.login_status = self.is_logged_in
         
         self.episode_number = episode_number
         self.shownotes = await shownotes_service.get_shownotes(self.episode_number)

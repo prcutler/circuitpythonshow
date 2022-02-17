@@ -22,18 +22,14 @@ class AdminViewModel(ViewModelBase):
     async def load(self):
         
         print("Logged in? ", self.is_logged_in)
-        
-        if self.is_logged_in is False:            
-            self.login_status = False
 
+        self.login_status = self.is_logged_in
         
-        else:
-            self.episodes = await episode_service.latest_episodes()
+        self.episodes = await episode_service.latest_episodes()
             
-            self.login_status = True
-            
-            form = await self.request.form()
-            self.episode_number = form.get("episode_number")
+           
+        form = await self.request.form()
+        self.episode_number = form.get("episode_number")
             
         
         

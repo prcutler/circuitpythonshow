@@ -27,8 +27,15 @@ class EpisodeAddViewModel(ViewModelBase):
         self.published: Optional[str] = None
         self.episode_length: Optional[int] = None
         self.captivate_url: Optional[str] = None
+        
+        self.login_status = self.is_logged_in
 
     async def load(self):
+        
+        self.login_status = self.is_logged_in
+        
+        print("Add Episode Viewmodel: ", self.login_status)
+        
         form = await self.request.form()
 
         self.season = form.get("season")

@@ -36,9 +36,7 @@ async def index(request: Request):
     
     if vm.login_status is False:
         response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
-    
         return response 
-        
     else:
         return vm.to_dict()
 
@@ -63,7 +61,12 @@ async def edit_post(request: Request):
 @template(template_file="admin/add-episode.pt")
 def register(request: Request):
     vm = EpisodeAddViewModel(request)
-    return vm.to_dict()
+
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        return response 
+    else:
+        return vm.to_dict()
 
 
 @router.post("/admin/add-episode", include_in_schema=False)
@@ -112,10 +115,15 @@ async def details(episode_number, request: Request):
     vm = EditEpisodeViewModel(episode_number, request)
     await vm.load(episode_number)
     
-    episode_number = vm.episode_number
-
-    return vm.to_dict()
-
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        return response 
+    else:
+        
+        episode_number = vm.episode_number
+        
+        return vm.to_dict()
+    
 
 @router.post("/admin/edit-episode/{episode_number}", include_in_schema=False)
 @template()
@@ -162,7 +170,16 @@ async def edit_episode(request: Request):
 @template("admin/add-show-notes.pt")
 def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
-    return vm.to_dict()
+    
+    print("VMload is: ", vm.login_status)
+    
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        
+        return response 
+   
+    else:
+        return vm.to_dict()
 
 
 @router.post("/admin/add-show-notes", include_in_schema=False)
@@ -235,10 +252,17 @@ async def add_show_notes(request: Request):
 async def edit_show_notes(episode_number, request: Request):
     vm = EditShowNotesViewModel(episode_number, request)
     await vm.load(episode_number)
+
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        return response 
+    else:
+        episode_number = vm.episode_number
+        return vm.to_dict()
+
     
     episode_number = vm.episode_number
 
-    return vm.to_dict()
 
 @router.post("/admin/edit-shownotes", include_in_schema=False)
 @template("admin/edit-shownotes.pt{episode_number}")
@@ -272,7 +296,12 @@ async def edit_show_notes(request: Request):
 @template(template_file="admin/add-transcripts.pt")
 def add_show_notes(request: Request):
     vm = TranscriptAddViewModel(request)
-    return vm.to_dict()
+    
+    if vm.login_status is False:
+        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        return response 
+    else:
+        return vm.to_dict()
 
 
 @router.post("/admin/add-transcripts", include_in_schema=False)
