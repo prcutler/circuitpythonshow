@@ -21,6 +21,8 @@ class EditShowNotesViewModel(ViewModelBase):
         
         self.timestamp_2: Optional[int] = None
         self.notes_2: Optional[str] = None
+        
+        self.login_status = None
 
         
     async def load(self, episode_number):
