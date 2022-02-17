@@ -32,8 +32,7 @@ class EpisodeDetailsViewModel(ViewModelBase):
     async def load(self, episode_number):
 
         self.episode_number = episode_number
-        # self.episode_info = await episode_service.get_episode_info(self.episode_number)
-        # self.publish_date = await episode_service.get_publish_date(self.episode_number)
+
 
         self.topic = await episode_service.get_episode_topic(self.episode_number)
         print("Topic: ", self.topic)

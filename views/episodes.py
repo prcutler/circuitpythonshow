@@ -1,5 +1,6 @@
 import fastapi
 from fastapi_chameleon import template
+import fastapi_chameleon
 from starlette import status
 from starlette.requests import Request
 
@@ -28,10 +29,11 @@ async def all(request: Request):
 @router.get("/episodes/{episode_number}")
 @template(template_file="episodes/episode-detail.pt")
 async def details(episode_number, request: Request):
+    
     vm = EpisodeDetailsViewModel(episode_number, request)
+        
     await vm.load(episode_number)
-
-    return vm.to_dict()
+    return vm.to_dict() 
 
 
 #### TRANSCRIPTS ####
