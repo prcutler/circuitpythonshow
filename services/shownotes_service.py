@@ -127,7 +127,7 @@ async def get_shownotes(episode_number) -> List[ShowNotes]:
 
         results = await session.execute(query)
         shownotes = results.scalar()
-        print(shownotes)
+        # print(shownotes)
 
         return shownotes
     
@@ -141,21 +141,23 @@ async def edit_show_notes(
     timestamp_2: int,
     notes_2: str,
 ):
-
-    shownotes = ShowNotes()
-    
-    shownotes.season = season
-    shownotes.episode = episode
-
-    shownotes.timestamp_1 = timestamp_1
-    shownotes.notes_1 = notes_1
-
-    shownotes.timestamp_2 = timestamp_2
-    shownotes.notes_2 = notes_2
-    
     async with db_session.create_async_session() as session:
         print("Add to database from service")
-        session.add(shownotes)
-        await session.commit()
 
+        query = select(ShowNotes).filter(ShowNotes.episode == episode)
+
+        results = await session.execute(query)
+        shownotes = results.scalar()
+        
+        shownotes.season = season
+        shownotes.episode = episode
+
+        shownotes.timestamp_1 = timestamp_1
+        shownotes.notes_1 = notes_1
+
+        shownotes.timestamp_2 = timestamp_2
+        shownotes.notes_2 = notes_2
+            
+        await session.commit()
+    
     return shownotes

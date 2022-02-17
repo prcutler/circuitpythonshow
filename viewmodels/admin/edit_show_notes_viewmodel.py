@@ -25,11 +25,11 @@ class EditShowNotesViewModel(ViewModelBase):
         self.login_status = self.is_logged_in
 
         
-    async def load(self, episode_number):
+    async def load(self):
         
         self.login_status = self.is_logged_in
         
-        self.episode_number = episode_number
+        self.episode_number = self.episode_number
         self.shownotes = await shownotes_service.get_shownotes(self.episode_number)
         
         form = await self.request.form()

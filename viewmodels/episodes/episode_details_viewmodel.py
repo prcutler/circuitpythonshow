@@ -39,6 +39,9 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.episode_info = await episode_service.get_episode_info(self.episode_number)
         
+        if self.episode_info is None:
+            return
+        
         self.episode_length = await episode_service.get_episode_length(
             self.episode_number
         )

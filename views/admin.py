@@ -171,8 +171,6 @@ async def edit_episode(request: Request):
 def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
     
-    print("VMload is: ", vm.login_status)
-    
     if vm.login_status is False:
         response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
         
@@ -249,9 +247,10 @@ async def add_show_notes(request: Request):
 #### EDIT SHOW NOTES ####
 @router.get("/admin/edit-shownotes/{episode_number}")
 @template(template_file="admin/edit-shownotes.pt")
-async def edit_show_notes(episode_number, request: Request):
+async def edit_show_notes_get(episode_number, request: Request):
     vm = EditShowNotesViewModel(episode_number, request)
-    await vm.load(episode_number)
+    print("This is the the view")
+    await vm.load()
 
     if vm.login_status is False:
         response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
@@ -260,14 +259,12 @@ async def edit_show_notes(episode_number, request: Request):
         episode_number = vm.episode_number
         return vm.to_dict()
 
-    
-    episode_number = vm.episode_number
 
-
-@router.post("/admin/edit-shownotes", include_in_schema=False)
+@router.post("/admin/edit-shownotes/{episode_number}", include_in_schema=False)
 @template("admin/edit-shownotes.pt{episode_number}")
-async def edit_show_notes(request: Request):
-    vm = EditShowNotesViewModel(request)
+async def edit_show_notes_post(episode_number, request: Request):
+    vm = EditShowNotesViewModel(episode_number, request)
+    print("This is the post view")
     await vm.load()
     print("Hi from the view")
     
@@ -277,6 +274,7 @@ async def edit_show_notes(request: Request):
     # Edit the show notes
     show_notes = await shownotes_service.edit_show_notes(
         vm.season,
+        vm.episode_number,
         vm.timestamp_1,
         vm.notes_1,
         vm.timestamp_2,

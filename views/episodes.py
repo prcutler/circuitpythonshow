@@ -33,6 +33,10 @@ async def details(episode_number, request: Request):
     vm = EpisodeDetailsViewModel(episode_number, request)
         
     await vm.load(episode_number)
+    
+    if vm.episode_info is None:
+        fastapi_chameleon.not_found()
+    
     return vm.to_dict() 
 
 
