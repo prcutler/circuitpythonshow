@@ -7,5 +7,9 @@
 
 The [CircuitPython Show](https://cpshow.xyz) is an independent podcast with the people in and around CircuitPython discussing the cool things they're doing.
 
+## Subscribe
+[Subscribe to the show](https://circuitpythonshow.com/subscribe) and listen in your favorite podcast app.
+
+
 ## Feedback
 Questions, comments, or want to be a guest on the show?  <a href="mailto:abc@example.com?subject=Query&body=The_Circuit_Python_Show">Email me!</a>
