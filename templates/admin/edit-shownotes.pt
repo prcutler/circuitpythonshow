@@ -13,18 +13,122 @@
             Season: <input name="season" type="text" placeholder="${shownotes.season}" class="form-control" value="${ season }" >
             <br />
 
-            Show Notes #1: <input name="notes_1" type="text" placeholder=" ${shownotes.notes_1}" 
-            class="form-control" value="${ notes_1 }" ><br />
-            
             Timestamp #1: <input name="timestamp_1" type="text" placeholder=" ${shownotes.timestamp_1}" 
             class="form-control" value="${ timestamp_1}" ><br />
-            
+            Show Notes #1: <input name="notes_1" type="text" placeholder=" ${shownotes.notes_1}" 
+            class="form-control" value="${ notes_1 }" ><br />
+            Link #1: <input name="link_1" type="text" placeholder=" ${shownotes.link_1}" 
+            class="form-control" value="${ link_1 }" ><br />
+            Link Text #1: <input name="link_text_1" type="text" placeholder=" ${shownotes.link_text_1}" 
+            class="form-control" value="${ link_text_1 }" ><br />
+
+            Timestamp #2: <input name="timestamp_2" type="text" placeholder=" ${shownotes.timestamp_2}" 
+            class="form-control" value="${ timestamp_2}" ><br />
             Show Notes #2: <input name="notes_2" type="text" placeholder=" ${shownotes.notes_2}" 
             class="form-control" value="${ notes_2 }" ><br />
-            
-            Timestamp #2: <input name="timestamp_2" type="text" placeholder=" ${shownotes.timestamp_2}"
-            class="form-control" value="${ timestamp_2}" ><br />
-            
+            Link #2: <input name="link_2" type="text" placeholder=" ${shownotes.link_2}" 
+            class="form-control" value="${ link_2 }" ><br />
+            Link Text #2: <input name="link_text_2" type="text" placeholder=" ${shownotes.link_text_2}" 
+            class="form-control" value="${ link_text_2 }" ><br />
+
+            Timestamp #3: <input name="timestamp_3" type="text" placeholder=" ${shownotes.timestamp_3}" 
+            class="form-control" value="${ timestamp_3}" ><br />
+
+            Show Notes #3: <input name="notes_3" type="text" placeholder=" ${shownotes.notes_3}" 
+            class="form-control" value="${ notes_3 }" ><br />
+
+            Link #2: <input name="link_3" type="text" placeholder=" ${shownotes.link_3}" 
+            class="form-control" value="${ link_3 }" ><br />
+
+            Link Text #3: <input name="link_text_3" type="text" placeholder=" ${shownotes.link_text_3}" 
+            class="form-control" value="${ link_text_3 }" ><br />
+
+            Timestamp #4: <input name="timestamp_4" type="text" placeholder=" ${shownotes.timestamp_4}" 
+            class="form-control" value="${ timestamp_4}" ><br />
+
+            Show Notes #4: <input name="notes_4" type="text" placeholder=" ${shownotes.notes_4}" 
+            class="form-control" value="${ notes_4 }" ><br />
+
+            Link #4: <input name="link_4" type="text" placeholder=" ${shownotes.link_4}" 
+            class="form-control" value="${ link_4 }" ><br />
+
+            Link Text #4: <input name="link_text_4" type="text" placeholder=" ${shownotes.link_text_4}" 
+            class="form-control" value="${ link_text_4 }" ><br />
+
+            Timestamp #5: <input name="timestamp_5" type="text" placeholder=" ${shownotes.timestamp_5}" 
+            class="form-control" value="${ timestamp_5}" ><br />
+
+            Show Notes #5: <input name="notes_5" type="text" placeholder=" ${shownotes.notes_5}" 
+            class="form-control" value="${ notes_5 }" ><br />
+
+            Link #5: <input name="link_5" type="text" placeholder=" ${shownotes.link_5}" 
+            class="form-control" value="${ link_5 }" ><br />
+
+            Link Text #5: <input name="link_text_5" type="text" placeholder=" ${shownotes.link_text_5}" 
+            class="form-control" value="${ link_text_5 }" ><br />
+
+            Link Text #5: <input name="link_text_5" type="text" placeholder=" ${shownotes.link_text_5}" 
+            class="form-control" value="${ link_text_5 }" ><br />
+
+            Timestamp #6: <input name="timestamp_6" type="text" placeholder=" ${shownotes.timestamp_6}" 
+            class="form-control" value="${ timestamp_6}" ><br />
+
+            Show Notes #6: <input name="notes_6" type="text" placeholder=" ${shownotes.notes_6}" 
+            class="form-control" value="${ notes_6 }" ><br />
+
+            Link #6: <input name="link_6" type="text" placeholder=" ${shownotes.link_6}" 
+            class="form-control" value="${ link_6 }" ><br />
+
+            Link Text #6: <input name="link_text_6" type="text" placeholder=" ${shownotes.link_text_6}" 
+            class="form-control" value="${ link_text_6 }" ><br />
+
+            Timestamp #7: <input name="timestamp_7" type="text" placeholder=" ${shownotes.timestamp_7}" 
+            class="form-control" value="${ timestamp_7}" ><br />
+
+            Show Notes #7: <input name="notes_7" type="text" placeholder=" ${shownotes.notes_7}" 
+            class="form-control" value="${ notes_7 }" ><br />
+
+            Link #7: <input name="link_7" type="text" placeholder=" ${shownotes.link_7}" 
+            class="form-control" value="${ link_7 }" ><br />
+
+            Link Text #7: <input name="link_text_7" type="text" placeholder=" ${shownotes.link_text_7}" 
+            class="form-control" value="${ link_text_7 }" ><br />
+
+            Timestamp #8: <input name="timestamp_8" type="text" placeholder=" ${shownotes.timestamp_8}" 
+            class="form-control" value="${ timestamp_8}" ><br />
+
+            Show Notes #8: <input name="notes_8" type="text" placeholder=" ${shownotes.notes_8}" 
+            class="form-control" value="${ notes_8 }" ><br />
+
+            Link #8: <input name="link_8" type="text" placeholder=" ${shownotes.link_8}" 
+            class="form-control" value="${ link_8 }" ><br />
+
+            Link Text #8: <input name="link_text_8" type="text" placeholder=" ${shownotes.link_text_8}" 
+            class="form-control" value="${ link_text_8}" ><br />
+
+            Timestamp #9: <input name="timestamp_9" type="text" placeholder=" ${shownotes.timestamp_9}" 
+            class="form-control" value="${ timestamp_9}" ><br />
+
+            Show Notes #9: <input name="notes_9" type="text" placeholder=" ${shownotes.notes_9}" 
+            class="form-control" value="${ notes_9 }" ><br />
+
+            Link #9: <input name="link_9" type="text" placeholder=" ${shownotes.link_9}" 
+            class="form-control" value="${ link_9 }" ><br />
+
+            Link Text #9: <input name="link_text_9" type="text" placeholder=" ${shownotes.link_text_9}" 
+            class="form-control" value="${ link_text_9}" ><br />
+
+            Timestamp #10: <input name="timestamp_10" type="text" placeholder=" ${shownotes.timestamp_10}" 
+            class="form-control" value="${ timestamp_10}" ><br />
+
+            Show Notes #10: <input name="notes_10" type="text" placeholder=" ${shownotes.notes_10}" 
+            class="form-control" value="${ notes_10 }" ><br />
+
+            Link #10: <input name="link_10" type="text" placeholder=" ${shownotes.link_10}" 
+            class="form-control" value="${ link_10 }" ><br />
+
+            Link Text #10: <input name="link_text_10" type="text" placeholder=" ${shownotes.link_text_10}"
+            class="form-control" value="${ link_text_10 }" ><br />
 
             <br />
             <button type="submit" class="btn btn-danger">Edit Shownotes</button>

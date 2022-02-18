@@ -192,8 +192,8 @@ async def add_show_notes(request: Request):
     # Add the show notes
     show_notes = await shownotes_service.create_show_notes(
         vm.season,
-        vm.episode,
-        vm.published,
+
+
         vm.timestamp_1,
         vm.notes_1,
         vm.link_1,
@@ -275,10 +275,53 @@ async def edit_show_notes_post(episode_number, request: Request):
     show_notes = await shownotes_service.edit_show_notes(
         vm.season,
         vm.episode_number,
+        
         vm.timestamp_1,
         vm.notes_1,
+        vm.link_1,
+        vm.link_text_1,
+        
         vm.timestamp_2,
         vm.notes_2,
+        vm.link_2,
+        vm.link_text_2,
+        
+        vm.timestamp_3,
+        vm.notes_3,
+        vm.link_3,
+        vm.link_text_3,
+        
+        vm.timestamp_4,
+        vm.notes_4,
+        vm.link_4,
+        vm.link_text_4,
+
+        vm.timestamp_5,
+        vm.notes_5,
+        vm.link_5,
+        vm.link_text_5,
+        
+        vm.timestamp_6,
+        vm.notes_6,
+        vm.link_6,
+        vm.link_text_6,
+        vm.timestamp_7,
+        vm.notes_7,
+        vm.link_7,
+        vm.link_text_7,
+        vm.timestamp_8,
+        vm.notes_8,
+        vm.link_8,
+        vm.link_text_8,
+        vm.timestamp_9,
+        vm.notes_9,
+        vm.link_9,
+        vm.link_text_9,
+        vm.timestamp_10,
+        vm.notes_10,
+        vm.link_10,
+        vm.link_text_10,
+
 
     )
         
