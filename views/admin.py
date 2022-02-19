@@ -111,31 +111,30 @@ async def register(request: Request):
 #### EDIT EPISODE DETAIL TEMPLATE ####
 @router.get("/admin/edit-episode/{episode_number}")
 @template(template_file="admin/edit-episode.pt")
-async def details(episode_number, request: Request):
+async def edit_details(episode_number, request: Request):
     vm = EditEpisodeViewModel(episode_number, request)
-    await vm.load(episode_number)
+    await vm.load()
     
     if vm.login_status is False:
         response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
         return response 
     else:
-        
         episode_number = vm.episode_number
-        
         return vm.to_dict()
     
 
 @router.post("/admin/edit-episode/{episode_number}", include_in_schema=False)
 @template()
-async def edit_episode(request: Request):
-    vm = EditEpisodeViewModel(request)
+async def edit_episode_post(episode_number, request: Request):
+    vm = EditEpisodeViewModel(episode_number, request)
     await vm.load()
 
     if vm.error:
         return vm.to_dict()
 
-    # Add the episode
-    episode = await episode_service.create_episode(
+    # Edit the episode
+    print("Hello from the view")
+    episode = await episode_service.edit_episode(
         vm.season,
         vm.episode_number,
         vm.episode_title,
@@ -157,7 +156,7 @@ async def edit_episode(request: Request):
         vm.captivate_url,
     )
 
-    # Redirect to the episode page
+    # Redirect to the admin page
     response = fastapi.responses.RedirectResponse(
         url="/admin/index", status_code=status.HTTP_302_FOUND
     )
@@ -264,9 +263,7 @@ async def edit_show_notes_get(episode_number, request: Request):
 @template("admin/edit-shownotes.pt{episode_number}")
 async def edit_show_notes_post(episode_number, request: Request):
     vm = EditShowNotesViewModel(episode_number, request)
-    print("This is the post view")
     await vm.load()
-    print("Hi from the view")
     
     if vm.error:
         return vm.to_dict()

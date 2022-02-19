@@ -8,56 +8,56 @@
             <form action="" method="POST" class="account-form" >
                 <h1>Edit Episode</h1>
 
-            Season: <input name="season" type="text" placeholder=" Season" class="form-control" value="${ episode_info.season }" required>
+            Season: <input name="season" type="text" placeholder=" ${episode_info.season}" class="form-control" value="${ season }" >
             <br />
-            Episode #: <input name="episode_number" type="text" placeholder=" Episode Number" class="form-control"
+            Episode #: <input name="episode_number" type="text" placeholder=" ${episode_info.episode_number}" class="form-control"
             value="${ episode_number }" ><br />
             
-            Episode Title: <input name="episode_title" type="text" placeholder=" Episode Title" 
+            Episode Title: <input name="episode_title" type="text" placeholder="${episode_info.episode_title}" 
             class="form-control" value="${ episode_title }" ><br />
             
-            YouTube Link: <input name="youtube_url" type="text" placeholder=" YouTube Link" 
+            YouTube Link: <input name="youtube_url" type="text" placeholder=" ${episode_info.youtube_url}" 
             class="form-control" value="${ youtube_url }" ><br />
             
-            Guest First Name: <input name="guest_firstname" type="text" placeholder=" Guest First Name" 
-            class="form-control" value="${ guest_firstname }" required><br />
+            Guest First Name: <input name="guest_firstname" type="text" placeholder=" ${episode_info.guest_firstname}" 
+            class="form-control" value="${ guest_firstname }" ><br />
             
-            Guest Last Name: <input name="guest_lastname" type="text" placeholder=" Guest Last Name" 
-            class="form-control" value="${ guest_lastname }" required><br />
+            Guest Last Name: <input name="guest_lastname" type="text" placeholder=" ${episode_info.guest_lastname}"
+            class="form-control" value="${ guest_lastname }" ><br />
             
-            Topic: <input name="topic" type="text" placeholder=" Topic" 
-            class="form-control" value="${ topic }" required<br />
+            Episode Topic: <input name="topic" type="text" placeholder="${episode_info.topic}" 
+            class="form-control" value="${ topic }" ><br />
             
-           Recorded Date: <input name="record_date" type="text" placeholder=" Recorded On" 
-            class="form-control" value="${ record_date }" required><br />
+           Recorded Date: <input name="record_date" type="text" placeholder=" ${episode_info.record_date}" 
+            class="form-control" value="${ record_date }" ><br />
             
-            Publish Date: <input name="publish_date" type="text" placeholder=" Published Date" 
-            class="form-control" value="${ publish_date }" required><br />
+            Publish Date: <input name="publish_date" type="text" placeholder=" ${episode_info.publish_date}" 
+            class="form-control" value="${ publish_date }" ><br />
             
-            Guest image URL: <input name="guest_image" type="text" placeholder=" Guest Image" 
+            Guest image URL: <input name="guest_image" type="text" placeholder=" ${episode_info.guest_image}" 
             class="form-control" value="${ guest_image }" ><br />
             
-            Guest Bio: <input name="guest_bio" type="text" placeholder=" Guest Bio" 
+            Guest Bio: <input name="guest_bio" type="text" placeholder=" ${episode_info.guest_bio}" 
             class="form-control" value="${ guest_bio }" ><br />
             
-            Sponsor #1: <input name="sponsor_1" type="text" placeholder=" Sponsor #1" 
+            Sponsor #1: <input name="sponsor_1" type="text" placeholder=" ${episode_info.sponsor_1}" 
             class="form-control" value="${ sponsor_1 }" ><br />
             
-            Sponsor #2: <input name="sponsor_2" type="text" placeholder=" Sponsor #2" 
+            Sponsor #2: <input name="sponsor_2" type="text" placeholder=" ${episode_info.sponsor_2}" 
             class="form-control" value="${ sponsor_2 }" ><br />
             
-            Published: <input name="published" type="text" placeholder=" Published" 
-            class="form-control" value="${ published }" required><br />
+            Published: <input name="published" type="text" placeholder=" ${episode_info.published}"
+            class="form-control" value="${ published }" ><br />
 
-            Episode Length: <input name="episode_length" type="text" placeholder=" Episode Length"" 
+            Episode Length: <input name="episode_length" type="text" placeholder=" ${episode_info.episode_length}" 
             class="form-control" value="${ episode_length }"><br />
 
-            Captivate URL: <input name="Captivate URL" type="text" placeholder=" Cativate URL"" 
+            Captivate URL: <input name="Captivate URL" type="text" placeholder=" Captivate URL"" 
             class="form-control" value="${ captivate_url }"><br />
 
 
             <br />
-            <button type="submit" class="btn btn-danger">Add Episode</button>
+            <button type="submit" class="btn btn-danger">Edit Episode</button>
             <br />
 
             <br />

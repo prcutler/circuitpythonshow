@@ -66,7 +66,7 @@ async def create_episode(
 #### EDIT EPISODE ####
 async def edit_episode(
     season: int,
-    episode: int,
+#    episode: int,
     episode_title: str,
     youtube_url: str,
     guest_firstname: str,
@@ -90,38 +90,36 @@ async def edit_episode(
         query = select(Episode).filter(Episode.episode_number == episode)
         results = await session.execute(query)
         print("Service results: ", results)
-        
-        episode_results = results.scalar()
+        episode = results.scalar()
         
         print("Episode: ", episode)
         print("Service episode query is ", episode)
 
-        print(season, type(season))
-        episode_results.season = season
-        episode_results.episode_number = episode
-        episode_results.episode_title = episode_title
-        episode_results.youtube_url = youtube_url
-        episode_results.guest_firstname = guest_firstname
-        episode_results.guest_lastname = guest_lastname
-        episode_results.topic = topic
-        episode_results.record_date = record_date
+        episode.season = season
+        # episode.episode_number = episode
+        episode.episode_title = episode_title
+        episode.youtube_url = youtube_url
+        episode.guest_firstname = guest_firstname
+        episode.guest_lastname = guest_lastname
+        episode.topic = topic
+        episode.record_date = record_date
         
         
-        episode_results.record_date_converted = record_date_converted
+        episode.record_date_converted = record_date_converted
         
-        episode_results.publish_date = publish_date
+        episode.publish_date = publish_date
         
         
-        episode_results.publish_date_converted = publish_date_converted
-        episode_results.guest_image = guest_image
+        episode.publish_date_converted = publish_date_converted
+        episode.guest_image = guest_image
         
-        episode_results.guest_bio = guest_bio
-        episode_results.sponsor_1 = sponsor_1
-        episode_results.sponsor_2 = sponsor_2
-        episode_results.published = published
-        episode_results.episode_length = episode_length
-        episode_results.episode_length_string = episode_length_converted
-        episode_results.captivate_url = captivate_url
+        episode.guest_bio = guest_bio
+        episode.sponsor_1 = sponsor_1
+        episode.sponsor_2 = sponsor_2
+        episode.published = published
+        episode.episode_length = episode_length
+        episode.episode_length_string = episode_length_converted
+        episode.captivate_url = captivate_url
 
         await session.commit()
 

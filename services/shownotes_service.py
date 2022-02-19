@@ -189,8 +189,8 @@ async def edit_show_notes(
         print("Add to database from service")
 
         query = select(ShowNotes).filter(ShowNotes.episode == episode)
-
         results = await session.execute(query)
+
         shownotes = results.scalar()
         
         shownotes.season = season

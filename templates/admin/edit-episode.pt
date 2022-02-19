@@ -8,10 +8,10 @@
             <form action="" method="POST" class="account-form" >
                 <h1>Edit Episode</h1>
 
+            <p>Episode: ${episode_info.episode_number}</p>
+
             Season: <input name="season" type="text" placeholder=" ${episode_info.season}" class="form-control" value="${ season }" >
             <br />
-            Episode #: <input name="episode_number" type="text" placeholder=" ${episode_info.episode_number}" class="form-control"
-            value="${ episode_number }" ><br />
             
             Episode Title: <input name="episode_title" type="text" placeholder="${episode_info.episode_title}" 
             class="form-control" value="${ episode_title }" ><br />
@@ -25,8 +25,8 @@
             Guest Last Name: <input name="guest_lastname" type="text" placeholder=" ${episode_info.guest_lastname}"
             class="form-control" value="${ guest_lastname }" ><br />
             
-            Topic: <input name="topic" type="text" placeholder=" ${episode_info.topic}" 
-            class="form-control" value=" ${ topic }" <br />
+            Episode Topic: <input name="topic" type="text" placeholder="${episode_info.topic}" 
+            class="form-control" value="${ topic }" ><br />
             
            Recorded Date: <input name="record_date" type="text" placeholder=" ${episode_info.record_date}" 
             class="form-control" value="${ record_date }" ><br />
