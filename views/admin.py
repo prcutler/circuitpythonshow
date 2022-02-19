@@ -360,7 +360,6 @@ async def add_transcripts(request: Request):
         vm.episode_number,
         vm.transcript_1,
         vm.transcript_2,
-        vm.published,
     )
 
     # Redirect to the episode page

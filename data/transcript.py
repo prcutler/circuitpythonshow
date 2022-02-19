@@ -15,4 +15,3 @@ class Transcript(SqlAlchemyBase):
     episode_number: int = sa.Column(sa.Integer, index=True)
     transcript_1: str = sa.Column(sa.String)
     transcript_2: str = sa.Column(sa.String, nullable=True)
-    published: int = sa.Column(sa.Integer)
