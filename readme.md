@@ -1,6 +1,6 @@
 <img src="https://badgen.net/badge/python/python/black?icon=github" alt="Python Badge"/>
 
-![/static/img/logo-readme.jpg](CircuitPython Show)
+![CircuitPython Show](/static/img/logo-readme.jpg)
 
 
 # Welcome to The CircuitPython Show
