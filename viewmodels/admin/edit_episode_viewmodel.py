@@ -45,39 +45,23 @@ class EditEpisodeViewModel(ViewModelBase):
         
         form = await self.request.form()
         
+
         self.season = form.get("season")
-        
         self.episode_title = form.get("episode_title")
         self.youtube_url = form.get("youtube_url")
         self.guest_firstname = form.get("guest_firstname")
         self.guest_lastname = form.get("guest_lastname")
         self.topic = form.get("topic")
-        
         self.record_date = form.get("record_date")
-        if self.record_date is None or ValueError:
-            pass
-        else:
-            self.record_date_converted = episode_service.convert_dates(self.record_date)
-        
-
-        if self.publish_date is None or ValueError:
-            pass
-        else:
-            self.publish_date = form.get("publish_date")
-            self.publish_date_converted = episode_service.convert_dates(self.publish_date)
-        
+        # self.record_date_converted = episode_service.convert_dates(self.record_date)
+        self.publish_date = form.get("publish_date")
+        # self.publish_date_converted = episode_service.convert_dates(self.publish_date)
         self.guest_image = form.get("guest_image")
         self.guest_bio = form.get("guest_bio")
         self.sponsor_1 = form.get("sponsor_1")
         self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")
-        
         self.episode_length = form.get("episode_length")
-        
-        if self.episode_length_string is None or ValueError:
-            pass
-        else:
-            self.episode_length_string = episode_service.convert_episode_length(self.episode_length)
-      
+        # self.episode_length_string = episode_service.convert_episode_length(self.episode_length)
         self.captivate_url = form.get("captivate_url")
 
