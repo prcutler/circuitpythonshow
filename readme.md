@@ -9,3 +9,6 @@ The [CircuitPython Show](https://cpshow.xyz) is an independent podcast with the 
 
 ## Feedback
 Questions, comments, or want to be a guest on the show?  <a href="mailto:abc@example.com?subject=Query&body=The_Circuit_Python_Show">Email me!</a>
+
+## Support the Show
+If you enjoy the the show, the best suport you can give is to subscribe in your favorite podcast app or write a review.  If you would like to sponsor the show financially, please visit [https://circuitpythonshow.com/support](https://circuitpythonshow.com/support).
