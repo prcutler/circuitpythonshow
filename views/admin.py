@@ -92,7 +92,8 @@ async def register(request: Request):
         vm.publish_date,
         vm.publish_date_converted,
         vm.guest_image,
-        vm.guest_bio,
+        vm.guest_bio_1,
+        vm.guest_bio_2,
         vm.sponsor_1,
         vm.sponsor_2,
         vm.published,
@@ -147,7 +148,8 @@ async def edit_episode_post(episode_number, request: Request):
         vm.publish_date,
         vm.publish_date_converted,
         vm.guest_image,
-        vm.guest_bio,
+        vm.guest_bio_1,
+        vm.guest_bio_2,
         vm.sponsor_1,
         vm.sponsor_2,
         vm.published,
@@ -191,8 +193,8 @@ async def add_show_notes(request: Request):
     # Add the show notes
     show_notes = await shownotes_service.create_show_notes(
         vm.season,
-
-
+        vm.episode,
+        vm.published,
         vm.timestamp_1,
         vm.notes_1,
         vm.link_1,

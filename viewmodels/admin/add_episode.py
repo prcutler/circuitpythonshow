@@ -21,7 +21,8 @@ class EpisodeAddViewModel(ViewModelBase):
         self.record_date: Optional[str] = None
         self.publish_date: Optional[str] = None
         self.guest_image: Optional[str] = None
-        self.guest_bio: Optional[str] = None
+        self.guest_bio_1: Optional[str] = None
+        self.guest_bio_2: Optional[str] = None
         self.sponsor_1: Optional[str] = None
         self.sponsor_2: Optional[str] = None
         self.published: Optional[str] = None
@@ -55,7 +56,8 @@ class EpisodeAddViewModel(ViewModelBase):
         self.publish_date_converted = episode_service.convert_dates(self.publish_date)
         
         self.guest_image = form.get("guest_image")
-        self.guest_bio = form.get("guest_bio")
+        self.guest_bio_1 = form.get("guest_bio_1")
+        self.guest_bio_2 = form.get("guest_bio_2")
         self.sponsor_1 = form.get("sponsor_1")
         self.sponsor_2 = form.get("sponsor_2")
         self.published = form.get("published")

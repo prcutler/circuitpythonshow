@@ -16,12 +16,19 @@
                             <p><b>Guest</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
                             <p><b>Topics</b>: ${topic.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
+                            <p><b>Guest Bio</b>: ${episode_info.guest_bio_1}</p>
 
+                            <div tal:condition="episode_info.guest_bio_2">
+                                <p tal:condition="episode_info.guest_bio_2"><b>Guest Bio 2</b>: ${episode_info.guest_bio_2}</p>
+                            </div>
+                            
                             <div tal:condition="episode_info.youtube_url">
-                                <p tal:condition="episode_info.youtube_url"> <a href="${episode_info.youtube_url}">Watch on YouTube</a></p>
-                     </div>
+                                <p tal:condition="episode_info.youtube_url"> <a href="${episode_info.youtube_url}">Watch on YouTube</a>
+                                (The YouTube stream is a behind the scenes recording of the episode and is only lightly edited
+                                    compared to the podcast, which is recommended).</p>
+                            </div>
 
-                            <p><b>Guest Bio</b>: ${episode_info.guest_bio}</p>
+                            
                       
                     </div>
                 </div>

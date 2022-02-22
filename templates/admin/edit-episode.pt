@@ -37,8 +37,11 @@
             Guest image URL: <input name="guest_image" type="text" placeholder=" ${episode_info.guest_image}" 
             class="form-control" value="${ guest_image }" ><br />
             
-            Guest Bio: <input name="guest_bio" type="text" placeholder=" ${episode_info.guest_bio}" 
-            class="form-control" value="${ guest_bio }" ><br />
+            Guest Bio 1: <input name="guest_bio_1" type="text" placeholder=" ${episode_info.guest_bio_1}" 
+            class="form-control" value="${ guest_bio_1 }" ><br />
+
+            Guest Bio 2: <input name="guest_bio_2" type="text" placeholder=" ${episode_info.guest_bio_2}" 
+            class="form-control" value="${ guest_bio_2 }" ><br />
             
             Sponsor #1: <input name="sponsor_1" type="text" placeholder=" ${episode_info.sponsor_1}" 
             class="form-control" value="${ sponsor_1 }" ><br />

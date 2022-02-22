@@ -9,9 +9,11 @@
                 <h1>Add Show Notes</h1>
 
             Season: <input name="season" type="text" placeholder="Season" class="form-control" value="${ season }" required>
+
             Episode: <input name="episode" type="text" placeholder="Episode" class="form-control" value="${ episode }" required>
             Published: <input name="published" type="text" placeholder="Published 1 or 0" class="form-control" value="${ published }" required>
             <br />
+
             Timestamp 1: <input name="timestamp_1" type="text" placeholder="Timestamp 1" class="form-control" value="${ timestamp_1 }" required>
             Notes 1: <input name="notes_1" type="text" placeholder="Notes 1" class="form-control" value="${ notes_1 }" required>
             Link 1: <input name="link_1" type="text" placeholder="Link 1" class="form-control" value="${ link_1 }" >

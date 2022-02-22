@@ -25,7 +25,8 @@ async def create_episode(
     publish_date: str,
     publish_date_converted: str,
     guest_image: str,
-    guest_bio: str,
+    guest_bio_1: str,
+    guest_bio_2: str,
     sponsor_1: str,
     sponsor_2: str,
     published: int,
@@ -48,7 +49,8 @@ async def create_episode(
     episode.publish_date = publish_date
     episode.publish_date_converted = publish_date_converted
     episode.guest_image = guest_image
-    episode.guest_bio = guest_bio
+    episode.guest_bio_1 = guest_bio_1
+    episode.guest_bio_2 = guest_bio_2
     episode.sponsor_1 = sponsor_1
     episode.sponsor_2 = sponsor_2
     episode.published = published
@@ -77,7 +79,8 @@ async def edit_episode(
     publish_date: str,
     publish_date_converted: str,
     guest_image: str,
-    guest_bio: str,
+    guest_bio_1: str,
+    guest_bio_2: str,
     sponsor_1: str,
     sponsor_2: str,
     published: int,
@@ -115,7 +118,8 @@ async def edit_episode(
         episode_results.publish_date_converted = publish_date_converted
         episode_results.guest_image = guest_image
         
-        episode_results.guest_bio = guest_bio
+        episode_results.guest_bio_1 = guest_bio_1
+        episode_results.guest_bio_2 = guest_bio_2
         episode_results.sponsor_1 = sponsor_1
         episode_results.sponsor_2 = sponsor_2
         episode_results.published = published
