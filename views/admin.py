@@ -104,7 +104,7 @@ async def register(request: Request):
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(
-        url="/admin/index", status_code=status.HTTP_302_FOUND)
+        url="/admin/add-show-notes", status_code=status.HTTP_302_FOUND)
 
     return response
 

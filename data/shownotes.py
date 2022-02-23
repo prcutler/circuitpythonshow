@@ -10,7 +10,10 @@ class ShowNotes(SqlAlchemyBase):
     id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     
     season: int = sa.Column(sa.Integer)
-    episode: int = sa.Column(sa.Integer, index=True)
+    
+    ## Episode relationship to Episode class
+    episode: int = sa.Column(sa.Integer, sa.ForeignKey("episodes.episode_number"))
+    
     published: int = sa.Column(sa.Integer, index=True)
 
     timestamp_1: int = sa.Column(sa.Integer)
