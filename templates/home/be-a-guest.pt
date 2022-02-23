@@ -4,7 +4,7 @@
     <section class="about-area">
         <div class="container">
             <div class="row align-items-lg-center">
-                <div class="col-lg-6">
+                <div class="col-lg-9">
                     <div class="about-content">
 
             <h1>Be a Guest on The CircuitPython Show</h1>
@@ -58,6 +58,7 @@
                                     what microcontroller you reach for when starting a new project.  If you don't want to do one of 
                                     the segments, just let me know.</li>
                                 <li>I'll ask you a few questions and we'll have a chat.  It'll be fun! </li>
+                            </ul></p>
 
                                 <h2>At the end of the show</h2>
                                 <p><ul class="text-white">
@@ -72,7 +73,7 @@
                                 <h2>When the episode is published</h2>
                                 <p><ul class="text-white">
                                     <li>I'll share the episode with you.  Please check it out and when the episode is published, please 
-                                        review the show notes so I can correct anything needed.<li>
+                                        review the show notes so I can correct anything needed.</li>
                                     <li>Tell your friends and promote the show!</li>
                                         </ul></p>
 
