@@ -16,7 +16,10 @@
                             <p><b>Guest(s)</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
                             <p><b>Topics</b>: ${topic.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
-                            <p><b>Guest Bio</b>: ${episode_info.guest_bio_1}</p>
+                            
+                        <div tal:condition="episode_info.guest_bio_1">
+                            <p tal:condition=episode_info.guest_bio_1" ><b>Guest Bio</b>: ${episode_info.guest_bio_1}</p>
+                         </div>
 
                             <div tal:condition="episode_info.guest_bio_2">
                                 <p tal:condition="episode_info.guest_bio_2"><b>Guest Bio 2</b>: ${episode_info.guest_bio_2}</p>
@@ -116,22 +119,8 @@
 
         <h2>Transcript</h2>
             <p>
-                Thank you to everyone who has contributed anything to CircuitPython and / or Python.  Thank you
-                to <a href="https://talkpython.fm">Talk Python to Me</a>, where I have learned almost all of the 
-                Python I know, starting from their first Kickstarter through the 
-                <a href="https://training.talkpython.fm/courses/full-html-web-applications-with-fastapi">Full Web Apps with FastAPI course</a> 
-                to build this site. The show also inspired me to start this podcast, and thank you to the host, Michael Kennedy, 
-                for answering all my questions when starting out. Thank you to Brian Okken, 
-                host of the <a href="https://testandcode.com">Test and Code podcast</a>, 
-                whose podcast interview prep I have shamelessly stole (with his permission, of course). </p>
-
-                <p>
-                The CircuitPython community wouldn't be who it is without the <a href="http://adafru.it/discord">Adafruit Discord</a>.  
-                Thanks to everyone who has answered one of my many questions.  
-                </p>
-                <p>
-                Lastly, thank you for listening and taking a chance on the show.
-                </p>
+                Transcripts are available in the embedded player above.  Press the menu button made of 3 dots to access the transcript.
+            </p>
                 <br />
                 <br />
 
