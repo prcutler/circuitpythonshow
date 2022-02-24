@@ -25,6 +25,8 @@ class IndexViewModel(ViewModelBase):
         self.episodes = await episode_service.latest_episodes()
         self.episode_count: int = await episode_service.get_episode_count()
         self.episode_number = await episode_service.get_last_episode_number()
+        
+        self.publish_date = await episode_service.get_publish_date(self.episode_number)
 
         self.guest_firstname = await episode_service.get_guest_firstname()
         self.guest_lastname = await episode_service.get_guest_lastname()

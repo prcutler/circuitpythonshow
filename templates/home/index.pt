@@ -40,9 +40,11 @@
                         <hr class="divider about-divider">
                         <p>The CircuitPython Show is an independent podcast hosted by 
                         <a href="https://paulcutler.org">Paul Cutler</a> talking with 
-                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
-                        Each episode features Paul in conversation with a guest for a twenty to thirty minute interview.  </p>
-                        <p>Questions or comments? Let me know how the show is doing.  Contact me <a href="mailto:paul@circuitpythonshow.com">via email </a>
+                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>
+                        or in the maker community. Each episode features Paul in conversation with a guest for a twenty
+                         to thirty minute interview.  </p>
+                        
+                         <p>Questions or comments? Let me know how the show is doing.  Contact me <a href="mailto:paul@circuitpythonshow.com">via email </a>
                         or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. </p>
                     </div>
                 <div>
@@ -78,9 +80,9 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
-                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with guest ${guest_firstname} ${guest_lastname}</h3>
+                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with ${guest_firstname} ${guest_lastname}</h3>
                                     <p class="card-text">Paul and ${guest_firstname} talk ${topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
-                                    <!-- p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p -->
+                                    <p class="card-text"><small class="text-muted">Released ${publish_date}</small></p>
                                 </div>
                             </div>
                         </div>
