@@ -228,9 +228,7 @@ def convert_dates(form_date):
     # print(form_date)
     pend_object = pendulum.parse(form_date)
     pend_convert = pend_object.to_date_string()
-    # print("Pendulum says: ", pend_convert)
     results_dates_converted = pend_convert
-    # print("Convert in service: ", results_dates_converted)
 
     return results_dates_converted
 

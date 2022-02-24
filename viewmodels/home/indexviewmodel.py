@@ -21,10 +21,7 @@ class IndexViewModel(ViewModelBase):
         self.topic: str = ""
         
         self.old_episode_number: Optional[int] = None
-        
         self.old_publish_date: Optional[str] = None
-        self.old_guest_firstname: Optional[str] = None
-        self.old_guest_lastname: Optional[str] = None
         
         self.old_episode: List[Episode] = []
 
@@ -34,18 +31,14 @@ class IndexViewModel(ViewModelBase):
         self.episode_number = await episode_service.get_last_episode_number()
         
         self.episodes = await episode_service.get_episode_info(self.episode_number)
+        self.publish_date = await episode_service.get_publish_date(self.episode_number)
         
         self.old_episode_number = self.episode_number - 1
         print("Old ep #", self.old_episode_number)
         
-        self.old_publish_date = await episode_service.get_publish_date(self.episode_number)
-
-        self.old_guest_firstname = await episode_service.get_guest_firstname()
-        self.old_guest_lastname = await episode_service.get_guest_lastname()
-        
         self.old_episode = await episode_service.get_episode_info(self.old_episode_number)
-        print("Old episode: ", self.old_episode)
-        
+        self.old_publish_date = await episode_service.get_publish_date(self.old_episode_number)
+
         
         
     
