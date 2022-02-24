@@ -80,13 +80,32 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
-                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with ${guest_firstname} ${guest_lastname}</h3>
-                                    <p class="card-text">Paul and ${guest_firstname} talk ${topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
-                                    <p class="card-text"><small class="text-muted">Released ${publish_date}</small></p>
+                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with ${episodes.guest_firstname} ${episodes.guest_lastname}</h3>
+                                    <p class="card-text">Paul and ${episodes.guest_firstname} talk ${episodes.topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
+                                    <p class="card-text"><small class="text-muted">Released ${episodes.publish_date_converted}</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card mb-4 bg-transparent">
+                                <div class="row g-0">
+                                    <div class="col-lg-3">
+                                        <img src="/static/img/news.webp" class="img-fluid">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="card-body bg-dark">
+                                            <h3 class="card-title"><a href="/episodes/${old_episode_number}">Episode ${old_episode_number}</a> with ${old_episode.guest_firstname} ${old_episode.guest_lastname}</h3>
+                                            <p class="card-text">Paul and ${old_episode.guest_firstname} talk ${old_episode.topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
+                                            <p class="card-text"><small class="text-muted">Released ${old_episode.publish_date_converted}</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                     <div class="card mb-4 bg-transparent">
                         <div class="row g-0">
                             <div class="col-lg-3">
