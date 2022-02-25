@@ -28,7 +28,6 @@ async def index(request: Request):
     vm = AdminViewModel(request)
 
     await vm.load()
-    print("VMload is: ", vm.login_status)
 
     if vm.login_status is False:
         response = fastapi.responses.RedirectResponse(
@@ -138,7 +137,6 @@ async def edit_episode_post(episode_number, request: Request):
         return vm.to_dict()
 
     # Edit the episode
-    print("Hello from the view")
     episode = await episode_service.edit_episode(
         vm.season,
         vm.episode_number,
@@ -256,7 +254,6 @@ async def add_show_notes(request: Request):
 @template(template_file="admin/edit-shownotes.pt")
 async def edit_show_notes_get(episode_number, request: Request):
     vm = EditShowNotesViewModel(episode_number, request)
-    print("This is the the view")
     await vm.load()
 
     if vm.login_status is False:

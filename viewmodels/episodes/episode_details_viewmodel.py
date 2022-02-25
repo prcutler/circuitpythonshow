@@ -24,14 +24,24 @@ class EpisodeDetailsViewModel(ViewModelBase):
         self.record_date: Optional[str] = None
 
         self.episode_info = []
-        self.episode_length = "0"
+        self.episode_length: [str] = "0"
 
         self.shownotes: List[ShowNotes] = []
+
+        self.timestamp_1: [str] = ""
+        self.timestamp_2: [str] = ""
+        self.timestamp_3: [str] = ""
+        self.timestamp_4: [str] = ""
+        self.timestamp_5: [str] = ""
+        self.timestamp_6: [str] = ""
+        self.timestamp_7: [str] = ""
+        self.timestamp_8: [str] = ""
+        self.timestamp_9: [str] = ""
+        self.timestamp_10: [str] = ""
 
     async def load(self, episode_number):
 
         self.episode_number = episode_number
-
         self.topic = await episode_service.get_episode_topic(self.episode_number)
         print("Topic: ", self.topic)
 
@@ -43,10 +53,16 @@ class EpisodeDetailsViewModel(ViewModelBase):
         self.episode_length = await episode_service.get_episode_length(
             self.episode_number
         )
-        print("Viewmodel conversion: ", self.episode_length)
+        # print("Viewmodel conversion: ", self.episode_length)
 
         self.publish_date = await episode_service.get_publish_date(self.episode_number)
         self.record_date = await episode_service.get_record_date(self.episode_number)
 
         episode = int(episode_number)
         self.shownotes = await shownotes_service.get_shownotes(episode)
+
+        self.timestamp_1 = await episode_service.get_timestamp_seconds(self.episode_number, 1)
+
+
+
+

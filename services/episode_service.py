@@ -9,6 +9,7 @@ import pendulum
 
 from data import db_session
 from data.episode import Episode
+from data.shownotes import ShowNotes
 
 
 # ### CREATE EPISODE ####
@@ -147,7 +148,7 @@ async def latest_episodes() -> List[Episode]:
 
 
 # ## GET EPISODE INFO BY ID ###
-async def get_episode_info(episode_id) -> (Episode):
+async def get_episode_info(episode_id) -> Episode:
     async with db_session.create_async_session() as session:
         query = (
             select(Episode)
@@ -162,7 +163,7 @@ async def get_episode_info(episode_id) -> (Episode):
         return episode_info
 
 
-async def get_episode_length(episode_number) -> int:
+async def get_episode_length(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.episode_length).filter(
             Episode.episode_number == episode_number
@@ -182,6 +183,19 @@ async def get_episode_length(episode_number) -> int:
         return conversion_time
 
 
+async def get_timestamp_seconds(episode_number, timestamp) -> str:
+    query_timestamp = "ShowNotes.timestamp_" + str(timestamp)
+    print("Query timestamp: ", query_timestamp)
+    async with db_session.create_async_session() as session:
+        query = select(ShowNotes.timestamp_1).filter(
+            ShowNotes.episode == episode_number
+        )
+        result = await session.execute(query)
+        timestamp_results = str(timedelta(seconds=result.scalar()))
+
+        return timestamp_results
+
+
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
     episode_length_converted = str(timedelta(seconds=int_episode_length))
@@ -191,7 +205,7 @@ def convert_episode_length(episode_length):
 
 
 # ### GET LAST EPISODE PUBLISH AND RECORDED DATES ####
-async def get_publish_date(episode_number) -> int:
+async def get_publish_date(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.publish_date).filter(
             Episode.episode_number == episode_number
@@ -206,7 +220,7 @@ async def get_publish_date(episode_number) -> int:
     return publish_date
 
 
-async def get_record_date(episode_number) -> int:
+async def get_record_date(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.record_date).filter(
             Episode.episode_number == episode_number
@@ -222,8 +236,6 @@ async def get_record_date(episode_number) -> int:
 
 
 def convert_dates(form_date):
-    format = "%Y%m%d"
-    # print(form_date)
     pend_object = pendulum.parse(form_date)
     pend_convert = pend_object.to_date_string()
     # print("Pendulum says: ", pend_convert)
@@ -267,7 +279,7 @@ async def get_guest_lastname() -> str:
         return result.scalar()
 
 
-#### GET LAST EPISODE NUMBER ####
+# ### GET LAST EPISODE NUMBER ####
 async def get_last_episode_number() -> int:
     async with db_session.create_async_session() as session:
         query = (
