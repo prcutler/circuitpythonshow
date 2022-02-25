@@ -5,6 +5,7 @@ from sqlalchemy.future import select
 from data import db_session
 from data.transcript import Transcript
 
+
 # ### ADD TRANSCRIPT ####
 async def create_transcript(
     season: int,

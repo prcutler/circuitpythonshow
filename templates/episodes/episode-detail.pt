@@ -14,7 +14,7 @@
                             Subscribe</a>
                             <br /><br />
                             <p><b>Guest(s)</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
-                            <p><b>Topics</b>: ${topic.topic} </p>
+                            <p><b>Topics</b>: ${episode_info.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
                             
                         <div tal:condition="episode_info.guest_bio_1">
@@ -104,8 +104,7 @@
         </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <!-- img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab"-->
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
