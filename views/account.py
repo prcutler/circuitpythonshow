@@ -22,9 +22,7 @@ async def index(request: Request):
     return vm.to_dict()
 
 
-########### REGISTER ###########
-
-
+# ########## REGISTER ###########
 @router.get("/account/register", include_in_schema=False)
 @template()
 def register(request: Request):
@@ -54,8 +52,6 @@ async def register(request: Request):
 
 
 # ################### LOGIN #################################
-
-
 @router.get("/account/login", include_in_schema=False)
 @template(template_file="account/login.pt")
 def login_get(request: Request):

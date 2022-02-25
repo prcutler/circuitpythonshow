@@ -5,7 +5,7 @@ from sqlalchemy.future import select
 from data import db_session
 from data.transcript import Transcript
 
-#### ADD TRANSCRIPT ####
+# ### ADD TRANSCRIPT ####
 async def create_transcript(
     season: int,
     episode_number: int,
@@ -28,7 +28,7 @@ async def create_transcript(
     return transcript
 
 
-#### GET TRANSCRIPT BY EPISODE NUMBER ####
+# ### GET TRANSCRIPT BY EPISODE NUMBER ####
 async def get_transcript_1(episode_number) -> int:
     async with db_session.create_async_session() as session:
         query = select(Transcript.transcript_1).filter(
