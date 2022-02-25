@@ -31,7 +31,9 @@ async def index(request: Request):
     print("VMload is: ", vm.login_status)
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
         return response
     else:
         return vm.to_dict()
@@ -60,7 +62,9 @@ def register(request: Request):
     vm = EpisodeAddViewModel(request)
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
         return response
     else:
         return vm.to_dict()
@@ -101,7 +105,8 @@ async def register(request: Request):
 
     # Redirect to the episode page
     response = fastapi.responses.RedirectResponse(
-        url="/admin/add-show-notes", status_code=status.HTTP_302_FOUND)
+        url="/admin/add-show-notes", status_code=status.HTTP_302_FOUND
+    )
 
     return response
 
@@ -114,7 +119,9 @@ async def edit_details(episode_number, request: Request):
     await vm.load()
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
         return response
     else:
         episode_number = vm.episode_number
@@ -170,7 +177,9 @@ def add_show_notes(request: Request):
     vm = ShowNotesAddViewModel(request)
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
 
         return response
 
@@ -251,7 +260,9 @@ async def edit_show_notes_get(episode_number, request: Request):
     await vm.load()
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
         return response
     else:
         episode_number = vm.episode_number
@@ -271,32 +282,26 @@ async def edit_show_notes_post(episode_number, request: Request):
     show_notes = await shownotes_service.edit_show_notes(
         vm.season,
         vm.episode_number,
-
         vm.timestamp_1,
         vm.notes_1,
         vm.link_1,
         vm.link_text_1,
-
         vm.timestamp_2,
         vm.notes_2,
         vm.link_2,
         vm.link_text_2,
-
         vm.timestamp_3,
         vm.notes_3,
         vm.link_3,
         vm.link_text_3,
-
         vm.timestamp_4,
         vm.notes_4,
         vm.link_4,
         vm.link_text_4,
-
         vm.timestamp_5,
         vm.notes_5,
         vm.link_5,
         vm.link_text_5,
-
         vm.timestamp_6,
         vm.notes_6,
         vm.link_6,
@@ -317,7 +322,6 @@ async def edit_show_notes_post(episode_number, request: Request):
         vm.notes_10,
         vm.link_10,
         vm.link_text_10,
-
     )
 
     # Redirect to the admin page
@@ -335,7 +339,9 @@ def add_show_notes(request: Request):
     vm = TranscriptAddViewModel(request)
 
     if vm.login_status is False:
-        response = fastapi.responses.RedirectResponse(url="/", status_code=status.HTTP_302_FOUND)
+        response = fastapi.responses.RedirectResponse(
+            url="/", status_code=status.HTTP_302_FOUND
+        )
         return response
     else:
         return vm.to_dict()
