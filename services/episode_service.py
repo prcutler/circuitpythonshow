@@ -97,10 +97,6 @@ async def edit_episode(
 
         episode_results = results.scalar()
 
-        print("Episode: ", episode)
-        print("Service episode query is ", episode)
-
-        print(season, type(season))
         episode_results.season = season
         episode_results.episode_number = episode
         episode_results.episode_title = episode_title
