@@ -20,8 +20,8 @@ from viewmodels.admin.edit_show_notes_viewmodel import EditShowNotesViewModel
 router = fastapi.APIRouter()
 
 
-###########  ADMIN HOMEPAGE ##############
-#### GET EPISODE LIST TO DISPLAY FOR EDIT ####
+# ##########  ADMIN HOMEPAGE ##############
+# ### GET EPISODE LIST TO DISPLAY FOR EDIT ####
 @router.get("/admin/index")
 @template(template_file="admin/index.pt")
 async def index(request: Request):
@@ -55,7 +55,7 @@ async def edit_post(request: Request):
     return response
 
 
-###########  ADD EPISODE ##############
+# ##########  ADD EPISODE ##############
 @router.get("/admin/add-episode", include_in_schema=False)
 @template(template_file="admin/add-episode.pt")
 def register(request: Request):
@@ -111,7 +111,7 @@ async def register(request: Request):
     return response
 
 
-#### EDIT EPISODE DETAIL TEMPLATE ####
+# ### EDIT EPISODE DETAIL TEMPLATE ####
 @router.get("/admin/edit-episode/{episode_number}")
 @template(template_file="admin/edit-episode.pt")
 async def edit_details(episode_number, request: Request):
@@ -170,7 +170,7 @@ async def edit_episode_post(episode_number, request: Request):
     return response
 
 
-###########  ADD SHOWNOTES ##############
+# ##########  ADD SHOWNOTES ##############
 @router.get("/admin/add-show-notes", include_in_schema=False)
 @template("admin/add-show-notes.pt")
 def add_show_notes(request: Request):
@@ -251,7 +251,7 @@ async def add_show_notes(request: Request):
     return response
 
 
-#### EDIT SHOW NOTES ####
+# ### EDIT SHOW NOTES ####
 @router.get("/admin/edit-shownotes/{episode_number}")
 @template(template_file="admin/edit-shownotes.pt")
 async def edit_show_notes_get(episode_number, request: Request):
@@ -332,7 +332,7 @@ async def edit_show_notes_post(episode_number, request: Request):
     return response
 
 
-###########  ADD Transcripts ##############
+# ##########  ADD Transcripts ##############
 @router.get("/admin/add-transcripts", include_in_schema=False)
 @template(template_file="admin/add-transcripts.pt")
 def add_show_notes(request: Request):

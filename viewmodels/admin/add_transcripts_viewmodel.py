@@ -1,5 +1,4 @@
 from typing import Optional
-from xmlrpc.client import Boolean
 
 from starlette.requests import Request
 
@@ -11,9 +10,9 @@ class TranscriptAddViewModel(ViewModelBase):
         super().__init__(request)
 
         self.season: Optional[int] = None
-        self.episode_number: Optional[int] = None
+        self.episode_number: [int] = None
         self.transcript_1: Optional[str] = None
-        self.transcript_2: Optional[int] = None
+        self.transcript_2: Optional[str] = None
 
         self.login_status = self.is_logged_in
 
