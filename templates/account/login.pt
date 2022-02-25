@@ -8,8 +8,8 @@
                 <h1>Login</h1>
 
                 <br />
-                <input name="email" type="text" placeholder=" Your username" class="form-control"
-                       value="${ username }" required>
+                <input name="email" type="text" placeholder=" Your email" class="form-control"
+                       value="${ email }" required>
                 <input name="password" type="password" placeholder=" Password" class="form-control"
                        value="${ password }" required>
                        <br />

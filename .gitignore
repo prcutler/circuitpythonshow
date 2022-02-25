@@ -136,7 +136,7 @@ server/scripts/app_repo
 templates/home/index.pt
 server/scripts/app_repo
 server/scripts/app_repo
-<<<<<<< HEAD
+workspace.code-workspacegit
 
 # Database file(s)
 *.sqlite3
@@ -146,3 +146,6 @@ server/scripts/app_repo
 *.db
 db/*
 
+
+templates/admin/edit-episode.pt
+scratchpad

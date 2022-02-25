@@ -1,0 +1,60 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+            <h1>Welcome, Paul</h1>
+                        <p>Choose from the options below:</p>
+
+                        <p><ol class="text-white">
+                        <li>Subscribe to the show in your favorite podcast app.</li>
+                        <li>If you like the show, write a review.</li>
+                        <li>Tell a friend or share it on social media.</li>
+                        </ol></p>
+                        <br />
+                        <br /> 
+
+                        <h3>Edit Episode Information</h3>
+                        <p>Choose an episode:</p>
+                        
+                        <div class="form-container">
+                        <form class="form-horizontal" action="" method="POST">
+                            <div class="form-group">
+
+                        <p>Episodes: <select class="form-control" name="episode_number">
+                            <option tal:repeat="e episodes" value="${e.episode_number}">${e.episode_number}
+                            </option>
+                         </select></p>
+
+                        <button type="submit" class="btn-success">Submit</button>
+                        </div>
+                        </form>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1">
+                    <div class="about-img">
+                        <img src="/static/img/cps-tagline-500.png" alt="">
+                        <br /><br /><br />
+                    </div>
+                </div>
+            </div>
+
+            <div metal:fill-slot="additional_css" tal:omit-tag="True">
+                <link rel="stylesheet" href="/static/css/account.css">
+            </div>
+
+        </div>
+    </section>
+
+       </div>
+        </div>
+
+
+            

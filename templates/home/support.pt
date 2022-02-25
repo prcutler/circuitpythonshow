@@ -7,8 +7,8 @@
                 <div class="col-lg-6">
                     <div class="about-content">
 
-            <h1>Thank You for your support</h1>
-                        <p>Thank you for listening to The CircuitPython Show.  The biggest ways you can help the show are:</p>
+            <h1>Support the show</h1>
+                        <p>Thank you for listening to The CircuitPython Show!  The biggest ways you can help the show are:</p>
 
                         <p><ol class="text-white">
                         <li>Subscribe to the show in your favorite podcast app.</li>
@@ -17,11 +17,12 @@
                         </ol></p>
 
                         <p>You can also support the show via a donation.  I'm not looking to quit my day job, but any help in 
-                        offsetting the cost of podcast hosting and sound engineering is greatly appreciated.  You can support the show via 
+                        offsetting the cost of podcast hosting, transcriptions, and sound engineering is greatly appreciated.  If I can buy 
+                        a cup of coffee, a microcontroller, or a record now and then, thank you! You can support the show via 
                         <a href="https://www.patreon.com/circuitpythonshow">Patreon</a>, <a href="https://ko-fi.com/circuitpythonshow">Ko-Fi</a>,
                         <a href="https://www.paypal.com/donate/?hosted_button_id=STELCW4PS4JK4">PayPal</a>, or <a href="https://github.com/sponsors/prcutler">Github</a>.</p>
 
-                        <p>Thanks for your support and, more importantly, thanks for listening to The CircuitPython Show!</p>
+                        <p>Thanks for your support and, more importantly, thanks for listening to The CircuitPython Show.</p>
 
 
                     </div>

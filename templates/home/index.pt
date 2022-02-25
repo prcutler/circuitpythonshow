@@ -11,10 +11,11 @@
                         <p>An independent podcast with the people in and around CircuitPython.</p>
                         <hr class="divider slider-divider">
                         <div class="pc-btn-group py-2">
-                            <a href="episodes/0/trailer" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw">
+                            <a href="episodes/${episode_number}" class="btn btn-success btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw">
                             </i>Latest</a>
-                            <a href="episodes/0/trailer" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
+                            <a href="episodes/all" class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>
                                 Episodes</a>
+
                             <a href="https://buttondown.email/circuitpythonshow" class="btn btn-info btn-rounded btn-lg"><i class="fa fa-envelope-open-text"></i>
                                 Newsletter</a>
                         </div>
@@ -38,11 +39,13 @@
                         <h2>About The Show</h2>
                         <hr class="divider about-divider">
                         <p>The CircuitPython Show is an independent podcast hosted by 
-                        <a href="https://paulcutler.org">Paul Cutler</a> focused on 
-                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>.  
-                        Each episode features Paul in conversation with a guest for a twenty to thirty minute interview.  </p>
-                        <p>Let me know how the show is doing.  Contact me <a href="mailto:paul@circuitpythonshow.com">via email </a>
-                        or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. Don't be shy!</p>
+                        <a href="https://paulcutler.org">Paul Cutler</a> talking with 
+                        the people doing awesome things with <a href="https://circuitpython.org">CircuitPython</a>
+                        or in the maker community. Each episode features Paul in conversation with a guest for a twenty
+                         to thirty minute interview.  </p>
+                        
+                         <p>Questions or comments? Let me know how the show is doing.  Contact me <a href="mailto:paul@circuitpythonshow.com">via email </a>
+                        or via <a href="https://twitter.com/circuitpyshow">Twitter at @prcutler</a>. </p>
                     </div>
                 <div>
                             <a href="/about" class="btn btn-primary btn-rounded btn-lg">Learn More</a>
@@ -77,15 +80,16 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
-                                    <h3 class="card-title">Episodes Coming Soon</h3>
-                                    <p class="card-text">The <a href="episodes/episodes/0/trailer">trailer for Season One</a> 
-                                    of The CircuitPython Show is now out!  Listen now and learn when the show will be debuting 
-                                    and who some of the guests will be.</p>
-                                    <!-- p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p -->
+                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with ${episodes.guest_firstname} ${episodes.guest_lastname}</h3>
+                                    <p class="card-text">${episodes.guest_firstname} and Paul talk ${episodes.topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
+                                    <p class="card-text"><small class="text-muted">Released ${publish_date}</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+
+
                     <div class="card mb-4 bg-transparent">
                         <div class="row g-0">
                             <div class="col-lg-3">

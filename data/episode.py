@@ -4,19 +4,30 @@ import sqlalchemy as sa
 
 from data.modelbase import SqlAlchemyBase
 
+
 class Episode(SqlAlchemyBase):
-    
-    __tablename__='episodes'
-    
-    id: str = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
-    guest_firstname: str = sa.Column(sa.String)
-    guest_lastname: str = sa.Column(sa.String)
-    record_date: datetime.datetime = sa.Column(sa.DateTime)
-    publish_date: datetime.datetime = sa.Column(sa.DateTime)
-    topic: str = sa.Column(sa.String)
+
+    __tablename__ = "episodes"
+
+    id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
+
     season: int = sa.Column(sa.Integer)
-    episode: int = sa.Column(sa.Integer)
+    episode_number: int = sa.Column(sa.Integer, index=True)
+    episode_title: str = sa.Column(sa.String, index=True)
+    youtube_url: str = sa.Column(sa.String, nullable=True)
+    guest_firstname: str = sa.Column(sa.String)
+    guest_lastname: str = sa.Column(sa.String, index=True)
+    topic: str = sa.Column(sa.String, index=True)
+    record_date: datetime.date = sa.Column(sa.String, index=True)
+    record_date_converted: datetime.date = sa.Column(sa.String, index=True)
+    publish_date: datetime.date = sa.Column(sa.String, index=True)
+    publish_date_converted: datetime.date = sa.Column(sa.String, index=True)
     guest_image: str = sa.Column(sa.String)
-    guest_bio: str = sa.Column(sa.String)
-    
-    
+    guest_bio_1: str = sa.Column(sa.String)
+    guest_bio_2: str = sa.Column(sa.String)
+    sponsor_1: str = sa.Column(sa.String, nullable=True)
+    sponsor_2 = sa.Column(sa.String, nullable=True)
+    published: int = sa.Column(sa.Integer)
+    episode_length: int = sa.Column(sa.Integer)
+    episode_length_string: str = sa.Column(sa.String)
+    captivate_url: str = sa.Column(sa.String, nullable=True)

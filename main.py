@@ -6,7 +6,9 @@ import uvicorn
 from starlette.staticfiles import StaticFiles
 
 from data import db_session
-from views import account, home, episodes
+from views import account, home, episodes, admin
+
+from pydantic import BaseModel
 
 app = fastapi.FastAPI()
 
@@ -21,12 +23,10 @@ def configure():
     configure_routes()
     configure_db(dev_mode=True)
     
-
-def configure_db(dev_mode: bool):
+def  configure_db(dev_mode: bool):
     file = (Path(__file__).parent / 'db' / 'cps_db.sqlite').absolute()
     db_session.global_init(file.as_posix())
-
-
+    
 def configure_templates():
     fastapi_chameleon.global_init("templates")
 
@@ -36,6 +36,7 @@ def configure_routes():
     app.include_router(home.router)
     app.include_router(episodes.router)
     app.include_router(account.router)
+    app.include_router(admin.router)
 
 
 if __name__ == "__main__":

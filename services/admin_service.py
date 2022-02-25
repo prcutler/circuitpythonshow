@@ -1,4 +1,5 @@
 from typing import Optional
+from xmlrpc.client import Boolean
 
 from passlib.handlers.sha2_crypt import sha512_crypt as crypto
 from sqlalchemy import func
@@ -6,6 +7,23 @@ from sqlalchemy.future import select
 
 from data import db_session
 from data.user import User
+from data.shownotes import Shownotes
+
+
+# async def get_login_status(user_id) -> int:
+# async with db_session.create_async_session() as session:
+# query = select(User).filter(User.id == user_id)
+# result = await session.execute(query)
+
+# login_status = None
+
+# if self.is_logged_in == False:
+#    return False
+
+# if self.is_logged_in == True:
+#    return True
+
+# return login_status
 
 
 async def user_count() -> int:

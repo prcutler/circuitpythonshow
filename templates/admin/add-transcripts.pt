@@ -1,0 +1,41 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+
+    <div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column text-white">
+
+        <div class="form-container">
+            <form action="" method="POST" class="account-form" >
+                <h1>Add Transcript</h1>
+
+            Season: <input name="season" type="text" placeholder="Season" class="form-control" value="${ season }" required>
+            <br />
+            Episode #: <input name="episode_number" type="text" placeholder="Episode" class="form-control"
+            value="${ episode_number }" required><br />
+
+            Transcript #1: <input name="transcript_1" type="text" placeholder=" Transcript #1" 
+            class="form-control" value="${ transcript_1 }" required><br />
+            
+            Transcript #2: <input name="transcript_2" type="text" placeholder=" Transcript #2" 
+            class="form-control" value="${ transcript_2}" required><br />
+            
+
+            <br />
+            <button type="submit" class="btn btn-danger">Add Transcript</button>
+            <br />
+
+            <br />
+                <div style="clear: both;"></div>
+                <br /><br /><br />
+
+                <div class="error-msg" tal:condition="error">${ error }</div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+
+    <div metal:fill-slot="additional_css" tal:omit-tag="True">
+        <link rel="stylesheet" href="/static/css/account.css">
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div metal:use-macro="load: ../shared/_layout.pt">
+    <div metal:fill-slot="content" tal:omit-tag="True">
+
+    <section class="about-area">
+        <div class="container">
+            <div class="row align-items-lg-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+
+                        <h2 class="title">Oh no, it's not here!</h2>
+
+                        <p>
+                            The page you were looking for was not found.</p>
+
+                            <img src=/static/img/404.gif />
+                            <br /><br /><br /><br />
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </section>
+
+       </div>
+        </div>
+
+
+            

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.languageServer": "Pylance",
+		"circuitpython.board.version": null,
+		"python.linting.pylintEnabled": false,
+		"python.analysis.diagnosticSeverityOverrides": {
+			"reportMissingModuleSource": "none"
+		},
+		"python.analysis.extraPaths": [
+			"",
+			"/Users/prcutler/.vscode/extensions/joedevivo.vscode-circuitpython-0.1.15/stubs",
+			"/Users/prcutler/Library/Application Support/Code/User/globalStorage/joedevivo.vscode-circuitpython/bundle/20220131/adafruit-circuitpython-bundle-py-20220131/lib"
+		]
+	}
+}

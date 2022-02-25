@@ -5,12 +5,16 @@ from data.modelbase import SqlAlchemyBase
 
 
 class User(SqlAlchemyBase):
-    
-    __tablename__ = 'users'
-    
-    id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
-    username: str = sa.Column(sa.String, unique=True)
-    password: str = sa.Column(sa.String)
-    su: bool = sa.Column(sa.Boolean)
-    
+    __tablename__ = "users"
 
+    id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
+    username: str = sa.Column(sa.String)
+    email: str = sa.Column(sa.String, index=True, unique=True)
+    hash_password: str = sa.Column(sa.String)
+    created_date: datetime.datetime = sa.Column(
+        sa.DateTime, default=datetime.datetime.now, index=True
+    )
+    last_login: datetime.datetime = sa.Column(
+        sa.DateTime, default=datetime.datetime.now, index=True
+    )
+    su: int = sa.Column(sa.Integer, default=0)

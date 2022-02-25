@@ -4,10 +4,16 @@
 <div class="container-fluid bg-dark pt-3 d-flex align-items-center flex-column">
 
         <div class="page-core">
-            <h1></h1>
+            <h1>Welcome to your account page.</h1>
 
             <div>
-                What would you like to listen to today?
+                <p class="text-white">
+
+                Account: ${ user }
+                    This is your account page. You can use it to manage your account settings and
+                    view your account details.
+                </p>
+                <br /><br /><br />
             </div>
         </div>
     </div>
