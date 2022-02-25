@@ -25,23 +25,21 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.episode_info = []
         self.episode_length = "0"
-        
+
         self.shownotes: List[ShowNotes] = []
-        
 
     async def load(self, episode_number):
 
         self.episode_number = episode_number
 
-
         self.topic = await episode_service.get_episode_topic(self.episode_number)
         print("Topic: ", self.topic)
 
         self.episode_info = await episode_service.get_episode_info(self.episode_number)
-        
+
         if self.episode_info is None:
             return
-        
+
         self.episode_length = await episode_service.get_episode_length(
             self.episode_number
         )
@@ -49,6 +47,6 @@ class EpisodeDetailsViewModel(ViewModelBase):
 
         self.publish_date = await episode_service.get_publish_date(self.episode_number)
         self.record_date = await episode_service.get_record_date(self.episode_number)
-        
+
         episode = int(episode_number)
         self.shownotes = await shownotes_service.get_shownotes(episode)
