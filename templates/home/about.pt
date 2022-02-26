@@ -70,10 +70,12 @@
 
         <h1>Credits</h1>
             <p>
-            Music by <a href="https://bartlebeats.bandcamp.com/releases">Bartlebeats</a> under a 
+            Music by <a href="https://bartlebeats.bandcamp.com/releases">Bartlebeats</a> under a
             <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons  CC-BY-SA 3.0 license</a>.
-            
+
             <p>Raspberry Pi Pico and host photographs by Kelly Cutler.  Microcontrollers photo by Les Pounder.</p>
+
+            <p>Video editing and production by Brook Stein.</p>
 
             <p>
                 Thank you to everyone who has contributed anything to CircuitPython, MicroPython, and / or Python.  
