@@ -1,5 +1,3 @@
-import datetime
-from typing import List, Optional
 import sqlalchemy as sa
 
 from data.modelbase import SqlAlchemyBase
