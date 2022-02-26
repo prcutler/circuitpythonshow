@@ -1,6 +1,9 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
 
+        <title>About</title>
+
+
     <section class="about-area">
         <div class="container">
             <div class="row align-items-lg-center">
