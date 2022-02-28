@@ -10,6 +10,7 @@ import pendulum
 from data import db_session
 from data.episode import Episode
 from data.shownotes import ShowNotes
+from sqlalchemy import text
 
 
 # ### CREATE EPISODE ####
@@ -180,10 +181,10 @@ async def get_episode_length(episode_number) -> str:
 
 
 async def get_timestamp_seconds(episode_number, timestamp) -> str:
-    query_timestamp = "ShowNotes.timestamp_" + str(timestamp)
+    query_timestamp = text("ShowNotes.timestamp_" + str(timestamp))
     print("Query timestamp: ", query_timestamp)
     async with db_session.create_async_session() as session:
-        query = select(ShowNotes.timestamp_1).filter(
+        query = select(query_timestamp).filter(
             ShowNotes.episode == episode_number
         )
         result = await session.execute(query)
