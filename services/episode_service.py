@@ -182,20 +182,28 @@ async def get_episode_length(episode_number) -> str:
 
 async def get_timestamp_seconds(episode_number, timestamp) -> str:
     query_timestamp = text("ShowNotes.timestamp_" + str(timestamp))
-    print("Query timestamp: ", query_timestamp)
     async with db_session.create_async_session() as session:
         query = select(query_timestamp).filter(
             ShowNotes.episode == episode_number
         )
         result = await session.execute(query)
 
-        print(result, type(result))
+        query_results = result.scalar_one_or_none()
 
-        timestamp_results = str(timedelta(seconds=result.scalar_one_or_none()))
-        print(timestamp_results, type(timestamp_results))
+        print("Query results: ", query_results, type(query_results))
+        if type(query_results) is int:
+            # print("Query results: ", query_results, type(query_results))
 
-        return timestamp_results
+            timestamp_results = timedelta(seconds=query_results)
+            print("Else statement: ", timestamp_results, type(timestamp_results))
 
+            timestamp_string = str(timestamp_results)
+
+            return timestamp_string
+                # print("timestamp string: ", timestamp_string, type(timestamp_string))
+
+        else:
+            pass
 
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
