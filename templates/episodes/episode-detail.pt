@@ -14,7 +14,7 @@
                             Subscribe</a>
                             <br /><br />
                             <p><b>Guest(s)</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
-                            <p><b>Topics</b>: ${topic.topic} </p>
+                            <p><b>Topics</b>: ${episode_info.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
                             
                         <div tal:condition="episode_info.guest_bio_1">
@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <div style="width: 100%; height: 600px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 600px;" frameborder="no" scrolling="no" seamless src="https://player.captivate.fm/show/e28e83a7-99fb-4877-8147-e20456377e01"></iframe></div>
+                        <div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" seamless src="${episode_info.captivate_url}"></iframe></div>
                     </div>
                 </div>
             </div>
@@ -52,60 +52,59 @@
 
         <h2>Show Notes</h2>
             <div tal:condition="shownotes.notes_1">
-                       <p> ${shownotes.notes_1}</p>
+                       <p> ${timestamp_1} ${shownotes.notes_1}</p>
                        <p tal:condition="shownotes.link_1"> <a href="${shownotes.link_1}">${shownotes.link_text_1}</a></p>
             </div>
 
             <div tal:condition="shownotes.link_2">
-                       <p> ${shownotes.notes_2}</p>
+                       <p> ${timestamp_2} ${shownotes.notes_2}</p>
                        <p tal:condition="shownotes.link_2"> <a href="${shownotes.link_2}">${shownotes.link_text_2}</a></p>
             </div>
 
             <div tal:condition="shownotes.notes_3">
-                       <p> ${shownotes.notes_3}</p>
+                       <p> ${timestamp_3} ${shownotes.notes_3}</p>
                        <p tal:condition="shownotes.link_3"> <a href="${shownotes.link_3}">${shownotes.link_text_3}</a></p>
             </div>
 
             <div tal:condition="shownotes.notes_4">
-                       <p> ${shownotes.notes_4}</p>
+                       <p> ${timestamp_4} ${shownotes.notes_4}</p>
                        <p tal:condition="shownotes.link_4"> <a href="${shownotes.link_4}">${shownotes.link_text_4}</a></p>
             </div>
 
             <div tal:condition="shownotes.notes_5">
-                       <p> ${shownotes.notes_5}</p>
+                       <p> ${timestamp_5} ${shownotes.notes_5}</p>
                        <p tal:condition="shownotes.link_5"> <a href="${shownotes.link_5}">${shownotes.link_text_5}</a></p>
             </div>
 
             <div tal:condition="shownotes.notes_6">
-                       <p> ${shownotes.notes_6}</p>
+                       <p> ${timestamp_6} ${shownotes.notes_6}</p>
                        <p tal:condition="shownotes.link_6"> <a href="${shownotes.link_6}">${shownotes.link_text_6}</a></p>
                     </div>
 
                     <div tal:condition="shownotes.notes_7">
-                       <p> ${shownotes.notes_7}</p>
+                       <p> ${timestamp_7} ${shownotes.notes_7}</p>
                        <p tal:condition="shownotes.link_7"> <a href="${shownotes.link_7}">${shownotes.link_text_7}</a></p>
                     </div>
 
                     <div tal:condition="shownotes.notes_8">
-                       <p> ${shownotes.notes_8}</p>
+                       <p> ${timestamp_8} ${shownotes.notes_8}</p>
                        <p tal:condition="shownotes.link_8"> <a href="${shownotes.link_8}">${shownotes.link_text_8}</a></p>
                     </div>
 
                     <div tal:condition="shownotes.notes_9">
-                       <p> ${shownotes.notes_9}</p>
+                       <p> ${timestamp_9} ${shownotes.notes_9}</p>
                        <p tal:condition="shownotes.link_9"> <a href="${shownotes.link_9}">${shownotes.link_text_9}</a></p>
                     </div>
 
                     <div tal:condition="shownotes.notes_10">
-                       <p> ${shownotes.notes_10}</p>
+                       <p> ${timestamp_10} ${shownotes.notes_10}</p>
                        <p tal:condition="shownotes.link_10"> <a href="${shownotes.link_10}">${shownotes.link_text_10}</a></p>
                     </div>
 
         </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <!-- img src="/static/img/about-personal.jpg" alt="Paul Cutler crouched with his dog, a black lab"-->
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>

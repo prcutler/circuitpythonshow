@@ -11,7 +11,7 @@ class ShowNotes(SqlAlchemyBase):
     
     season: int = sa.Column(sa.Integer)
     
-    ## Episode relationship to Episode class
+    # # Episode relationship to Episode class
     episode: int = sa.Column(sa.Integer, sa.ForeignKey("episodes.episode_number"))
     
     published: int = sa.Column(sa.Integer, index=True)
