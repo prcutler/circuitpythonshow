@@ -188,7 +188,11 @@ async def get_timestamp_seconds(episode_number, timestamp) -> str:
             ShowNotes.episode == episode_number
         )
         result = await session.execute(query)
-        timestamp_results = str(timedelta(seconds=result.scalar()))
+
+        print(result, type(result))
+
+        timestamp_results = str(timedelta(seconds=result.scalar_one_or_none()))
+        print(timestamp_results, type(timestamp_results))
 
         return timestamp_results
 
