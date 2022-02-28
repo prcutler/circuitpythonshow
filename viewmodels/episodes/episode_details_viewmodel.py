@@ -58,17 +58,33 @@ class EpisodeDetailsViewModel(ViewModelBase):
         episode = int(episode_number)
         self.shownotes = await shownotes_service.get_shownotes(episode)
 
-        self.timestamp_1 = await episode_service.get_timestamp_seconds(self.episode_number, 1)
-        self.timestamp_2 = await episode_service.get_timestamp_seconds(self.episode_number, 2)
-        self.timestamp_3 = await episode_service.get_timestamp_seconds(self.episode_number, 3)
-        self.timestamp_4 = await episode_service.get_timestamp_seconds(self.episode_number, 4)
-        self.timestamp_5 = await episode_service.get_timestamp_seconds(self.episode_number, 5)
-        self.timestamp_6 = await episode_service.get_timestamp_seconds(self.episode_number, 6)
-        self.timestamp_7 = await episode_service.get_timestamp_seconds(self.episode_number, 7)
-        self.timestamp_8 = await episode_service.get_timestamp_seconds(self.episode_number, 8)
-        self.timestamp_9 = await episode_service.get_timestamp_seconds(self.episode_number, 9)
-        self.timestamp_10 = await episode_service.get_timestamp_seconds(self.episode_number, 10)
-
-
-
-
+        self.timestamp_1 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 1
+        )
+        self.timestamp_2 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 2
+        )
+        self.timestamp_3 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 3
+        )
+        self.timestamp_4 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 4
+        )
+        self.timestamp_5 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 5
+        )
+        self.timestamp_6 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 6
+        )
+        self.timestamp_7 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 7
+        )
+        self.timestamp_8 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 8
+        )
+        self.timestamp_9 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 9
+        )
+        self.timestamp_10 = await episode_service.get_timestamp_seconds(
+            self.episode_number, 10
+        )
