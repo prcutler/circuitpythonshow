@@ -200,10 +200,11 @@ async def get_timestamp_seconds(episode_number, timestamp) -> str:
             timestamp_string = str(timestamp_results)
 
             return timestamp_string
-                # print("timestamp string: ", timestamp_string, type(timestamp_string))
+            # print("timestamp string: ", timestamp_string, type(timestamp_string))
 
         else:
             pass
+
 
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
