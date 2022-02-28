@@ -27,8 +27,7 @@
                             
                             <div tal:condition="episode_info.youtube_url">
                                 <p tal:condition="episode_info.youtube_url"> <a href="${episode_info.youtube_url}">Watch on YouTube</a>
-                                (The YouTube stream is a behind the scenes recording of the episode and is only lightly edited
-                                    compared to the podcast, which is recommended).</p>
+                                (The YouTube stream may differ slightly than the podcast due to editing).</p>
                             </div>
 
                             

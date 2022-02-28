@@ -34,7 +34,10 @@ class IndexViewModel(ViewModelBase):
         self.episodes = await episode_service.get_episode_info(self.episode_number)
         self.publish_date = await episode_service.get_publish_date(self.episode_number)
 
-        self.old_episode_number = self.episode_number - 1
+        if self.episode_number > 1:
+            self.old_episode_number = self.episode_number - 1
+        else:
+            self.old_episode_number = self.episode_number
 
         self.old_episode = await episode_service.get_episode_info(
             self.old_episode_number

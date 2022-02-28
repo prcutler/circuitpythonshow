@@ -219,8 +219,9 @@ async def get_publish_date(episode_number) -> str:
             Episode.episode_number == episode_number
         )
         result = await session.execute(query)
-
+    print("Episode #: ", episode_number)
     publish_results = result.scalar()
+    print("Publish results: ", publish_results, type(publish_results))
 
     pend_object = pendulum.parse(publish_results)
     publish_date = pend_object.to_formatted_date_string()
