@@ -28,7 +28,7 @@ class IndexViewModel(ViewModelBase):
 
     async def load(self):
 
-        self.episode_count: int = await episode_service.get_episode_count()
+        # self.episode_count: int = await episode_service.get_episode_count()
         self.episode_number = await episode_service.get_last_episode_number()
 
         self.episodes = await episode_service.get_episode_info(self.episode_number)
