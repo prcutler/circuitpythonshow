@@ -80,14 +80,13 @@
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
-                                    <h3 class="card-title">Latest: <a href="/episodes/ $ {episode_number}">Episode ${episode_number}</a> with $ {episodes.guest_firstname} ${episodes.guest_lastname}</h3>
-                                    <p class="card-text">${episodes.guest_firstname} and Paul talk ${episodes.topic}. <a href="/episodes/$ {episode_number}">Full Details</a> </p>
+                                    <h3 class="card-title">Latest: <a href="/episodes/${episode_number}">Episode ${episode_number}</a> with ${episodes.guest_firstname} ${episodes.guest_lastname}</h3>
+                                    <p class="card-text">${episodes.guest_firstname} and Paul talk ${episodes.topic}. <a href="/episodes/${episode_number}">Full Details</a> </p>
                                     <p class="card-text"><small class="text-muted">Released ${publish_date}</small></p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
 
                     <div class="card mb-4 bg-transparent">
