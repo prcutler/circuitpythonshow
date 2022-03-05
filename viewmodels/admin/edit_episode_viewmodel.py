@@ -15,7 +15,7 @@ class EditEpisodeViewModel(ViewModelBase):
 
         self.episode_number: Optional[int] = episode_number
         self.episode_info = []
-        
+
         self.season: Optional[int] = None
         self.episode_title: Optional[str] = None
         self.youtube_url: Optional[str] = None
@@ -31,21 +31,20 @@ class EditEpisodeViewModel(ViewModelBase):
         self.guest_bio_2: Optional[str] = None
         self.sponsor_1: Optional[str] = None
         self.sponsor_2: Optional[str] = None
-        self.published: Optional[str] = None
+        self.published: Optional[int] = None
         self.episode_length: Optional[int] = None
-        self.episode_length_string: Optional[int] = None
+        self.episode_length_string: Optional[str] = None
         self.captivate_url: Optional[str] = None
 
     async def load(self):
-        
+
         self.login_status = self.is_logged_in
-        
+
         self.episode_number = self.episode_number
         print("Viewmodel Episode Number: ", self.episode_number)
         self.episode_info = await episode_service.get_episode_info(self.episode_number)
-        
+
         form = await self.request.form()
-        
 
         self.season = form.get("season")
         self.episode_title = form.get("episode_title")
@@ -66,4 +65,3 @@ class EditEpisodeViewModel(ViewModelBase):
         self.episode_length = form.get("episode_length")
         # self.episode_length_string = episode_service.convert_episode_length(self.episode_length)
         self.captivate_url = form.get("captivate_url")
-

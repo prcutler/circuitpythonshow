@@ -9,7 +9,7 @@ from data import db_session
 from data.shownotes import ShowNotes
 
 
-#### ADD SHOW NOTES ####
+# ### ADD SHOW NOTES ####
 async def create_show_notes(
     season: int,
     episode: int,
@@ -120,7 +120,7 @@ async def create_show_notes(
     return shownotes
 
 
-#### GET SHOW NOTES ####
+# ### GET SHOW NOTES ####
 async def get_shownotes(episode_number) -> List[ShowNotes]:
     async with db_session.create_async_session() as session:
         query = select(ShowNotes).filter(ShowNotes.episode == episode_number)
@@ -130,38 +130,32 @@ async def get_shownotes(episode_number) -> List[ShowNotes]:
         # print(shownotes)
 
         return shownotes
-    
-    
-#### EDIT SHOW NOTES ####
+
+
+# ### EDIT SHOW NOTES ####
 async def edit_show_notes(
     season: int,
     episode: int,
-    
     timestamp_1: int,
     notes_1: str,
     link_1: str,
     link_text_1: str,
-    
     timestamp_2: int,
     notes_2: str,
     link_2: str,
     link_text_2: str,
-    
     timestamp_3: int,
     notes_3: str,
     link_3: str,
     link_text_3: str,
-    
     timestamp_4: int,
     notes_4: str,
     link_4: str,
     link_text_4: str,
-
     timestamp_5: int,
     notes_5: str,
     link_5: str,
     link_text_5: str,
-    
     timestamp_6: int,
     notes_6: str,
     link_6: str,
@@ -182,8 +176,6 @@ async def edit_show_notes(
     notes_10: str,
     link_10: str,
     link_text_10: str,
- 
- 
 ):
     async with db_session.create_async_session() as session:
         print("Add to database from service")
@@ -192,7 +184,7 @@ async def edit_show_notes(
         results = await session.execute(query)
 
         shownotes = results.scalar()
-        
+
         shownotes.season = season
         shownotes.episode = episode
 
@@ -215,12 +207,12 @@ async def edit_show_notes(
         shownotes.notes_4 = notes_4
         shownotes.link_4 = link_4
         shownotes.link_text_4 = link_text_4
-        
+
         shownotes.timestamp_5 = timestamp_5
         shownotes.notes_5 = notes_5
         shownotes.link_5 = link_5
         shownotes.link_text_5 = link_text_5
-        
+
         shownotes.timestamp_6 = timestamp_6
         shownotes.notes_6 = notes_6
         shownotes.link_6 = link_6
@@ -246,7 +238,6 @@ async def edit_show_notes(
         shownotes.link_10 = link_10
         shownotes.link_text_10 = link_text_10
 
-            
         await session.commit()
-    
+
     return shownotes

@@ -1,5 +1,3 @@
-import datetime
-from typing import List, Optional
 import sqlalchemy as sa
 
 from data.modelbase import SqlAlchemyBase
@@ -8,7 +6,7 @@ from data.modelbase import SqlAlchemyBase
 class Transcript(SqlAlchemyBase):
 
     __tablename__ = "transcripts"
-    
+
     id: int = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
 
     season: int = sa.Column(sa.Integer)

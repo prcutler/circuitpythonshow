@@ -23,6 +23,11 @@ class IndexViewModel(ViewModelBase):
         self.old_episode_number: Optional[int] = None
         self.old_publish_date: Optional[str] = None
         
+        self.publish_date: str = ""
+
+        self.old_episode_number: Optional[int] = None
+        self.old_publish_date: Optional[str] = None
+
         self.old_episode: List[Episode] = []
 
     async def load(self):
@@ -39,6 +44,18 @@ class IndexViewModel(ViewModelBase):
         self.old_episode = await episode_service.get_episode_info(self.old_episode_number)
         self.old_publish_date = await episode_service.get_publish_date(self.old_episode_number)
 
-        
-        
-    
+        self.episodes = await episode_service.get_episode_info(self.episode_number)
+        self.publish_date = await episode_service.get_publish_date(self.episode_number)
+
+        if self.episode_number > 1:
+            self.old_episode_number = self.episode_number - 1
+        else:
+            self.old_episode_number = self.episode_number
+
+        self.old_episode = await episode_service.get_episode_info(
+            self.old_episode_number
+        )
+        self.old_publish_date = await episode_service.get_publish_date(
+            self.old_episode_number
+        )
+

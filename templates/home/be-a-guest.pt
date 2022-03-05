@@ -1,6 +1,8 @@
 <div metal:use-macro="load: ../shared/_layout.pt">
     <div metal:fill-slot="content" tal:omit-tag="True">
 
+        <title>Be a Guest</title>
+
     <section class="about-area">
         <div class="container">
             <div class="row align-items-lg-center">
@@ -8,8 +10,9 @@
                     <div class="about-content">
 
             <h1>Be a Guest on The CircuitPython Show</h1>
-                        <p>I am always looking to talk to people who are doing cool things with CircuitPython, microcontrollers, or other maker 
-                            related things. Don't let the show name fool you, it's not always just about CircuitPython.
+                        <p>I am always looking to talk to people who are doing cool things with CircuitPython,
+                            microcontrollers, Python, or other maker related things. Don't let the show name
+                            fool you, it's not always just about CircuitPython.
                         </p>
 
                         <h2>Contents</h2>
@@ -24,25 +27,32 @@
 
                         <h2>You and a topic</h2>
                         <p><ul class="text-white">
-                            <li>You don't have to be an expert or a professional speaker to be a great.  I want to talk with people
-                                who have something interesting to share.  It can be about CircuitPython, microcontrollers, Python,
-                                or anything related to the maker community.</li>
-                            <li>You can contact me via the email link at the bottom of the page or DM me on Twitter.  I'm happy to 
-                                discuss potential topic ideas with you.</li>
-                            <li>My goal is about 25 minutes per episode.  Some are a little shorter, some are a little longer.  As long
-                                as the conversation is natural and interesting, it always works out.</li>
-                        </ul></p>
+                            <li>You don't have to be an expert or a professional speaker to be a great.
+                                I want to talk with people who have something interesting to share.
+                                It can be about CircuitPython, microcontrollers, Python, or anything related to the
+                                maker community.</li>
+                            <li>You can contact me via the email link at the bottom of the page or DM me on Twitter.
+                                I'm happy to discuss potential topic ideas with you.</li>
+                            <li>My goal is about 25 minutes per episode.  Some are a little shorter, some are
+                                a little longer.  As long as the conversation is natural and interesting, it
+                                always works out.</li>
+                        </ul>
+                        </p>
 
                         <h2>Before the show</h2>
                         <p><ul class="text-white">
                             <li>Schedule some time with me.  I usually recommend a 15 minute pre-interview where we get a 
-                                chance to meet, review the topics, and I can answer any questions you might have.</li>
-                            <li>I'll share a Google Doc with you where you can add any articles or videos I should review, if any. 
-                                I'll also want to capture your bio, pronounciation, pronouns, and any other information.</li>
-                            <li>A headphone and mic are recommended, but your laptop can work in a pinch, though I highly recommend a 
-                                pair of headphones to avoid any potential feedback.</li>
-                                <li>I'll share the link to Zencastr in the Google Doc for our recording session.  Unfortunately, Zencastr 
-                                    does not work with Firefox, you'll need to use Chrome, Safari, or Edge.</li>
+                                chance to meet, review the topics, and I can answer any questions you might have.
+                                I'll share a link for you to put a meeting on my calendar - schedule for when it's
+                                convenient for you!</li>
+                            <li>I'll share a Google Doc with you where you can add any articles or videos I
+                                should review, if any.  I'll also want to capture your bio, pronunciation,
+                                pronouns, and any other information.</li>
+                            <li>A headphone and mic are recommended, but your laptop can work in a pinch,
+                                though I highly recommend a  pair of headphones to avoid any potential feedback.</li>
+                            <li>I'll share the link to Zencastr in the Google Doc for our recording session.
+                                Unfortunately, Zencastr does not work with Firefox, you'll need to use Chrome,
+                                Safari, or Edge.</li>
                                 <li>Let me know if there is anything you want to make sure is covered.</li>
                         </ul></p>
 
@@ -50,39 +60,41 @@
                             <p><ul class="text-white">
                                 <li>We both log in to Zencastr and chat for a few minutes and review some of the above.</li>
                                 <li>I'll double check your personal info and give you a headsup when it's time to start.</li>
-                                <li>I typically pre-record the intro, including your bio and I'll welcome you to the show.</li>
-                                <li>I'll ask you some questions and we'll have a chat.  It'll be fun! </li>
+                                <li>I typically pre-record the intro, including your bio, and I'll welcome you to the show.</li>
+                                <li>I'll ask you a few questions, and we'll have a chat.  It'll be fun! </li>
                                 <li>Feel free to ask any clarifying questions you might have.</li>
                                 <li>The podcast is professionally edited.  We can cut out bloopers and other misc. sounds.  
                                     Feel free to pause before giving an answer and don't forget to breathe.</li>
-                                <li>We'll end the show with two segments.  One, where it's your turn to ask me a question of your
-                                    choosing.  (I'll share a Google Doc with previously asked questions.)  The other, I'll ask you
-                                    what microcontroller you reach for when starting a new project.  If you don't want to do one of 
-                                    the segments, just let me know.</li>
-                                <li>I'll ask you a few questions and we'll have a chat.  It'll be fun! </li>
+                                <li>We'll end the show with two segments.  One, where it's your turn to ask me a
+                                    question of your choosing.  (I'll share a Google Doc with previously asked
+                                    questions.)  The other, I'll ask you what microcontroller you reach for when
+                                    starting a new project.  If you don't want to do one of the segments, just let me know.</li>
                             </ul></p>
 
                                 <h2>At the end of the show</h2>
                                 <p><ul class="text-white">
                                     <li>I'll thank you for being on the show and hopefully remember to ask you a call to action, 
                                         where people can find you or reach you. </li>
-                                    <li>Wait to close your window for a few seconds after the show, it takes Zencastr a few moments
-                                        to finalize the recording.  We can briefly chat and I'll let you know the upcoming schedule for when 
-                                    your episode will probably air and answer any other questions.</li>
+                                    <li>Wait to close your window for a few seconds after the show, it takes Zencastr
+                                        a few moments to finalize the recording.  We can briefly chat, and I'll let
+                                        you know the upcoming schedule for when your episode will probably air and
+                                        answer any other questions.</li>
                                 
                                 </ul></p>
 
                                 <h2>When the episode is published</h2>
                                 <p><ul class="text-white">
-                                    <li>I'll share the episode with you.  Please check it out and when the episode is published, please 
-                                        review the show notes so I can correct anything needed.</li>
+                                    <li>I'll share the episode with you.  Please check it out and when the episode is
+                                        published, please review the show notes to help me make any needed corrections.</li>
                                     <li>Tell your friends and promote the show!</li>
                                         </ul></p>
 
                                         <h2>Thank you!</h2>
-                                        <p>Thank you for your interest in being on the show.  I look forward to chatting with you.</p>
+                                        <p>Thank you for your interest in being on the show.  I look forward to
+                                            chatting with you.</p>
 
-                                        <p><i>A big thank you to Brian Okken of Test and Code for the above format.  Used with his permission.</i></p>
+                                        <p><i>A big thank you to Brian Okken of Test and Code for the above format.
+                                            Used with his permission.</i></p>
                                         
 
 

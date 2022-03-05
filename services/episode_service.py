@@ -9,9 +9,11 @@ import pendulum
 
 from data import db_session
 from data.episode import Episode
+from data.shownotes import ShowNotes
+from sqlalchemy import text
 
 
-#### CREATE EPISODE ####
+# ### CREATE EPISODE ####
 async def create_episode(
     season: int,
     episode_number: int,
@@ -65,7 +67,7 @@ async def create_episode(
     return episode
 
 
-#### EDIT EPISODE ####
+# ### EDIT EPISODE ####
 async def edit_episode(
     season: int,
     episode: int,
@@ -93,13 +95,9 @@ async def edit_episode(
         query = select(Episode).filter(Episode.episode_number == episode)
         results = await session.execute(query)
         print("Service results: ", results)
-        
-        episode_results = results.scalar()
-        
-        print("Episode: ", episode)
-        print("Service episode query is ", episode)
 
-        print(season, type(season))
+        episode_results = results.scalar()
+
         episode_results.season = season
         episode_results.episode_number = episode
         episode_results.episode_title = episode_title
@@ -108,16 +106,14 @@ async def edit_episode(
         episode_results.guest_lastname = guest_lastname
         episode_results.topic = topic
         episode_results.record_date = record_date
-        
-        
+
         episode_results.record_date_converted = record_date_converted
-        
+
         episode_results.publish_date = publish_date
-        
-        
+
         episode_results.publish_date_converted = publish_date_converted
         episode_results.guest_image = guest_image
-        
+
         episode_results.guest_bio_1 = guest_bio_1
         episode_results.guest_bio_2 = guest_bio_2
         episode_results.sponsor_1 = sponsor_1
@@ -132,7 +128,7 @@ async def edit_episode(
     return episode
 
 
-### GET LIST OF ALL PUBLISHED EPISODES ###
+# ## GET LIST OF ALL PUBLISHED EPISODES ###
 async def latest_episodes() -> List[Episode]:
     async with db_session.create_async_session() as session:
         query = (
@@ -148,8 +144,8 @@ async def latest_episodes() -> List[Episode]:
         return episodes
 
 
-### GET EPISODE INFO BY ID ###
-async def get_episode_info(episode_id) -> (Episode):
+# ## GET EPISODE INFO BY ID ###
+async def get_episode_info(episode_id) -> Episode:
     async with db_session.create_async_session() as session:
         query = (
             select(Episode)
@@ -164,7 +160,7 @@ async def get_episode_info(episode_id) -> (Episode):
         return episode_info
 
 
-async def get_episode_length(episode_number) -> int:
+async def get_episode_length(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.episode_length).filter(
             Episode.episode_number == episode_number
@@ -184,6 +180,30 @@ async def get_episode_length(episode_number) -> int:
         return conversion_time
 
 
+async def get_timestamp_seconds(episode_number, timestamp) -> str:
+    query_timestamp = text("ShowNotes.timestamp_" + str(timestamp))
+    async with db_session.create_async_session() as session:
+        query = select(query_timestamp).filter(ShowNotes.episode == episode_number)
+        result = await session.execute(query)
+
+        query_results = result.scalar_one_or_none()
+
+        # print("Query results: ", query_results, type(query_results))
+        if type(query_results) is int:
+            # print("Query results: ", query_results, type(query_results))
+
+            timestamp_results = timedelta(seconds=query_results)
+            # print("Else statement: ", timestamp_results, type(timestamp_results))
+
+            timestamp_string = str(timestamp_results)
+
+            return timestamp_string
+            # print("timestamp string: ", timestamp_string, type(timestamp_string))
+
+        else:
+            pass
+
+
 def convert_episode_length(episode_length):
     int_episode_length = int(episode_length)
     episode_length_converted = str(timedelta(seconds=int_episode_length))
@@ -192,15 +212,16 @@ def convert_episode_length(episode_length):
     return episode_length_converted
 
 
-#### GET LAST EPISODE PUBLISH AND RECORDED DATES ####
-async def get_publish_date(episode_number) -> int:
+# ### GET LAST EPISODE PUBLISH AND RECORDED DATES ####
+async def get_publish_date(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.publish_date).filter(
             Episode.episode_number == episode_number
         )
         result = await session.execute(query)
-
+    print("Episode #: ", episode_number)
     publish_results = result.scalar()
+    print("Publish results: ", publish_results, type(publish_results))
 
     pend_object = pendulum.parse(publish_results)
     publish_date = pend_object.to_formatted_date_string()
@@ -208,7 +229,7 @@ async def get_publish_date(episode_number) -> int:
     return publish_date
 
 
-async def get_record_date(episode_number) -> int:
+async def get_record_date(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode.record_date).filter(
             Episode.episode_number == episode_number
@@ -224,8 +245,6 @@ async def get_record_date(episode_number) -> int:
 
 
 def convert_dates(form_date):
-    format = "%Y%m%d"
-    # print(form_date)
     pend_object = pendulum.parse(form_date)
     pend_convert = pend_object.to_date_string()
     results_dates_converted = pend_convert
@@ -233,7 +252,7 @@ def convert_dates(form_date):
     return results_dates_converted
 
 
-#### GET EPISODE COUNT ####
+# ### GET EPISODE COUNT ####
 async def get_episode_count() -> int:
     async with db_session.create_async_session() as session:
         query = select(func.count(Episode.id).filter(Episode.published == 1))
@@ -242,7 +261,7 @@ async def get_episode_count() -> int:
         return result.scalar()
 
 
-#### GET GUEST NAMES ####
+# ### GET GUEST NAMES ####
 async def get_guest_firstname() -> str:
     async with db_session.create_async_session() as session:
         query = (
@@ -267,7 +286,7 @@ async def get_guest_lastname() -> str:
         return result.scalar()
 
 
-#### GET LAST EPISODE NUMBER ####
+# ### GET LAST EPISODE NUMBER ####
 async def get_last_episode_number() -> int:
     async with db_session.create_async_session() as session:
         query = (
@@ -280,7 +299,7 @@ async def get_last_episode_number() -> int:
         return result.scalar()
 
 
-#### GET THE EPISODE TOPIC BY EPISODE NUMBER ####
+# ### GET THE EPISODE TOPIC BY EPISODE NUMBER ####
 async def get_episode_topic(episode_number) -> str:
     async with db_session.create_async_session() as session:
         query = select(Episode).filter(Episode.episode_number == episode_number)
@@ -291,7 +310,7 @@ async def get_episode_topic(episode_number) -> str:
         return result.scalar()
 
 
-#### GET LAST EPISODE TOPIC ####
+# ### GET LAST EPISODE TOPIC ####
 async def get_last_topic() -> int:
     async with db_session.create_async_session() as session:
         query = (
@@ -304,7 +323,7 @@ async def get_last_topic() -> int:
         return result.scalar()
 
 
-### GET LIST OF ALL EPISODE NUMBERS FOR ADMIN PANEL ###
+# ## GET LIST OF ALL EPISODE NUMBERS FOR ADMIN PANEL ###
 async def get_episode_number_list() -> List[Episode]:
     async with db_session.create_async_session() as session:
         query = select(Episode).order_by(Episode.episode_number.desc())

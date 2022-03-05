@@ -3,7 +3,6 @@ from typing import List, Optional
 
 from viewmodels.shared.viewmodel import ViewModelBase
 from services import transcripts_service
-from data.transcript import Transcript
 
 
 class TranscriptsViewModel(ViewModelBase):
@@ -14,12 +13,11 @@ class TranscriptsViewModel(ViewModelBase):
 
         self.transcript_1 = ""
         self.transcript_2 = ""
-        
-    async def load(self, episode_number):
-        
-        self.episode_number = episode_number
-        
-        self.transcript_1 = await transcripts_service.get_transcript_1(self.episode_number)
-        # self.episode_count: int = await episode_service.get_episode_count()
 
-        # self.topic: str = await episode_service.get_episode_topic(self.episode_number)
+    async def load(self, episode_number):
+
+        self.episode_number = episode_number
+
+        self.transcript_1 = await transcripts_service.get_transcript_1(
+            self.episode_number
+        )

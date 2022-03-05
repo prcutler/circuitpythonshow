@@ -37,6 +37,7 @@ def index(request: Request):
     vm = IndexViewModel(request)
     return vm.to_dict()
 
+
 @router.get("/be-a-guest")
 @template(template_file="home/be-a-guest.pt")
 def index(request: Request):

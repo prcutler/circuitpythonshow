@@ -10,20 +10,20 @@ from data.user import User
 from data.shownotes import Shownotes
 
 
-#async def get_login_status(user_id) -> int:
-    #async with db_session.create_async_session() as session:
-        # query = select(User).filter(User.id == user_id)
-        # result = await session.execute(query)
-        
-        # login_status = None
-        
-        #if self.is_logged_in == False:
-        #    return False
-        
-        #if self.is_logged_in == True:
-        #    return True
+# async def get_login_status(user_id) -> int:
+# async with db_session.create_async_session() as session:
+# query = select(User).filter(User.id == user_id)
+# result = await session.execute(query)
 
-        #return login_status
+# login_status = None
+
+# if self.is_logged_in == False:
+#    return False
+
+# if self.is_logged_in == True:
+#    return True
+
+# return login_status
 
 
 async def user_count() -> int:
@@ -77,8 +77,3 @@ async def get_user_by_email(email: str) -> Optional[User]:
         result = await session.execute(query)
 
         return result.scalar_one_or_none()
-    
-
-
-
-        
