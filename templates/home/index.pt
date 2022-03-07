@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="slider-img">
-                        <img src="/static/img/coverart-no-500.png" class="img-responsive" alt="The Circuit Python Show podcast logo" style="width:75%">
+                        <img src="/static/img/cps-logo-500-webp.webp" class="img-responsive" alt="The Circuit Python Show podcast logo" style="width:75%">
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
-                        <img src="/static/img/boards.jpg" alt="Over a dozen CircuitPython boards laid out">
+                        <img src="/static/img/boards-webp.webp" alt="Over a dozen CircuitPython boards laid out">
                     </div>
                 </div>
             </div>
@@ -114,7 +114,7 @@
                     <div class="card mb-4 bg-transparent">
                         <div class="row g-0">
                             <div class="col-lg-3">
-                                <img src="/static/img/cps-tagline-500.png" class="img-fluid">
+                                <img src="/static/img/cps-logo-500-webp.webp" class="img-fluid">
                             </div>
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
