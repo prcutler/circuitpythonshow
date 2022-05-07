@@ -1,12 +1,12 @@
 uvicorn~=0.17.5
-fastapi~=0.74.1
+fastapi~=0.76.0
 fastapi-chameleon
 starlette==0.17.1
 aiofiles
 requests
 python-multipart
 gunicorn
-sqlalchemy~=1.4.31
+sqlalchemy~=1.4.36
 progressbar2
 python-dateutil
 aiosqlite
