@@ -21,7 +21,7 @@
 
                             <br /><br />
                             <p><b>Guest(s)</b>: ${episode_info.guest_firstname} ${episode_info.guest_lastname}</p>
-                            <p><b>Topics</b>: ${episode_info.topic} </p>
+                            <p><b>Topics</b>: ${episode_info.guest_firstname} and Paul talk about ${episode_info.topic} </p>
                             <p><b>Episode length</b>: ${episode_length}</p>
                             
                         <div tal:condition="episode_info.guest_bio_1">
