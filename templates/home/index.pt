@@ -88,8 +88,11 @@
                             <div class="col-lg-9">
                                 <div class="card-body bg-dark">
                                     <h3 class="card-title">CircuitPythonDay 2022 is August 19th!</h3>
-                                    <p class="card-text">I will be moderating a panel with some folks sponsored
-                                    by Adafruit who work on CircuitPython.  More info soon!</p>
+                                    <p class="card-text">I will be moderating a panel with Dan, Jeff, Kattni, and Tim
+                                    from Adafruit at 11:00 a.m. EDT on CircuitPython Day!  We will be celebrating
+                                        all things code and community by taking a look back at the all the
+                                        accomplishments of the last year as well as what's coming next.
+                                        Details on the <a href="https://blog.adafruit.com/2022/08/04/announcing-circuitpython-day-2022-on-august-19th-circuitpythonday2022-circuitpython-python-copy-copy-copy/">Adafruit blog.</a></p>
                                 </div>
                             </div>
                         </div>
