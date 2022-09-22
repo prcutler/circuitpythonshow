@@ -55,7 +55,7 @@
             Episode Length: <input name="episode_length" type="text" placeholder=" Episode Length"" 
             class="form-control" value="${ episode_length }"><br />
 
-            Captivate URL: <input name="Captivate URL" type="text" placeholder=" Captivate URL"" 
+            Captivate URL: <input name="captivate_url" type="text" placeholder=" Captivate URL""
             class="form-control" value="${ captivate_url }"><br />
 
 

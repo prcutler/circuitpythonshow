@@ -1,4 +1,4 @@
-uvicorn~=0.17.5
+uvicorn~=0.18.3
 fastapi~=0.85.0
 fastapi-chameleon
 starlette==0.20.4
@@ -6,12 +6,12 @@ aiofiles
 requests
 python-multipart
 gunicorn
-sqlalchemy~=1.4.31
+sqlalchemy~=1.4.41
 progressbar2
 python-dateutil
 aiosqlite
 black
 passlib~=1.7.4
 greenlet
-pydantic~=1.9.0
+pydantic~=1.10.2
 pendulum~=2.1.2
