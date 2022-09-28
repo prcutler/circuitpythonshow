@@ -94,7 +94,6 @@
                         </div>
                     </div>
 
-
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card mb-4 bg-transparent">
@@ -111,6 +110,29 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                    <div class="card mb-4 bg-transparent">
+                        <div class="row g-0">
+                            <div class="col-lg-3">
+                                <a href="https://pcbway.com"><img src="/static/img/pcbway-500x500.png"
+                                                                  class="img-responsive"></a>
+                            </div>
+                            <div class="col-lg-9">
+                                <div class="card-body bg-dark">
+                                    <h3 class="card-title">The CircuitPython Show is brought to you by
+                                        PCBWay</h3>
+                                    <p class="card-text">Thank you to PCBWay for sponsoring The CircuitPython
+                                        Show.
+                                        With over a decade of experience, PCBWay can help make your designs a
+                                        reality. Starting
+                                        at only $5 for 10 PCBs, <a href="https://pcbway.com">visit PCBWay.com
+                                            today</a>.</p>
+                                    <!-- p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="card mb-4 bg-transparent">
