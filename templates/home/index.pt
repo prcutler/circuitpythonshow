@@ -115,7 +115,7 @@
                     <div class="card mb-4 bg-transparent">
                         <div class="row g-0">
                             <div class="col-lg-3">
-                                <a href="https://pcbway.com"><img src="/static/img/pcbway-500x500.png"
+                                <a href="https://pcbway.com" target="_blank"><img src="/static/img/pcbway-500x500.png"
                                                                   class="img-responsive"></a>
                             </div>
                             <div class="col-lg-9">
@@ -126,7 +126,7 @@
                                         Show.
                                         With over a decade of experience, PCBWay can help make your designs a
                                         reality. Starting
-                                        at only $5 for 10 boards, <a href="https://pcbway.com">visit PCBWay.com
+                                        at only $5 for 10 boards, <a href="https://pcbway.com" target="_blank">visit PCBWay.com
                                             today</a>.</p>
                                     <!-- p class="card-text"><small class="text-muted">Uploaded 3 mins ago</small></p -->
                                 </div>

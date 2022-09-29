@@ -46,7 +46,7 @@
                 <div class="col-lg-5 offset-lg-1">
                     <div class="about-img">
                         <p>Thank you to PCBWay for sponsoring The CircuitPython Show.</p>
-                        <a href="https://pcbway.com"> <img src="/static/img/pcbway-500x500.png" class="img-responsive"></a>
+                        <a href="https://pcbway.com" target="_blank"> <img src="/static/img/pcbway-500x500.png" class="img-responsive" ></a>
                     </div>
                 </div>
 
