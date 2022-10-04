@@ -10,7 +10,7 @@
             <h2>Episode  ${episode_info.episode_number} with ${episode_info.guest_firstname} ${episode_info.guest_lastname}</h2>
             <p>Released ${publish_date} (recorded ${record_date})</p>    
      
-            <a href="https://circuitpythonshow.captivate.fm/listen" target="_blank"
+            <a href="https://feeds.zencastr.com/f/AWWhiPn6.rss" target="_blank"
                class="btn btn-primary btn-rounded btn-lg"><i class="fa fa fa-rss fa-fw"></i>Subscribe</a>
 
             <a href="/static/mp3/cps-${episode_info.episode_number}.mp3" target="_blank"
