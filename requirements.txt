@@ -6,7 +6,7 @@ aiofiles
 requests
 python-multipart
 gunicorn
-sqlalchemy~=1.4.42
+sqlalchemy~=1.4.43
 progressbar2
 python-dateutil
 aiosqlite
