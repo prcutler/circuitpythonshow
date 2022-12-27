@@ -131,7 +131,7 @@
                     <a href="https://twitter.com/circuitpyshow" class="btn btn-primary btn-floating me-1">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a rel="me" href="https://fosstodon.org/@prcutler" class="btn btn-primary btn-floating me-1">
+                    <a rel="me" href="https://hachyderm.io/@prcutler" class="btn btn-primary btn-floating me-1">
                         <i class="fab fa-mastodon"></i>
                         <a href="https://github.com/prcutler/circuitpythonshow"
                            class="btn btn-primary btn-floating me-1">
