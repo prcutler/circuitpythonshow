@@ -13,5 +13,5 @@ aiosqlite
 black
 passlib~=1.7.4
 greenlet
-pydantic~=1.10.2
+pydantic~=1.10.3
 pendulum~=2.1.2
