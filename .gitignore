@@ -149,3 +149,11 @@ db/*
 
 templates/admin/edit-episode.pt
 scratchpad
+.fleet/run.json
+.fleet/settings.json
+.idea/circuitpythonshow.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/.gitignore
