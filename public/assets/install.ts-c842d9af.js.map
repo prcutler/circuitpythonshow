@@ -1,0 +1,1 @@
+{"version":3,"file":"install.ts-c842d9af.js","sources":["../../app/Resources/js/install.ts"],"sourcesContent":["import Tooltip from \"./modules/Tooltip\";\n\nTooltip();\n"],"names":["Tooltip"],"mappings":"0CAEAA,EAAQ"}
