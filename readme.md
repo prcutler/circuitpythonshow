@@ -13,3 +13,4 @@ Questions, comments, or want to be a guest on the show?  <a href="mailto:abc@exa
 ## Support the Show
 If you enjoy the the show, the best suport you can give is to subscribe in your favorite podcast app or write a review.  
 
+*Note: This repository is now archived and has been replaced by a Castopod installation.*
